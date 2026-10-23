@@ -1,0 +1,31 @@
+<%
+// Homepage cards for publications flagged featured: true.
+const THEME_SLUG = {
+  "Visual attention": "attention", "Brain networks": "networks", "Cognitive decline and dementia": "decline",
+  "Lifestyle and interventions": "lifestyle", "Clinical neuroscience": "clinical", "Data science": "data",
+};
+const isMe = (a) => /^Ruiz(?:[- ]Rizzo)?\s+A/.test(a);
+const byline = (authors) => {
+  if (!authors || !authors.length) return "";
+  const first = authors[0];
+  if (authors.length === 1) return first;
+  const me = authors.findIndex(isMe);
+  if (me <= 0) return `${first} et al.`;
+  return `${first}, …, ${authors[me]}${me < authors.length - 1 ? ", …" : ""}`;
+};
+%>
+```{=html}
+<div class="list rr-grid rr-grid-2 rr-fixed">
+<% for (const item of items) { const t = (item.categories || [])[0]; %>
+<article class="rr-card rr-feature rr-theme <%- THEME_SLUG[t] || '' %>" <%= metadataAttrs(item) %>>
+<span class="rr-theme-label"><%- t %></span>
+<div class="rr-feature-venue"><%- item.venue %> · <span class="rr-num"><%- item.year %></span></div>
+<h3><a href="https://doi.org/<%= item.doi %>"><%- item.title %></a></h3>
+<p class="rr-feature-summary"><%- item.summary %></p>
+<div class="rr-card-foot">
+<p class="rr-feature-authors"><%- byline(item.authors) %><% if (item.note) { %> · <%- item.note %><% } %></p>
+</div>
+</article>
+<% } %>
+</div>
+```

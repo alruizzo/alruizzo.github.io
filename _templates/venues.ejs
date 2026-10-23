@@ -1,0 +1,15 @@
+<%
+// Distinct journals across the peer-reviewed articles in the listing, most frequent first.
+// Derived from the data; nothing is typed by hand.
+const counts = new Map();
+for (const item of items) {
+  if (!item.venue) continue;
+  counts.set(item.venue, (counts.get(item.venue) || 0) + 1);
+}
+const venues = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map((e) => e[0]);
+%>
+```{=html}
+<ul class="list rr-venue-list">
+<% for (const v of venues) { %><li><%- v %></li><% } %>
+</ul>
+```

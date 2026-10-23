@@ -1,0 +1,18 @@
+---
+title: "News"
+description: "Recent publications, preprints, talks and funding of Dr. Adriana L. Ruiz-Rizzo, cognitive and clinical neuroscientist in Jena."
+image: assets/social/news.png
+image-alt: "Title card: News, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
+listing:
+  - id: news-all
+    contents: data/generated/news.yml
+    template: _templates/news.ejs
+    template-params:
+      page: true
+    sort: false
+---
+
+Short updates on new publications, talks and funding, newest first. The full record is on the [publications](publications.qmd) and [about](about.qmd) pages and in the [CV]({{< var cv.file >}}).
+
+::: {#news-all}
+:::

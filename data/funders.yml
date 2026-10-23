@@ -1,0 +1,77 @@
+# Funding bodies referenced from recognition.yml (field `funders`). A funder without `logo`
+# renders as a text wordmark. Logo files are reproduced only from sources whose terms allow it;
+# see README.md "Images and rights". logo_status: pending marks a logo still to be supplied.
+# logo_kind: eu-emblem marks the official EU emblem with funding statement: it must be listed first
+# and is sized so the emblem is at least as large as any other logo and at least 1 cm high
+# (EU emblem rules 2021-2027). in_strip: false keeps a variant out of the homepage funder strip.
+# logo_caption: short text shown inside the tile below the logo (for marks without a name).
+- id: eu
+  name: European Union
+  logo: assets/logos/eu-funded.png
+  logo_alt: Funded by the European Union
+  logo_kind: eu-emblem
+  url: https://marie-sklodowska-curie-actions.ec.europa.eu/
+  logo_source: European Commission logo download centre, EU emblem with funding statement (funded_en.zip, horizontal, RGB positive), scaled only
+- id: eu-cofunded
+  name: European Union (co-funding)
+  logo: assets/logos/eu-cofunded.png
+  logo_alt: Co-funded by the European Union
+  logo_kind: eu-emblem
+  in_strip: false
+  url: https://marie-sklodowska-curie-actions.ec.europa.eu/
+  logo_source: European Commission logo download centre, EU emblem with funding statement (co-funded_en.zip, horizontal, RGB positive), scaled only
+- id: lmu
+  name: LMU Munich
+  logo: assets/logos/lmu.png
+  logo_alt: Logo of Ludwig-Maximilians-Universität München (LMU)
+  url: https://www.lmu.de/excellent/
+  # Current LMU logo (two framed squares), from LMU's brand guide gallery image; low resolution
+  # (195x95 px of artwork), so ask LMU for the vector master if a sharper version is needed.
+  logo_source: Supplied by the site owner (logosRuizResearch/lmu_brandguide_logo_..._format_s.jpg, LMU brand guide), grey background removed by colour-to-alpha, cropped; artwork colours unchanged
+- id: bmbf
+  name: Federal Ministry of Education and Research (BMBF)
+  logo: assets/logos/bmbf.svg
+  logo_alt: Logo of the German Federal Ministry of Education and Research
+  url: https://www.bmftr.bund.de/
+  logo_source: Wikimedia Commons, File:DEgov-BMBF-Logo_en.svg (public domain)
+- id: bavaria
+  name: Free State of Bavaria
+  logo: assets/logos/bavaria.png
+  logo_alt: Bavarian Landessymbol
+  logo_caption: Free State of Bavaria
+  url: https://www.stmi.bayern.de/staat-und-verfassung/staatssymbole/
+  # The Landessymbol (white-blue diamonds), not the restricted state coat of arms. General
+  # permission (StMI, 1987): free use compatible with its meaning, without an official impression
+  # and without added crowns or heraldic figures.
+  logo_source: Bavarian State Ministry of the Interior, Landessymbol vierfarbig (Offset Euroscala ZIP), GIF converted to PNG, unmodified
+- id: izkf
+  name: IZKF, Jena University Hospital
+  logo: assets/logos/izkf.png
+  logo_alt: Logo of the Interdisciplinary Center for Clinical Research (IZKF) Jena
+  url: https://www.uniklinikum-jena.de/izkf/Advanced_Medical_Scientist_Programm.html
+  # Supplied file is a screen capture, not a master file; replace with UKJ's original when available.
+  logo_source: Supplied by the site owner (logosRuizResearch/IZKF_Jena_logo.png, screen capture), cropped to the artwork
+- id: colfuturo
+  name: Colfuturo
+  logo: assets/logos/colfuturo.png
+  logo_alt: COLFUTURO logo
+  url: https://www.colfuturo.org/
+  logo_source: Supplied by the site owner (logosRuizResearch/Logo_COLFUTURO.png), cropped to the artwork
+- id: fens
+  name: FENS
+  logo: assets/logos/fens.png
+  logo_alt: Logo of the Federation of European Neuroscience Societies (FENS)
+  url: https://www.fens.org/
+  logo_source: Supplied by the site owner (logosRuizResearch/FENS-logo.png), cropped to the artwork
+- id: ibro-perc
+  name: IBRO-PERC
+  logo: assets/logos/ibro-perc.png
+  logo_alt: Logo of the IBRO Pan-Europe Regional Committee (IBRO-PERC)
+  url: https://ibro.org/about/governance/regional-committees/pan-europe-regional-committee/
+  logo_source: Supplied by the site owner (logosRuizResearch/IBRO-PERC_logo_200x200.png), cropped to the artwork
+- id: udea
+  name: Universidad de Antioquia
+  logo: assets/logos/udea.png
+  logo_alt: Coat of arms of the Universidad de Antioquia
+  url: https://www.udea.edu.co/
+  logo_source: Wikimedia Commons, File:Escudo-UdeA-Nombre-Completo.svg (public domain), PNG rendering by Wikimedia

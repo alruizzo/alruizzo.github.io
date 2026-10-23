@@ -1,0 +1,80 @@
+---
+title: "Collaboration and contact"
+description: "Get in touch about research collaboration, joint projects, methods or invited contributions."
+image: assets/social/contact.png
+image-alt: "Title card: Collaboration and contact, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
+listing:
+  - id: profiles
+    contents: data/profiles.yml
+    template: _templates/profiles.ejs
+    sort: false
+  - id: coauthors-current
+    contents: data/generated/coauthors.yml
+    include: {status: current}
+    template: _templates/coauthors.ejs
+    sort: false
+  - id: coauthors-previous
+    contents: data/generated/coauthors.yml
+    include: {status: previous}
+    template: _templates/coauthors.ejs
+    sort: false
+---
+
+Adriana welcomes enquiries from researchers, research groups, institutions and R&D teams whose questions connect with her work on aging, early cognitive decline, visual attention and brain networks. Students and early-career researchers interested in these topics are also welcome to write.
+
+::: {.rr-actions}
+[Write an e-mail](mailto:{{< var email >}}){.rr-btn .rr-btn-primary}
+[CV (PDF, {{< var cv.date >}})]({{< var cv.file >}}){.rr-btn .rr-btn-secondary}
+:::
+
+## Contact details {#details}
+
+{{< var affiliation.department >}}, {{< var affiliation.institution >}}, {{< var affiliation.city >}}
+
+::: {#profiles}
+:::
+
+## Areas for collaboration {#areas}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Scientific collaboration
+
+Joint studies and proposals on cognitive aging, subjective cognitive decline, mild cognitive impairment and dementia risk. See [research](research.qmd).
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Methods and analysis
+
+Theory-based assessment of visual attention, resting-state and diffusion MRI, longitudinal and intervention analyses. See [methods and expertise](expertise.qmd).
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Clinical and applied research
+
+Cognitive and imaging outcomes for neurological populations and for training or lifestyle interventions. See [where the expertise applies](expertise.qmd#applications).
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Data and open science
+
+Shared data, scripts and workflows, and machine learning on health and social data. See [open science](expertise.qmd#open-science).
+:::
+:::
+
+## Collaborators {#collaborators}
+
+Frequent co-authors, generated from the publication list on this site: everyone with three or more joint peer-reviewed articles, chapters or preprints. Names appear as published; co-authorship records shared work, not an institutional partnership.
+
+### Current {#collaborators-current}
+
+Joint publications in 2023 or later.
+
+::: {#coauthors-current}
+:::
+
+### Previous {#collaborators-previous}
+
+::: {#coauthors-previous}
+:::
+

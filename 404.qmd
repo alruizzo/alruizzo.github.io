@@ -1,0 +1,16 @@
+---
+title: "Page not found"
+description: "The page you were looking for does not exist or has moved."
+image: assets/social/404.png
+image-alt: "Title card: Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
+share-noindex: true
+search: false
+---
+
+The address may be mistyped, or the page may have moved during a redesign of this site.
+
+::: {.rr-actions}
+[Home](index.qmd){.rr-btn .rr-btn-primary}
+[Research](research.qmd){.rr-btn .rr-btn-secondary}
+[Publications](publications.qmd){.rr-btn .rr-btn-secondary}
+:::

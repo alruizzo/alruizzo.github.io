@@ -1,0 +1,7 @@
+```{=html}
+<ul class="list rr-profile-list">
+<% for (const item of items) { %>
+<li <%= metadataAttrs(item) %>><span class="rr-icon rr-icon-<%- item.icon %>" aria-hidden="true"></span><span><a href="<%= item.url %>"><%- item.name %></a><span class="rr-profile-handle"><%- item.handle %></span></span></li>
+<% } %>
+</ul>
+```

@@ -1,0 +1,50 @@
+# Contact channels and scholarly profiles, in display order. Single source for the Contact page
+# list (rendered from this file) and the footer icon row (written in _quarto.yml and checked
+# against this file by scripts/prerender.py). `id` matches the key in _variables.yml `links`
+# (or `email`), and the URLs must agree. `icon` names a file in assets/icons/ and a CSS class
+# `.rr-icon-<icon>` in styles/site.scss. Only networks Adriana actually uses are listed.
+# hero: true also shows the profile as a pill link in the homepage hero.
+- id: email
+  name: E-mail
+  url: "mailto:Adriana.RuizRizzo@med.uni-jena.de"
+  icon: email
+  handle: Adriana.RuizRizzo@med.uni-jena.de
+- id: orcid
+  name: ORCID
+  url: "https://orcid.org/0000-0003-1467-0745"
+  icon: orcid
+  handle: 0000-0003-1467-0745
+  hero: true
+- id: scholar
+  name: Google Scholar
+  url: "https://scholar.google.com/citations?user=L2v2k5QAAAAJ"
+  icon: scholar
+  handle: Publications and citations
+  hero: true
+- id: osf
+  name: OSF
+  url: "https://osf.io/z2ke7/"
+  icon: osf
+  handle: Open Science Framework, data and code
+  hero: true
+- id: researchgate
+  name: ResearchGate
+  url: "https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo"
+  icon: researchgate
+  handle: Adriana-Ruiz-Rizzo
+- id: github
+  name: GitHub
+  url: "https://github.com/alruizzo"
+  icon: github
+  handle: alruizzo
+  hero: true
+- id: linkedin
+  name: LinkedIn
+  url: "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
+  icon: linkedin
+  handle: Professional profile
+- id: x
+  name: X
+  url: "https://x.com/alruizzo"
+  icon: x
+  handle: "@alruizzo"

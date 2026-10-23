@@ -1,0 +1,31 @@
+# Profile facts used across pages via {{< var key >}}. Change them here only.
+# Sources: the previous version of the site (e-mail, profile IDs, biography) and ORCID (affiliation).
+name: "Dr. Adriana L. Ruiz-Rizzo"
+role: "Cognitive and clinical neuroscientist"
+affiliation:
+  department: "Department of Neurology"
+  institution: "Jena University Hospital"
+  city: "Jena, Germany"
+email: "Adriana.RuizRizzo@med.uni-jena.de"
+orcid: "0000-0003-1467-0745"
+links:
+  orcid: "https://orcid.org/0000-0003-1467-0745"
+  scholar: "https://scholar.google.com/citations?user=L2v2k5QAAAAJ"
+  osf: "https://osf.io/z2ke7/"
+  researchgate: "https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo"
+  github: "https://github.com/alruizzo"
+  linkedin: "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
+  x: "https://x.com/alruizzo"
+  blog: "https://psicologiayneurocienciaenespanol.blogspot.com/"
+# The CV is Adriana's own PDF ("Curriculum vitae-latest.pdf", 23 October 2026), published exactly as
+# supplied. sha256 pins those bytes: scripts/prerender.py and check_site.py fail if the file or its
+# rendered copy ever differs (for example after an accidental regeneration or compression).
+cv:
+  file: "files/Ruiz-Rizzo_CV.pdf"
+  date: "October 2026"
+  sha256: "5ca17aeec98b468b9f28759aa5498fb814b4a0771608d6b2ff0cb68993132de5"
+# Legal notice and privacy statement. The postal address (required by § 5 DDG) was supplied by the
+# site owner; the build warns if it is ever reset to a "TO BE ADDED" placeholder.
+legal:
+  address: "Salvador-Allende-Platz 29, 07747 Jena"
+  reviewed: "2026-10-21"

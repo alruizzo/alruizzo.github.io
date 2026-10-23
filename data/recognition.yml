@@ -1,0 +1,137 @@
+# Awards, honors and competitive funding, newest first.
+# Sources: the previous site's short CV (Feb 2022) and about page; the IZKF program is from ORCID.
+# amount_eur: award amount in euros as stated in the October 2026 CV (third-party funding section).
+# kind: award | funding. highlight: true surfaces the item on the homepage credentials strip;
+# fellowship: true features it as a competitive fellowship (needs summary). funders: ids from
+# funders.yml. Grant numbers and programme codes are from the CORDIS project records.
+- id: izkf-ams
+  kind: funding
+  period: "2023 to 2026"
+  title: Advanced Medical Scientist Program (IZKF)
+  org: Interdisciplinary Center for Clinical Research, Jena University Hospital
+  highlight: true
+  amount_eur: 150000
+  source: orcid+cv
+  funders: [izkf]
+- id: schuhfried-award
+  kind: award
+  period: "2020"
+  title: SCHUHFRIED Science Award
+  org: "For the work “Alertness training increases visual processing speed in healthy older adults”. Austria."
+  highlight: true
+  source: cv
+- id: wsu-poster
+  kind: award
+  period: "2020"
+  title: First place, poster presentation prize (postdoctoral level)
+  org: 10th Annual Graduate and Postdoctoral Research Symposium, Wayne State University
+  source: cv
+- id: lmu-research-fellows
+  kind: funding
+  period: "2019 to 2022"
+  title: LMUexcellent postdoctoral research fellowship
+  org: LMU Research Fellows program, co-funded by the European Union's Horizon 2020 Marie Skłodowska-Curie COFUND scheme, and LMUexcellent, funded by the Federal Ministry of Education and Research (BMBF) and the Free State of Bavaria
+  programme: H2020-MSCA-COFUND-2016
+  grant: "754388"
+  grant_url: https://cordis.europa.eu/project/id/754388
+  amount_eur: 159000
+  detail: Awarded as an LMU Outgoing Research Fellowship for outstanding postdoctoral researchers.
+  funders: [eu-cofunded, lmu, bmbf, bavaria]
+  fellowship: true
+  summary: Competitive postdoctoral fellowship at LMU Munich within LMUexcellent, the university's Excellence Strategy program, co-funded by the European Union's Marie Skłodowska-Curie Actions.
+  source: cv+cordis
+- id: jena-talk
+  kind: award
+  period: "2017"
+  title: Second best talk prize
+  org: Retreat of the Department of Neurology, Jena University Hospital
+  source: cv
+- id: fens-travel
+  kind: funding
+  period: "2016"
+  title: FENS-IBRO/PERC travel grant
+  org: FENS Forum of Neuroscience 2016, Copenhagen
+  source: cv
+  funders: [fens, ibro-perc]
+- id: msca-phd
+  kind: funding
+  period: "2014 to 2018"
+  title: Marie Curie doctoral fellowship
+  org: INDIREA (Individualised Diagnostics and Rehabilitation of Attention), a Marie Curie Initial Training Network of the European Commission's Seventh Framework Programme
+  programme: FP7-PEOPLE-2013-ITN
+  grant: "606901"
+  grant_url: https://cordis.europa.eu/project/id/606901
+  funders: [eu]
+  fellowship: true
+  summary: Competitive doctoral fellowship in an international training network on the diagnosis and rehabilitation of attention disorders, supporting her Ph.D. on visual processing speed in the aging brain at LMU Munich.
+  source: about+orcid+cordis
+- id: escobar-award
+  kind: award
+  period: "2013"
+  title: Alejandro Ángel Escobar National Award in Biological Sciences and Physics
+  org: For research on genetic Alzheimer’s disease due to the E280A mutation in the presenilin-1 gene in families of Antioquia. Colombia.
+  highlight: true
+  source: cv
+- id: colfuturo
+  kind: funding
+  period: "2011 to 2013"
+  title: Colfuturo national high-potential scholarship for master’s studies abroad
+  org: Colombia
+  source: cv
+  funders: [colfuturo]
+- id: enlazamundos
+  kind: funding
+  period: "2011 to 2013"
+  title: Enlazamundos regional high-potential scholarship for master’s studies abroad
+  org: Antioquia, Colombia
+  source: cv
+- id: talent-project
+  kind: funding
+  period: "2008 to 2009"
+  title: "Project funding: training course on executive functions for preschool teachers of Medellín"
+  org: Talent Young Woman in Science and Technology Award, Colombia
+  source: cv
+- id: outstanding-undergrad
+  kind: award
+  period: "2008"
+  title: Outstanding Undergraduate Researcher Award
+  org: Mayoralty of Medellín, Colombia
+  source: cv
+- id: talent-award
+  kind: award
+  period: "2008"
+  title: Talent Young Woman in Science and Technology Award
+  org: Mayoralty of Medellín, Colombia
+  source: cv
+- id: national-exam
+  kind: award
+  period: "2008"
+  title: Best score in the national higher-education quality exam in psychology
+  org: Honor, Faculty of Human and Social Sciences, Universidad de Antioquia
+  source: cv
+- id: alfa
+  kind: funding
+  period: "2007"
+  title: Studentship, ALFA Programme
+  org: European Commission
+  source: cv
+  funders: [eu]
+- id: deans-list
+  kind: award
+  period: "2007"
+  title: Dean’s Honors List
+  org: Universidad de Antioquia
+  source: cv
+- id: seed-grant
+  kind: funding
+  period: "2006 to 2007"
+  title: Undergraduate thesis seed grant
+  org: Human and Social Research Center, Universidad de Antioquia
+  source: cv
+  funders: [udea]
+- id: best-student
+  kind: award
+  period: "2005"
+  title: Best advanced student in psychology (2004)
+  org: Universidad de Antioquia
+  source: cv

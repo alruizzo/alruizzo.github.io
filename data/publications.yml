@@ -1,0 +1,1111 @@
+# Publications and research outputs of Adriana L. Ruiz-Rizzo.
+# Single source of truth for the publication pages, homepage, research page and BibTeX export.
+# Schema and provenance: see README.md ("Content data").
+- id: schrenk-2026-impact-online
+  type: article
+  title: Impact of an online-guided physical activity intervention on cognition, resting-state brain connectivity,
+    and the gut microbiome in healthy older adults—a randomized controlled trial
+  authors:
+  - Schrenk SJ
+  - Bang C
+  - Best L
+  - Dost T
+  - Flor S
+  - Frahm C
+  - Gaser C
+  - Hamdan RA
+  - Herbsleb M
+  - Kaleta C
+  - Kattlun F
+  - Müller HJ
+  - Puta C
+  - Radscheidt M
+  - Ruiz-Rizzo AL
+  - Scherag A
+  - Steidten T
+  - Witte OW
+  - Brodoehl S
+  - Finke K
+  year: 2026
+  date: '2026-05-21'
+  venue: GeroScience
+  doi: 10.1007/s11357-026-02324-6
+  open_access: true
+  categories:
+  - Lifestyle and interventions
+  - Brain networks
+  theme: lifestyle
+  preprint: 10.21203/rs.3.rs-7039036/v1
+  source: orcid
+- id: klink-2026-frontoparietal-functional
+  type: article
+  title: Frontoparietal functional connectivity underlies top-down control impairments in patients with mild cognitive
+    impairment
+  authors:
+  - Klink H
+  - Finke K
+  - Kattlun F
+  - Brodoehl S
+  - Ruiz-Rizzo AL
+  year: 2026
+  date: '2026-05-08'
+  venue: JoCN Forum
+  doi: 10.21428/8e6ba8ef.2b4f0301
+  categories:
+  - Cognitive decline and dementia
+  - Visual attention
+  - Brain networks
+  theme: decline
+  source: orcid
+- id: gerner-2025-visual-processing
+  type: article
+  title: Visual processing capacity and cognitive decline in Parkinson’s disease
+  authors:
+  - Gerner K
+  - Bublak P
+  - Finke K
+  - Schrenk S
+  - Ruiz-Rizzo AL
+  - Wagner F
+  - Klingner C
+  - Brodoehl S
+  year: 2025
+  date: '2025-01-01'
+  venue: BMJ Neurology Open
+  volume: '7'
+  issue: '1'
+  pages: e000953
+  doi: 10.1136/bmjno-2024-000953
+  open_access: true
+  categories:
+  - Clinical neuroscience
+  - Visual attention
+  theme: clinical
+  source: orcid
+- id: balssuweit-2025-multimodal-mri
+  type: article
+  title: A multimodal MRI framework employing machine learning for detecting beginning cognitive impairment in Parkinson’s
+    disease
+  authors:
+  - Balßuweit K
+  - Bublak P
+  - Finke K
+  - Ruiz-Rizzo AL
+  - Wagner F
+  - Klingner C
+  - Brodoehl S
+  year: 2025
+  date: '2025-11-26'
+  venue: Frontiers in Neuroscience
+  volume: '19'
+  pages: '1689302'
+  doi: 10.3389/fnins.2025.1689302
+  open_access: true
+  categories:
+  - Clinical neuroscience
+  - Data science
+  - Brain networks
+  theme: clinical
+  source: orcid
+- id: schirge-2025-perivascular-space
+  type: article
+  title: 'Perivascular space and white matter hyperintensities in Alzheimer’s disease: associations with disease
+    progression and cognitive function'
+  authors:
+  - Schirge PM
+  - Perneczky R
+  - Taoka T
+  - Ruiz-Rizzo AL
+  - Ersoezlue E
+  - Forbrig R
+  - Guersel S
+  - Kurz C
+  - Brendel M
+  - Hellmann-Regen J
+  - Priller J
+  - Schneider A
+  - Jessen F
+  - Düzel E
+  - Buerger K
+  - Teipel S
+  - Laske C
+  - Peters O
+  - Spruth E
+  - Fliessbach K
+  - Rostamzadeh A
+  - Glanz W
+  - Janowitz D
+  - Kilimann I
+  - Sodenkamp S
+  - Ewers M
+  - Rauchmann BS
+  year: 2025
+  date: '2025-03-18'
+  venue: Alzheimer's Research & Therapy
+  volume: '17'
+  issue: '1'
+  pages: '62'
+  doi: 10.1186/s13195-025-01707-9
+  open_access: true
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: orcid
+- id: ruizrizzo-2024-diffusion-tensor
+  type: chapter
+  title: Diffusion Tensor Imaging in Alzheimer’s Studies
+  authors:
+  - Ruiz-Rizzo AL
+  - Finke K
+  - Archila-Meléndez ME
+  year: 2024
+  date: '2024-01-01'
+  venue: 'In: Methods in Molecular Biology'
+  pages: 105-113
+  doi: 10.1007/978-1-0716-3774-6_8
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: ruizrizzo-2024-fornix-fractional
+  type: article
+  title: Fornix fractional anisotropy mediates the association between Mediterranean diet adherence and memory four
+    years later in older adults without dementia
+  authors:
+  - Ruiz-Rizzo AL
+  - Finke K
+  - Damoiseaux JS
+  - Bartels C
+  - Buerger K
+  - Cosma NC
+  - Dechent P
+  - Dobisch L
+  - Ewers M
+  - Fliessbach K
+  - Frommann I
+  - Glanz W
+  - Goerss D
+  - Hetzer S
+  - Incesoy EI
+  - Janowitz D
+  - Kilimann I
+  - Laske C
+  - van Lent DM
+  - Munk MHJ
+  - Peters O
+  - Priller J
+  - Ramirez A
+  - Rostamzadeh A
+  - Roy N
+  - Scheffler K
+  - Schneider A
+  - Spottke A
+  - Spruth EJ
+  - Teipel S
+  - Wagner M
+  - Wiltfang J
+  - Yakupov R
+  - Jessen F
+  - Duezel E
+  - Perneczky R
+  - Rauchmann BS
+  year: 2024
+  date: '2024-04-01'
+  venue: Neurobiology of Aging
+  volume: '136'
+  pages: 99-110
+  doi: 10.1016/j.neurobiolaging.2024.01.012
+  open_access: true
+  categories:
+  - Lifestyle and interventions
+  - Cognitive decline and dementia
+  theme: lifestyle
+  featured: true
+  selected: true
+  summary: In 376 older adults from the DELCODE cohort, fornix white-matter microstructure mediated the association
+    between Mediterranean diet adherence and verbal episodic memory four years later.
+  preprint: 10.1101/2023.03.31.534758
+  data:
+  - https://osf.io/s7dpb/
+  source: repo
+- id: schrenk-2023-impact-online
+  type: article
+  title: 'Impact of an online guided physical activity training on cognition and gut-brain axis interactions in
+    older adults: protocol of a randomized controlled trial'
+  authors:
+  - Schrenk SJ
+  - Brodoehl S
+  - Flor S
+  - Frahm C
+  - Gaser C
+  - Hamdan RA
+  - Herbsleb M
+  - Kaleta C
+  - Kattlun F
+  - Müller HJ
+  - Puta C
+  - Radscheidt M
+  - Ruiz-Rizzo AL
+  - Saraei T
+  - Scherag A
+  - Steidten T
+  - Witte OW
+  - Finke K
+  year: 2023
+  date: '2023-09-14'
+  venue: Frontiers in Aging Neuroscience
+  volume: '15'
+  pages: '1254194'
+  doi: 10.3389/fnagi.2023.1254194
+  open_access: true
+  categories:
+  - Lifestyle and interventions
+  theme: lifestyle
+  note: Study protocol
+  source: repo
+- id: marreropolegre-2023-lower-visual
+  type: article
+  title: Lower visual processing speed relates to greater subjective cognitive complaints in community-dwelling
+    healthy older adults
+  authors:
+  - Marrero-Polegre D
+  - Finke K
+  - Roaschio N
+  - Haupt M
+  - Reyes-Moreno C
+  - Ruiz-Rizzo AL
+  year: 2023
+  date: '2023-03-21'
+  venue: Frontiers in Psychiatry
+  volume: '14'
+  pages: '1063151'
+  doi: 10.3389/fpsyt.2023.1063151
+  open_access: true
+  categories:
+  - Visual attention
+  - Cognitive decline and dementia
+  theme: attention
+  data:
+  - https://osf.io/md6r9/
+  source: repo
+- id: nuernberger-2023-visual-stimulation
+  type: article
+  title: Visual stimulation by extensive visual media consumption can be beneficial for motor learning
+  authors:
+  - Nuernberger M
+  - Finke K
+  - Nuernberger L
+  - Ruiz-Rizzo AL
+  - Gaser C
+  - Klingner C
+  - Witte OW
+  - Brodoehl S
+  year: 2023
+  date: '2023-12-12'
+  venue: Scientific Reports
+  volume: '13'
+  issue: '1'
+  pages: '22056'
+  doi: 10.1038/s41598-023-49415-4
+  open_access: true
+  categories:
+  - Lifestyle and interventions
+  - Visual attention
+  theme: lifestyle
+  source: repo
+- id: ruizrizzo-2022-predicting-probability
+  type: article
+  title: Predicting the probability of finding missing older adults based on machine learning
+  authors:
+  - Ruiz-Rizzo AL
+  - Archila-Meléndez ME
+  - González Veloza JJF
+  year: 2022
+  date: '2022-11-01'
+  venue: Journal of Computational Social Science
+  volume: '5'
+  issue: '2'
+  pages: 1303-1321
+  doi: 10.1007/s42001-022-00171-x
+  open_access: true
+  categories:
+  - Data science
+  theme: data
+  selected: true
+  data:
+  - https://osf.io/agz5e/
+  source: repo
+- id: ruizrizzo-2022-subjective-cognitive
+  type: article
+  title: Subjective cognitive decline predicts lower cingulo-opercular network functional connectivity in individuals
+    with lower neurite density in the forceps minor
+  authors:
+  - Ruiz-Rizzo AL
+  - Viviano RP
+  - Daugherty AM
+  - Finke K
+  - Müller HJ
+  - Damoiseaux JS
+  year: 2022
+  date: '2022-11-01'
+  venue: NeuroImage
+  volume: '263'
+  pages: '119662'
+  doi: 10.1016/j.neuroimage.2022.119662
+  open_access: true
+  categories:
+  - Cognitive decline and dementia
+  - Brain networks
+  theme: decline
+  featured: true
+  selected: true
+  summary: Combining resting-state and diffusion MRI over three years, subjective cognitive decline predicted lower
+    cingulo-opercular network connectivity in older adults with lower neurite density in the forceps minor.
+  preprint: 10.1101/2022.03.25.485749
+  data:
+  - https://osf.io/zaef2/
+  source: repo
+- id: ruizrizzo-2022-neural-distinctiveness
+  type: article
+  title: Neural distinctiveness of fatigue and low sleep quality in multiple sclerosis
+  authors:
+  - Ruiz-Rizzo AL
+  - Bublak P
+  - Kluckow S
+  - Finke K
+  - Gaser C
+  - Schwab M
+  - Güllmar D
+  - Müller HJ
+  - Witte OW
+  - Rupprecht S
+  year: 2022
+  date: '2022-10-01'
+  venue: European Journal of Neurology
+  volume: '29'
+  issue: '10'
+  pages: 3017-3027
+  doi: 10.1111/ene.15445
+  open_access: true
+  categories:
+  - Clinical neuroscience
+  - Brain networks
+  theme: clinical
+  data:
+  - https://osf.io/bnpu6/
+  source: repo
+- id: ruizrizzo-2022-lower-resolution
+  type: article
+  title: Lower-Resolution Retrieval of Scenes in Older Adults With Subjective Cognitive Decline
+  authors:
+  - Ruiz-Rizzo AL
+  - Pruitt PJ
+  - Finke K
+  - Müller HJ
+  - Damoiseaux JS
+  year: 2022
+  date: '2022-02-23'
+  venue: Archives of Clinical Neuropsychology
+  volume: '37'
+  issue: '2'
+  pages: 408-422
+  doi: 10.1093/arclin/acab061
+  open_access: true
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  selected: true
+  data:
+  - https://osf.io/xsuy7/
+  source: repo
+- id: kuchenhoff-2021-visual-processing
+  type: article
+  title: Visual processing speed is linked to functional connectivity between right frontoparietal and visual networks
+  authors:
+  - Küchenhoff S
+  - Sorg C
+  - Schneider SC
+  - Kohl O
+  - Müller HJ
+  - Napiórkowski N
+  - Menegaux A
+  - Finke K
+  - Ruiz-Rizzo AL
+  year: 2021
+  date: '2021-05-01'
+  venue: European Journal of Neuroscience
+  volume: '53'
+  issue: '10'
+  pages: 3362-3377
+  doi: 10.1111/ejn.15206
+  open_access: true
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  selected: true
+  note: Shared senior authorship
+  preprint: 10.1101/2020.11.11.378406
+  data:
+  - https://osf.io/nhqg3/
+  source: repo
+- id: penning-2021-alertness-training
+  type: article
+  title: Alertness Training Increases Visual Processing Speed in Healthy Older Adults
+  authors:
+  - Penning MD
+  - Ruiz-Rizzo AL
+  - Redel P
+  - Müller HJ
+  - Salminen T
+  - Strobach T
+  - Behrens S
+  - Schubert T
+  - Sorg C
+  - Finke K
+  year: 2021
+  date: '2021-03-01'
+  venue: Psychological Science
+  volume: '32'
+  issue: '3'
+  pages: 340-353
+  doi: 10.1177/0956797620965520
+  open_access: true
+  categories:
+  - Visual attention
+  - Lifestyle and interventions
+  theme: attention
+  featured: true
+  selected: true
+  note: Shared first authorship; SCHUHFRIED Science Award 2020
+  summary: Alertness training increased visual processing speed in healthy older adults, and pre-training cingulo-opercular
+    network connectivity predicted each person's training gain.
+  source: repo
+- id: haupt-2020-right-lateralized
+  type: article
+  title: Right-lateralized fronto-parietal network and phasic alertness in healthy aging
+  authors:
+  - Haupt M
+  - Ruiz-Rizzo AL
+  - Sorg C
+  - Finke K
+  year: 2020
+  date: '2020-03-16'
+  venue: Scientific Reports
+  volume: '10'
+  issue: '1'
+  pages: '4823'
+  doi: 10.1038/s41598-020-61844-z
+  open_access: true
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  selected: true
+  preprint: 10.1101/826008
+  source: repo
+- id: ruizrizzo-2020-human-subsystems
+  type: article
+  title: Human subsystems of medial temporal lobes extend locally to amygdala nuclei and globally to an allostatic-interoceptive
+    system
+  authors:
+  - Ruiz-Rizzo AL
+  - Beissner F
+  - Finke K
+  - Müller HJ
+  - Zimmer C
+  - Pasquini L
+  - Sorg C
+  year: 2020
+  date: '2020-02-01'
+  venue: NeuroImage
+  volume: '207'
+  pages: '116404'
+  doi: 10.1016/j.neuroimage.2019.116404
+  open_access: true
+  categories:
+  - Brain networks
+  theme: networks
+  selected: true
+  preprint: 10.1101/659854
+  data:
+  - https://osf.io/dx7qp/
+  source: repo
+- id: menegaux-2020-linking-impact
+  type: article
+  title: Linking the impact of aging on visual short-term memory capacity with changes in the structural connectivity
+    of posterior thalamus to occipital cortices
+  authors:
+  - Menegaux A
+  - Bäuerlein FJB
+  - Vania A
+  - Napiorkowski N
+  - Neitzel J
+  - Ruiz-Rizzo AL
+  - Müller HJ
+  - Sorg C
+  - Finke K
+  year: 2020
+  date: '2020-03-01'
+  venue: NeuroImage
+  volume: '208'
+  pages: '116440'
+  doi: 10.1016/j.neuroimage.2019.116440
+  open_access: true
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  source: repo
+- id: haupt-2019-phasic-alerting
+  type: article
+  title: Phasic alerting effects on visual processing speed are associated with intrinsic functional connectivity
+    in the cingulo-opercular network
+  authors:
+  - Haupt M
+  - Ruiz-Rizzo AL
+  - Sorg C
+  - Finke K
+  year: 2019
+  date: '2019-08-01'
+  venue: NeuroImage
+  volume: '196'
+  pages: 216-226
+  doi: 10.1016/j.neuroimage.2019.04.019
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  source: repo
+- id: menegaux-2019-theory-visual
+  type: article
+  title: 'Theory of visual attention thalamic model for visual short-term memory capacity and top-down control:
+    Evidence from a thalamo-cortical structural connectivity analysis'
+  authors:
+  - Menegaux A
+  - Napiorkowski N
+  - Neitzel J
+  - Ruiz-Rizzo AL
+  - Petersen A
+  - Müller HJ
+  - Sorg C
+  - Finke K
+  year: 2019
+  date: '2019-07-01'
+  venue: NeuroImage
+  volume: '195'
+  pages: 67-77
+  doi: 10.1016/j.neuroimage.2019.03.052
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  source: repo
+- id: ruizrizzo-2019-decreased-cingulo
+  type: article
+  title: Decreased cingulo-opercular network functional connectivity mediates the impact of aging on visual processing
+    speed
+  authors:
+  - Ruiz-Rizzo AL
+  - Sorg C
+  - Napiórkowski N
+  - Neitzel J
+  - Menegaux A
+  - Müller HJ
+  - Vangkilde S
+  - Finke K
+  year: 2019
+  date: '2019-01-01'
+  venue: Neurobiology of Aging
+  volume: '73'
+  pages: 50-60
+  doi: 10.1016/j.neurobiolaging.2018.09.014
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  featured: true
+  selected: true
+  summary: Across 91 adults aged 20 to 77, decreased connectivity within the cingulo-opercular network, notably
+    in the left insula, mediated the effect of age on visual processing speed.
+  source: repo
+- id: ruizrizzo-2018-distinctive-correspondence
+  type: article
+  title: Distinctive Correspondence Between Separable Visual Attention Functions and Intrinsic Brain Networks
+  authors:
+  - Ruiz-Rizzo AL
+  - Neitzel J
+  - Müller HJ
+  - Sorg C
+  - Finke K
+  year: 2018
+  date: '2018-03-12'
+  venue: Frontiers in Human Neuroscience
+  volume: '12'
+  pages: '89'
+  doi: 10.3389/fnhum.2018.00089
+  open_access: true
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  source: repo
+- id: ruizrizzo-2017-simultaneous-object
+  type: article
+  title: Simultaneous object perception deficits are related to reduced visual processing speed in amnestic mild
+    cognitive impairment
+  authors:
+  - Ruiz-Rizzo AL
+  - Bublak P
+  - Redel P
+  - Grimmer T
+  - Müller HJ
+  - Sorg C
+  - Finke K
+  year: 2017
+  date: '2017-07-01'
+  venue: Neurobiology of Aging
+  volume: '55'
+  pages: 132-142
+  doi: 10.1016/j.neurobiolaging.2017.03.029
+  categories:
+  - Visual attention
+  - Cognitive decline and dementia
+  theme: attention
+  source: repo
+- id: londono-2014-1h-mrs
+  type: article
+  title: An 1H-MRS framework predicts the onset of Alzheimer's disease symptoms in PSEN1 mutation carriers
+  authors:
+  - Londono AC
+  - Castellanos FX
+  - Arbelaez A
+  - Ruiz A
+  - Aguirre-Acevedo DC
+  - Richardson AM
+  - Easteal S
+  - Lidbury BA
+  - Arcos-Burgos M
+  - Lopera F
+  year: 2014
+  date: '2014-09-01'
+  venue: Alzheimer's & Dementia
+  volume: '10'
+  issue: '5'
+  pages: 552-561
+  doi: 10.1016/j.jalz.2013.08.282
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: quiroz-2013-cortical-atrophy
+  type: article
+  title: Cortical atrophy in presymptomatic Alzheimer's disease presenilin 1 mutation carriers
+  authors:
+  - Quiroz YT
+  - Stern CE
+  - Reiman EM
+  - Brickhouse M
+  - Ruiz A
+  - Sperling RA
+  - Lopera F
+  - Dickerson BC
+  year: 2013
+  date: '2013-05-01'
+  venue: Journal of Neurology, Neurosurgery & Psychiatry
+  volume: '84'
+  issue: '5'
+  pages: 556-561
+  doi: 10.1136/jnnp-2012-303299
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: quiroz-2011-event-related
+  type: article
+  title: Event-related potential markers of brain changes in preclinical familial Alzheimer disease
+  authors:
+  - Quiroz YT
+  - Ally BA
+  - Celone K
+  - McKeever J
+  - Ruiz-Rizzo AL
+  - Lopera F
+  - Stern CE
+  - Budson AE
+  year: 2011
+  date: '2011-08-02'
+  venue: Neurology
+  volume: '77'
+  issue: '5'
+  pages: 469-475
+  doi: 10.1212/wnl.0b013e318227b1b0
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: quiroz-2010-hippocampal-hyperactivation
+  type: article
+  title: Hippocampal hyperactivation in presymptomatic familial Alzheimer's disease
+  authors:
+  - Quiroz YT
+  - Budson AE
+  - Celone K
+  - Ruiz A
+  - Newmark R
+  - Castrillón G
+  - Lopera F
+  - Stern CE
+  year: 2010
+  date: '2010-12-01'
+  venue: Annals of Neurology
+  volume: '68'
+  issue: '6'
+  pages: 865-875
+  doi: 10.1002/ana.22105
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: ruizrizzo-2009-comparacion-desempeno
+  type: article
+  title: Comparación del desempeño neuropsicológico según la edad de inicio en sujetos con enfermedad de Parkinson
+    y parkinsonismo
+  authors:
+  - Ruiz Rizzo AL
+  - Tirado Pérez V
+  - Moreno Carrillo C
+  - Aguirre Acevedo DC
+  - Murillo O
+  - Lopera Restrepo F
+  year: 2009
+  date: '2009-01-01'
+  venue: Revista de Neurología
+  volume: '49'
+  issue: '03'
+  pages: '123'
+  doi: 10.33588/rn.4903.2008475
+  language: es
+  categories:
+  - Clinical neuroscience
+  theme: clinical
+  source: repo
+- id: ruizrizzo-2009-alteraciones-neuropsicologicas
+  type: article
+  title: Alteraciones neuropsicológicas en pacientes con depresión mayor
+  authors:   # single author, as listed in the October 2026 CV
+  - Ruiz AL
+  year: 2009
+  date: '2009-06-01'
+  venue: Acta Neurológica Colombiana
+  volume: '25'
+  issue: '2'
+  url: https://doi.org/10.5281/zenodo.2669585
+  language: es
+  categories:
+  - Clinical neuroscience
+  theme: clinical
+  source: repo
+- id: ruizrizzo-2008-memoria-explicita
+  type: article
+  title: Memoria explícita en el trastorno depresivo mayor
+  authors:
+  - Ruiz Rizzo AL
+  - Lopera Restrepo F
+  year: 2008
+  date: '2008-06-27'
+  venue: Iatreia
+  volume: '21'
+  issue: '2'
+  doi: 10.17533/udea.iatreia.4479
+  language: es
+  categories:
+  - Clinical neuroscience
+  theme: clinical
+  source: repo
+- id: ruizrizzo-2026-physical-exercise
+  type: preprint
+  title: 'Physical exercise increases the NODDI-derived neurite density index across white matter tracts in healthy
+    older adults: results from the FIT4BRAIN randomized controlled trial'
+  authors:
+  - Ruiz-Rizzo AL
+  - Schrenk SJ
+  - Brodoehl S
+  - Frahm C
+  - Gaser C
+  - Herbsleb M
+  - Puta C
+  - Witte OW
+  - Finke K
+  year: 2026
+  date: '2026-09-04'
+  venue: medRxiv
+  doi: 10.64898/2026.08.31.26361810
+  open_access: true
+  categories:
+  - Lifestyle and interventions
+  - Brain networks
+  theme: lifestyle
+  source: orcid
+- id: ruizrizzo-2021-forceps-minor
+  type: abstract
+  title: The forceps minor white matter modulates cingulo-opercular functional connectivity change in subjective
+    cognitive decline
+  authors:
+  - Ruiz-Rizzo AL
+  - Viviano RP
+  - Daugherty AM
+  - Finke K
+  - Müller HJ
+  - Damoiseaux JS
+  year: 2021
+  date: '2021-12-01'
+  venue: Alzheimer's & Dementia
+  volume: '17'
+  issue: S5
+  pages: e058475
+  doi: 10.1002/alz.058475
+  categories:
+  - Cognitive decline and dementia
+  - Brain networks
+  theme: decline
+  source: repo
+- id: ruizrizzo-2020-lower-resolution
+  type: abstract
+  title: Lower-resolution retrieval of scenes in older adults with subjective cognitive decline
+  authors:
+  - Ruiz-Rizzo AL
+  - Pruitt PJ
+  - Finke K
+  - Müller HJ
+  - Damoiseaux JS
+  year: 2020
+  date: '2020-12-01'
+  venue: Alzheimer's & Dementia
+  volume: '16'
+  issue: S5
+  pages: e047371
+  doi: 10.1002/alz.047371
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: quiroz-2012-ic-p
+  type: abstract
+  title: 'IC-P-058: Encoding of novel complex visual scenes in presymptomatic Alzheimer''s disease'
+  authors:
+  - Quiroz Y
+  - Willment K
+  - Muniz M
+  - Ruiz A
+  - Castrillon G
+  - Lopera F
+  - Stern C
+  year: 2012
+  date: '2012-07-01'
+  venue: Alzheimer's & Dementia
+  volume: '8'
+  issue: 4S_Part_1
+  doi: 10.1016/j.jalz.2012.05.091
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: fleisher-2011-ic-p
+  type: abstract
+  title: 'IC-P-098: Reduced regional gray matter in cognitively normal young adults at genetic risk for early-onset
+    Alzheimer''s disease'
+  authors:
+  - Fleisher A
+  - Quiroz Y
+  - Chen K
+  - Langbaum J
+  - Thiyyagura P
+  - Liu X
+  - Lee W
+  - Roontiva A
+  - Ruiz A
+  - Tariot P
+  - Lopera F
+  - Reiman E
+  year: 2011
+  date: '2011-07-01'
+  venue: Alzheimer's & Dementia
+  volume: '7'
+  issue: 4S_Part_2
+  doi: 10.1016/j.jalz.2011.05.063
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: ayutyanont-2011-p3-287
+  type: abstract
+  title: 'P3-287: Composite cognitive endpoints with improved power to detect presymptomatic Alzheimer''s disease
+    treatment effects: Findings in the Colombian kindred with the E280A Presenilin 1 mutation and the Alzheimer''s
+    Prevention Initiative'
+  authors:
+  - Ayutyanont N
+  - Lopera F
+  - Hendrix S
+  - Langbaum J
+  - Madrigal L
+  - Moreno S
+  - Tirado V
+  - Munoz C
+  - Henao E
+  - Ruiz A
+  - Aguirre C
+  - Quiroz Y
+  - Fleisher A
+  - Chen K
+  - Langlois C
+  - Tariot P
+  - Reiman E
+  year: 2011
+  date: '2011-07-01'
+  venue: Alzheimer's & Dementia
+  volume: '7'
+  issue: 4S_Part_17
+  doi: 10.1016/j.jalz.2011.05.1729
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: quiroz-2009-ic-p
+  type: abstract
+  title: 'IC-P-047: Distinct activation patterns for associative encoding in presymptomatic individuals with familial
+    Alzheimer''s disease due to E280A presenilin-1 mutation'
+  authors:
+  - Quiroz YT
+  - Budson AE
+  - Lopera F
+  - Celone K
+  - Schon K
+  - Ruiz A
+  - Cooper S
+  - Newmark R
+  - Stern CE
+  year: 2009
+  date: '2009-07-01'
+  venue: Alzheimer's & Dementia
+  volume: '5'
+  issue: 4S_Part_1
+  doi: 10.1016/j.jalz.2009.05.067
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: quiroz-2009-p1-090
+  type: abstract
+  title: 'P1-090: Using high density event-related potentials to study recognition memory in pre-symptomatic individuals
+    with familial Alzheimer''s disease due to E280A presenilin-1 mutation'
+  authors:
+  - Quiroz YT
+  - Stern CE
+  - Lopera F
+  - McKeever JD
+  - Ally BA
+  - Ruiz A
+  - Budson AE
+  year: 2009
+  date: '2009-07-01'
+  venue: Alzheimer's & Dementia
+  volume: '5'
+  issue: 4S_Part_7
+  doi: 10.1016/j.jalz.2009.04.094
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: ruizrizzo-2012-qualitative-measures
+  type: abstract
+  title: Qualitative measures including grammar in the Controlled Oral Word Association Test for healthy older adults
+  year: 2012
+  date: '2012-06-27'
+  venue: The 2012 International Neuropsychological Society Mid-Year Meeting, Oslo. Journal of the International
+    Neuropsychological Society
+  volume: '18'
+  issue: S2
+  url: https://doi.org/10.1017/S1355617712001063
+  categories:
+  - Cognitive decline and dementia
+  theme: decline
+  source: repo
+- id: ruizrizzo-2008-attention-executive
+  type: abstract
+  title: Attention and executive functions in subjects with major depression
+  year: 2008
+  date: '2008-07-02'
+  venue: INS and Sociedad de Neuropsicología de Argentina Joint Mid-Year Meeting, Buenos Aires. Journal of the International
+    Neuropsychological Society
+  volume: '14'
+  issue: S2
+  url: https://doi.org/10.1017/S1355617708081071
+  categories:
+  - Clinical neuroscience
+  theme: clinical
+  source: repo
+- id: ruizrizzo-2022-factores-prediccion
+  type: thesis
+  title: Factores de predicción de la aparición de personas mayores reportadas como desaparecidas, a partir de modelos
+    de aprendizaje automático supervisado
+  authors:
+  - Ruiz-Rizzo AL
+  year: 2022
+  date: '2022-02-01'
+  venue: Postgraduate thesis, Applied Statistics, Fundación Universitaria Los Libertadores, Bogotá
+  language: es
+  categories:
+  - Data science
+  theme: data
+  source: repo
+- id: ruizrizzo-2018-visual-processing
+  type: thesis
+  title: Visual processing speed in the aging brain
+  authors:
+  - Ruiz-Rizzo AL
+  year: 2018
+  date: '2018-06-01'
+  venue: Doctoral dissertation, Graduate School of Systemic Neurosciences, LMU Munich
+  categories:
+  - Visual attention
+  - Brain networks
+  theme: attention
+  source: repo
+- id: ruizrizzo-2013-neurocognitive-processes
+  type: thesis
+  title: Neurocognitive processes associated with peer preference in preschool children
+  authors:
+  - Ruiz-Rizzo AL
+  year: 2013
+  date: '2013-09-01'
+  venue: M.Sc. thesis, Cognitive and Clinical Neuroscience, Maastricht University
+  url: https://doi.org/10.5281/zenodo.2669589
+  source: repo
+- id: ruizrizzo-2008-description-neuropsychological
+  type: thesis
+  title: Description of the neuropsychological features of explicit memory in adults with history of major depression
+    from adolescence
+  authors:
+  - Ruiz-Rizzo AL
+  year: 2008
+  date: '2008-05-01'
+  venue: B.A. thesis, Psychology, Universidad de Antioquia, Medellín
+  categories:
+  - Clinical neuroscience
+  theme: clinical
+  source: cv
+- id: ruizrizzo-2021-integracion-espontanea
+  type: scicomm
+  title: 'La integración espontánea de nuestro cerebro: un sustento para la capacidad atencional'
+  authors:
+  - Ruiz Rizzo AL
+  year: 2021
+  date: '2021-08-01'
+  venue: Revista FULL Investiga
+  url: https://doi.org/10.5281/zenodo.5163080
+  language: es
+  categories:
+  - Visual attention
+  theme: attention
+  source: repo

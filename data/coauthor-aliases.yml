@@ -1,0 +1,4 @@
+# Name variants of the same co-author across publications, mapped to one canonical form.
+# Accents, hyphens and spaces in family names are already normalized automatically;
+# list here only variants that normalization cannot join (e.g. a second family name).
+"Lopera Restrepo F": "Lopera F"

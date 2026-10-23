@@ -1,0 +1,7 @@
+```{=html}
+<ul class="list rr-hero-profiles">
+<% for (const item of items) { %>
+<li <%= metadataAttrs(item) %>><a class="rr-pill-link" href="<%= item.url %>"><span class="rr-icon rr-icon-<%- item.icon %>" aria-hidden="true"></span><span><%- item.name %></span></a></li>
+<% } %>
+</ul>
+```

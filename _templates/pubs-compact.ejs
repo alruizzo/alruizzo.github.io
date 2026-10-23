@@ -1,0 +1,7 @@
+```{=html}
+<div class="list rr-pubs rr-pubs-compact">
+<% for (const item of items) { %>
+<% partial('_pub-item.ejs.md', { item, metadataAttrs, compact: true }) %>
+<% } %>
+</div>
+```

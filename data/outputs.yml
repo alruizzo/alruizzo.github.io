@@ -1,0 +1,91 @@
+# Open research outputs (data, analysis code, workflows, figures), newest first.
+# Source: ORCID works record (OSF and figshare DOIs), metadata from DataCite.
+# related: id of the publication in publications.yml that the output accompanies (matched by title
+# and co-creators). Leave it out when the relation is not documented.
+- id: figshare-methods-figure
+  title: Brain connectivity, visual attention, and visual memory
+  kind: Figure
+  year: 2026
+  repository: figshare
+  doi: 10.6084/m9.figshare.32064264
+  url: https://figshare.com/articles/figure/Brain_connectivity_visual_attention_and_visual_memory/32064264
+  license: CC BY 4.0
+  description: Overview figure of the research methods used to study brain and behavior links across populations.
+- id: osf-medi-fornix
+  title: MeDiAd Fornix and memory
+  kind: Collection
+  year: 2023
+  repository: OSF
+  doi: 10.17605/osf.io/s7dpb
+  url: https://osf.io/s7dpb/
+  related: ruizrizzo-2024-fornix-fractional
+- id: osf-scd
+  title: SCD
+  kind: Workflow
+  year: 2023
+  repository: OSF
+  doi: 10.17605/osf.io/md6r9
+  url: https://osf.io/md6r9/
+  related: marreropolegre-2023-lower-visual
+- id: osf-ms
+  title: MS
+  kind: Workflow
+  year: 2023
+  repository: OSF
+  doi: 10.17605/osf.io/bnpu6
+  url: https://osf.io/bnpu6/
+  related: ruizrizzo-2022-neural-distinctiveness
+- id: osf-con-forceps
+  title: Cingulo-opercular network and the forceps minor
+  kind: Collection
+  year: 2022
+  repository: OSF
+  doi: 10.17605/osf.io/zaef2
+  url: https://osf.io/zaef2/
+  related: ruizrizzo-2022-subjective-cognitive
+- id: osf-missing
+  title: Missing older persons
+  kind: Collection
+  year: 2022
+  repository: OSF
+  doi: 10.17605/osf.io/agz5e
+  url: https://osf.io/agz5e/
+  related: ruizrizzo-2022-predicting-probability
+- id: osf-roi-masks
+  title: ROI Masks
+  kind: Image data
+  year: 2022
+  repository: OSF
+  doi: 10.17605/osf.io/xvhgf
+  url: https://osf.io/xvhgf/
+- id: osf-scene-object-load
+  title: Scene Object Load
+  kind: Collection
+  year: 2020
+  repository: OSF
+  doi: 10.17605/osf.io/xsuy7
+  url: https://osf.io/xsuy7/
+  related: ruizrizzo-2022-lower-resolution
+- id: osf-inter-fc
+  title: Inter-FC
+  kind: Workflow
+  year: 2020
+  repository: OSF
+  doi: 10.17605/osf.io/nhqg3
+  url: https://osf.io/nhqg3/
+  related: kuchenhoff-2021-visual-processing
+- id: osf-a-mtl
+  title: A-MTL
+  kind: Workflow
+  year: 2020
+  repository: OSF
+  doi: 10.17605/osf.io/dx7qp
+  url: https://osf.io/dx7qp/
+  related: ruizrizzo-2020-human-subsystems
+- id: osf-scripts
+  title: Scripts
+  kind: Software
+  year: 2020
+  repository: OSF
+  doi: 10.17605/osf.io/95ykg
+  url: https://osf.io/95ykg/

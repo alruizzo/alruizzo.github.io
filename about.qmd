@@ -1,0 +1,107 @@
+---
+title: "About"
+description: "Cognitive and clinical neuroscientist at the Department of Neurology, Jena University Hospital. Career, recognition, teaching, talks and service."
+image: assets/social/about.png
+image-alt: "Title card: About Dr. Adriana L. Ruiz-Rizzo, with her portrait, on a dark background with a network pattern."
+share-card-tagline: "Cognitive and clinical neuroscientist, Department of Neurology, Jena University Hospital"
+share-type: profile
+share-profile:
+  first_name: "Adriana"
+  last_name: "Ruiz-Rizzo"
+toc: true
+toc-title: "On this page"
+toc-location: right
+listing:
+  - id: positions
+    contents: data/career.yml
+    include: {kind: position}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: education
+    contents: data/career.yml
+    include: {kind: education}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: awards
+    contents: data/generated/recognition.yml
+    include: {kind: award}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: funding
+    contents: data/generated/recognition.yml
+    include: {kind: funding}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: teaching
+    contents: data/career.yml
+    include: {kind: teaching}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: talks
+    contents: data/talks.yml
+    template: _templates/timeline.ejs
+    sort: false
+---
+
+## Profile {#profile}
+
+::: {style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;"}
+<img class="rr-about-portrait" src="assets/img/portrait.jpg" width="1450" height="967" alt="Portrait of Adriana L. Ruiz-Rizzo">
+
+::: {style="flex: 1 1 22rem;"}
+Dr. Adriana L. Ruiz-Rizzo is a cognitive and clinical neuroscientist and associate researcher in the {{< var affiliation.department >}} at {{< var affiliation.institution >}}, Germany. Her research examines how brain networks underlie cognitive and behavioral changes in healthy aging, subjective cognitive decline and mild cognitive impairment, and how brain function, lifestyle and behavior relate across neurological and psychiatric conditions.
+:::
+:::
+
+She trained in psychology at the Universidad de Antioquia in Medellín, Colombia, where she worked with the Grupo de Neurociencias de Antioquia on familial Alzheimer's disease, and in cognitive and clinical neuroscience at Maastricht University. She received her Ph.D. in Systemic Neurosciences from the Graduate School of Systemic Neurosciences at LMU Munich, with a dissertation on visual processing speed in the aging brain supported by the European Union's Marie Skłodowska-Curie Actions.
+
+Postdoctoral work followed at LMU Munich, including an LMUexcellent fellowship co-funded by the European Union's Horizon 2020 programme, and as a postdoctoral fellow at the Institute of Gerontology of Wayne State University in Detroit. She also holds a specialization in applied statistics, which brings statistical modeling and machine learning into her research. Her work has appeared in journals including *Psychological Science*, *NeuroImage* and *Neurobiology of Aging*.
+
+At Jena University Hospital she leads a project on the brain connectivity underpinnings of visual attention dysfunctions in mild cognitive impairment, holds an award from the IZKF Advanced Medical Scientist Program (2023 to 2026) and supervises a doctoral candidate. She serves as an academic editor for *Journal of Aging Research* and *BMC Geriatrics*.
+
+::: {.rr-actions}
+[CV (PDF, {{< var cv.date >}})]({{< var cv.file >}}){.rr-btn .rr-btn-primary}
+[Contact](contact.qmd){.rr-btn .rr-btn-secondary}
+:::
+
+## Research positions {#positions}
+
+::: {#positions}
+:::
+
+## Education {#education-heading}
+
+::: {#education}
+:::
+
+## Awards and honors {#awards-heading}
+
+::: {#awards}
+:::
+
+## Funding and fellowships {#funding-heading}
+
+::: {#funding}
+:::
+
+## Teaching and supervision {#teaching-heading}
+
+::: {#teaching}
+:::
+
+## Talks and recordings {#talks-heading}
+
+Selected talks; recordings are linked where they are public.
+
+::: {#talks}
+:::
+
+## Service {#service}
+
+**Academic editor** for *Journal of Aging Research* and *BMC Geriatrics*.
+
+**Peer reviewer** for more than 25 journals, including *Brain*, *Alzheimer's & Dementia*, *NeuroImage*, *Human Brain Mapping*, *Cerebral Cortex*, *Neurobiology of Aging* and *Psychological Medicine*. The full list is in the [CV]({{< var cv.file >}}); verified review activity is recorded on her [ORCID profile]({{< var links.orcid >}}).
+
+## Science communication {#science-communication}
+
+Adriana communicates psychology and neuroscience to Spanish-speaking audiences, including through the blog [Psicología y Neurociencia en Español]({{< var links.blog >}}){lang="es"} and a popular-science article on the neural basis of attentional capacity in *Revista FULL Investiga* ([2021](https://doi.org/10.5281/zenodo.5163080)). As a student in Medellín she led a training course on executive functions for preschool teachers, funded through the Talent Young Woman in Science and Technology Award.

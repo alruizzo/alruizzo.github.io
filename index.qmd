@@ -1,0 +1,414 @@
+---
+pagetitle: "Dr. Adriana L. Ruiz-Rizzo"
+description: "Cognitive and clinical neuroscientist studying how aging and early cognitive decline reshape attention, memory and brain networks, using multimodal MRI."
+image: assets/social/index.png
+image-alt: "Title card: Dr. Adriana L. Ruiz-Rizzo, cognitive and clinical neuroscientist, with her portrait, on a dark background with a network pattern."
+share-card-title: "Dr. Adriana L. Ruiz-Rizzo"
+share-card-tagline: "Aging, early cognitive decline, visual attention and the organization of brain networks"
+open-graph:
+  title: "Dr. Adriana L. Ruiz-Rizzo · Cognitive and clinical neuroscientist"
+twitter-card:
+  title: "Dr. Adriana L. Ruiz-Rizzo · Cognitive and clinical neuroscientist"
+page-layout: custom
+toc: false
+include-in-header:
+  - text: |
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adriana L. Ruiz-Rizzo",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Associate researcher",
+        "description": "Cognitive and clinical neuroscientist",
+        "affiliation": {"@type": "Organization", "name": "Jena University Hospital", "department": {"@type": "Organization", "name": "Department of Neurology"}},
+        "alumniOf": [
+          {"@type": "CollegeOrUniversity", "name": "Ludwig-Maximilians-Universität München"},
+          {"@type": "CollegeOrUniversity", "name": "Maastricht University"},
+          {"@type": "CollegeOrUniversity", "name": "Universidad de Antioquia"}
+        ],
+        "knowsAbout": ["Cognitive aging", "Visual attention", "Subjective cognitive decline", "Mild cognitive impairment", "Functional connectivity", "Diffusion MRI"],
+        "image": "https://alruizzo.github.io/assets/img/portrait.jpg",
+        "url": "https://alruizzo.github.io/",
+        "sameAs": [
+          "https://orcid.org/0000-0003-1467-0745",
+          "https://scholar.google.com/citations?user=L2v2k5QAAAAJ",
+          "https://osf.io/z2ke7/",
+          "https://github.com/alruizzo",
+          "https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo",
+          "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
+        ]
+      }
+      </script>
+listing:
+  - id: featured
+    contents: data/publications.yml
+    include:
+      featured: true
+    template: _templates/featured.ejs
+    sort: "date desc"
+  - id: venues
+    contents: data/publications.yml
+    include:
+      type: article
+    template: _templates/venues.ejs
+    page-size: 500
+  - id: cred-education
+    contents: data/career.yml
+    include:
+      kind: education
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+  - id: cred-positions
+    contents: data/career.yml
+    include:
+      kind: position
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+  - id: fellowships
+    contents: data/generated/recognition.yml
+    include:
+      fellowship: true
+    template: _templates/fellowships.ejs
+    sort: false
+  - id: funders
+    contents: data/generated/funders.yml
+    template: _templates/funders-strip.ejs
+    sort: false
+  - id: hero-profiles
+    contents: data/profiles.yml
+    include:
+      hero: true
+    template: _templates/hero-profiles.ejs
+    sort: false
+  - id: news
+    contents: data/generated/news.yml
+    template: _templates/news.ejs
+    sort: false
+    max-items: 3
+  - id: cred-recognition
+    contents: data/recognition.yml
+    include:
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+---
+
+<main id="quarto-document-content" class="rr-home" tabindex="-1">
+
+::: {.rr-hero}
+{{< include _hero-motif.md >}}
+
+<button class="rr-hero-toggle" type="button" aria-label="Pause background animation" hidden><svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg><svg class="icon-play" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 1.5v11l9-5.5z" fill="currentColor"/></svg></button>
+
+::: {.rr-wrap .rr-hero-grid}
+::: {.rr-hero-copy}
+[{{< var role >}}]{.rr-eyebrow}
+
+<div class="rr-hero-head"><span class="rr-hero-rule" aria-hidden="true"></span><h1 id="hero-title"><span class="rr-wipe">Dr. Adriana L. Ruiz-Rizzo</span></h1></div>
+
+[Studying how aging and the earliest stages of cognitive decline reshape attention, memory and the organization of brain networks.]{.rr-statement}
+
+[Her research combines multimodal MRI with computational models of visual attention to identify early markers of decline and to inform prevention and early intervention.]{.rr-support}
+
+[<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0a5.5 5.5 0 0 0-5.5 5.5C2.5 9.6 8 16 8 16s5.5-6.4 5.5-10.5A5.5 5.5 0 0 0 8 0Zm0 7.75a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z"/></svg>{{< var affiliation.department >}}, {{< var affiliation.institution >}}, {{< var affiliation.city >}}]{.rr-affil}
+
+::: {.rr-actions}
+[Explore the research](research.qmd){.rr-btn .rr-btn-primary}
+[Publications](publications.qmd){.rr-btn .rr-btn-secondary}
+[Get in touch](contact.qmd){.rr-btn .rr-btn-secondary}
+:::
+
+::: {.rr-profiles-wrap}
+::: {#hero-profiles}
+:::
+:::
+:::
+
+<figure class="rr-portrait">
+<img src="assets/img/portrait.jpg" width="1450" height="967" fetchpriority="high" alt="Portrait of Adriana L. Ruiz-Rizzo">
+</figure>
+:::
+:::
+
+```{=html}
+<script>
+// Hero motion is opt-in: CSS animates only under .rr-motion, added here when motion is allowed.
+// The slow background drift lasts longer than 5 s, so the pause control is revealed with it
+// (WCAG 2.2.2). Without JS or under reduced motion the hero is simply shown in its final state.
+(function () {
+  var hero = document.querySelector(".rr-hero");
+  if (!hero || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  document.documentElement.classList.add("rr-motion");
+  // If the browser paused animations (background tab, power saving), never leave the hero hidden.
+  setTimeout(function () { document.documentElement.classList.add("rr-entered"); }, 2600);
+  var btn = hero.querySelector(".rr-hero-toggle");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var paused = hero.classList.toggle("is-paused");
+    btn.setAttribute("aria-label", paused ? "Play background animation" : "Pause background animation");
+  });
+})();
+</script>
+```
+
+::: {.rr-band}
+::: {.rr-wrap .rr-section style="padding-block: var(--rr-space-7);"}
+::: {.rr-credentials}
+::: {}
+## Education {.unlisted}
+::: {#cred-education}
+:::
+:::
+
+::: {}
+## Research positions {.unlisted}
+::: {#cred-positions}
+:::
+:::
+
+::: {}
+## Recognition and funding {.unlisted}
+::: {#cred-recognition}
+:::
+:::
+:::
+
+::: {.rr-venues}
+[Peer-reviewed work published in]{.rr-eyebrow}
+
+::: {#venues}
+:::
+:::
+:::
+:::
+
+::: {.rr-section .rr-fellowships-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Competitive fellowships]{.rr-eyebrow}
+
+## Marie Skłodowska-Curie support at two career stages
+
+Adriana's doctoral and postdoctoral research were each funded through highly competitive fellowship programs co-funded by the European Union's Marie Skłodowska-Curie Actions.
+:::
+
+[Funding and awards](about.qmd#funding-heading){.rr-more}
+:::
+
+::: {#fellowships}
+:::
+
+::: {.rr-funders-block}
+[Research supported by]{.rr-eyebrow}
+
+::: {#funders}
+:::
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap .rr-intro}
+::: {}
+[Why it matters]{.rr-eyebrow}
+
+## Decline begins long before diagnosis {.rr-section-title}
+:::
+
+::: {}
+Changes in attention, memory and brain connectivity can start years before dementia is diagnosed. In young carriers of a genetic mutation for early-onset Alzheimer's disease, Adriana and colleagues found altered hippocampal activity while memory performance was still indistinguishable from that of non-carriers. In older adults who notice their own decline before standard tests can detect it, her work links those complaints to slower visual processing and, in people with lower neurite density in frontal white matter, to lower connectivity in an attention-related brain network.
+
+Measuring such early changes precisely, and understanding which brain systems carry them, is the basis for detecting decline sooner and for testing interventions, from alertness training to physical activity and diet, that may support cognitive health in aging.
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Research themes]{.rr-eyebrow}
+
+## Four connected questions
+:::
+
+[All research themes](research.qmd){.rr-more}
+:::
+
+::: {.rr-grid .rr-grid-4 .rr-fixed}
+::: {.rr-card .rr-theme .attention}
+[Visual attention]{.rr-theme-label}
+
+### Why does visual processing slow with age?
+
+Theory-based measures of attention, such as processing speed and short-term memory capacity, related to brain networks across the adult lifespan.
+
+[Read more](research.qmd#visual-attention){.rr-more .rr-card-foot aria-label="Read more about visual attention"}
+:::
+
+::: {.rr-card .rr-theme .networks}
+[Brain networks]{.rr-theme-label}
+
+### How does the brain's organization support cognition?
+
+Resting-state and diffusion MRI show how functional networks and white-matter pathways relate to individual differences in attention and memory.
+
+[Read more](research.qmd#brain-networks){.rr-more .rr-card-foot aria-label="Read more about brain networks"}
+:::
+
+::: {.rr-card .rr-theme .decline}
+[Cognitive decline and dementia]{.rr-theme-label}
+
+### What are the earliest signs of decline?
+
+From presymptomatic familial Alzheimer's disease to subjective cognitive decline and mild cognitive impairment.
+
+[Read more](research.qmd#cognitive-decline){.rr-more .rr-card-foot aria-label="Read more about cognitive decline and dementia"}
+:::
+
+::: {.rr-card .rr-theme .lifestyle}
+[Lifestyle and interventions]{.rr-theme-label}
+
+### Can attention and brain health be supported?
+
+Alertness training, physical activity and diet, studied in training studies, a randomized controlled trial and a longitudinal cohort.
+
+[Read more](research.qmd#lifestyle-interventions){.rr-more .rr-card-foot aria-label="Read more about lifestyle and interventions"}
+:::
+:::
+
+The same approach extends to [multiple sclerosis, Parkinson's disease and depression](research.qmd#clinical-neuroscience), and to [machine learning on health and social data](research.qmd#data-science).
+:::
+:::
+
+::: {.rr-band}
+::: {.rr-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Selected publications]{.rr-eyebrow}
+
+## Representative work
+
+Studies that show the range of the research, from mechanisms of attention in aging to lifestyle and early decline.
+:::
+
+[All publications](publications.qmd){.rr-more}
+:::
+
+::: {#featured}
+:::
+:::
+:::
+:::
+
+::: {.rr-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[News]{.rr-eyebrow}
+
+## Recent updates
+:::
+
+[All news](news.qmd){.rr-more}
+:::
+
+::: {#news}
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Approach]{.rr-eyebrow}
+
+## From measurement to mechanism
+:::
+
+[Methods and expertise](expertise.qmd){.rr-more}
+:::
+
+::: {.rr-pipeline}
+::: {.rr-card .rr-card-quiet .rr-step}
+[1]{.rr-step-num aria-hidden="true"}
+
+### Measure
+
+- Computational assessment of visual attention (whole and partial report)
+- Neuropsychological assessment
+- Resting-state, task and diffusion MRI
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[2]{.rr-step-num aria-hidden="true"}
+
+### Model
+
+- Group comparisons and individual differences
+- Longitudinal latent growth curve and mediation models
+- Machine learning classification
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[3]{.rr-step-num aria-hidden="true"}
+
+### Translate
+
+- Early markers of cognitive decline
+- Outcomes for training and lifestyle interventions
+- Applications in neurological conditions
+:::
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+[Trajectory]{.rr-eyebrow}
+
+## An international research path {.rr-section-title style="margin-bottom: var(--rr-space-6);"}
+
+<ol class="rr-trajectory">
+<li><div class="rr-when rr-num">2003 to 2011</div><div class="rr-where">Medellín</div><div class="rr-what">Universidad de Antioquia and the Grupo de Neurociencias de Antioquia: familial Alzheimer's disease research</div></li>
+<li><div class="rr-when rr-num">2011 to 2013</div><div class="rr-where">Maastricht</div><div class="rr-what">M.Sc., Maastricht University; research internship at the Donders Institute, Nijmegen</div></li>
+<li><div class="rr-when rr-num">2014 to 2022</div><div class="rr-where">Munich</div><div class="rr-what">Ph.D. and postdoctoral research, LMU Munich</div></li>
+<li><div class="rr-when rr-num">2019 to 2021</div><div class="rr-where">Detroit</div><div class="rr-what">Postdoctoral fellow, Institute of Gerontology, Wayne State University</div></li>
+<li><div class="rr-when rr-num">Since 2022</div><div class="rr-where">Jena</div><div class="rr-what">Department of Neurology, Jena University Hospital</div></li>
+</ol>
+
+[Full career, awards and teaching](about.qmd){.rr-more}
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-cta}
+::: {}
+[Collaboration]{.rr-eyebrow}
+
+## Points of connection
+
+Adriana's expertise spans theory-based cognitive assessment, multimodal neuroimaging and statistical modeling in aging and clinical populations. Researchers, institutions and R&D teams working on related questions are welcome to get in touch.
+
+::: {.rr-actions}
+[Get in touch](contact.qmd){.rr-btn .rr-btn-primary}
+[Methods and expertise](expertise.qmd){.rr-btn .rr-btn-secondary}
+:::
+:::
+
+- Multimodal MRI analysis [Resting-state, diffusion and task fMRI]{}
+- Theory-based assessment of visual attention [Processing speed, short-term memory capacity, alertness]{}
+- Longitudinal and intervention designs [Latent growth curve models, randomized controlled trials]{}
+- Applied machine learning [Clinical imaging and open social data]{}
+:::
+:::
+:::
+
+</main>

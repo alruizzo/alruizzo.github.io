@@ -1,0 +1,64 @@
+/*-- scss:defaults --*/
+// Dark theme tokens, sampled from the same Scientific Colour Maps (v7.0) as light.scss.
+// Elevated layers get lighter (page < surface < band < raised), never darker. Chip tints are
+// 16 % blends of the theme color over the surface. Ratios in README.md.
+
+$rr-page:      #101010;   // grayC[243]
+$rr-surface:   #181818;   // grayC[234]
+$rr-band:      #1E1E1E;   // grayC[226]
+$rr-hairline:  #343434;   // grayC[200]
+$rr-ink:       #F6F6F6;   // grayC[8]
+$rr-text:      #E2E2E2;   // grayC[26]
+$rr-text-2:    #B2B2B2;   // grayC[70]
+$rr-text-3:    #9B9B9B;   // grayC[92]
+$rr-accent:    #D4ABC7;   // acton[196]
+$rr-accent-strong: #DAC6DA; // acton[224]
+$rr-signal:    #F29D6D;   // batlow[192]
+$rr-hero:      #0B0914;   // original hero ink (not a colour-map sample)
+
+$body-bg: $rr-page;
+$body-color: $rr-text;
+$link-color: $rr-accent;
+$primary: $rr-accent;
+$headings-color: $rr-ink;
+$border-color: $rr-hairline;
+$navbar-bg: $rr-surface;
+$navbar-fg: $rr-text;
+$navbar-hl: $rr-accent;
+$footer-bg: $rr-band;
+$footer-fg: $rr-text-2;
+$code-color: $rr-accent-strong;
+
+/*-- scss:rules --*/
+:root {
+  color-scheme: dark;
+  --rr-page: #{$rr-page};
+  --rr-surface: #{$rr-surface};
+  --rr-band: #{$rr-band};
+  --rr-raised: #252525;   // grayC[218]
+  --rr-hairline: #{$rr-hairline};
+  --rr-ink: #{$rr-ink};
+  --rr-text: #{$rr-text};
+  --rr-text-2: #{$rr-text-2};
+  --rr-text-3: #{$rr-text-3};
+  --rr-accent: #{$rr-accent};
+  --rr-accent-strong: #{$rr-accent-strong};
+  --rr-accent-soft: #3A3238;
+  --rr-on-accent: #101010;
+  --rr-signal: #{$rr-signal};
+  --rr-hero: #{$rr-hero};
+  --rr-hero-text: #FFFFFF;
+  --rr-hero-text-2: #DDDDDD;
+  --rr-hero-text-3: #B2B2B2;
+  --rr-hero-accent: #F29D6D;
+  --rr-hero-line: rgba(255, 255, 255, 0.14);
+  --rr-shadow: none;
+  --rr-focus: #{$rr-accent-strong};
+
+  --rr-t-attention: #A4A2EB;  --rr-t-attention-bg: #2E2E3A;   // devon[150]
+  --rr-t-networks:  #5FE2BB;  --rr-t-networks-bg:  #233832;   // hawaii[212]
+  --rr-t-decline:   #F1B3A3;  --rr-t-decline-bg:   #3B312E;   // turku[206]
+  --rr-t-lifestyle: #A0C498;  --rr-t-lifestyle-bg: #2E342C;   // tokyo[190]
+  --rr-t-clinical:  #F0BB5B;  --rr-t-clinical-bg:  #3B3223;   // lajolla[70]
+  --rr-t-data:      #B0B0B0;  --rr-t-data-bg:      #303030;   // grayC[72]
+}

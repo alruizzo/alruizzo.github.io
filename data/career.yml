@@ -1,0 +1,137 @@
+# Career: positions and education, newest first (rendered in this order; listing sort is off).
+# Sources: the previous site's about page and short CV (Feb 2022), ORCID employment record, and
+# the October 2026 CV (files/Ruiz-Rizzo_CV.pdf: project lead, supervision, clinical role, teaching dates).
+# kind: position | education | teaching. highlight + short: shown in the homepage credentials strip.
+- id: jena-neurology
+  kind: position
+  period: "2022 to present"
+  title: Associate researcher
+  org: Department of Neurology, Jena University Hospital
+  place: Jena, Germany
+  highlight: true
+  short: Jena University Hospital, Department of Neurology
+  detail: Leads the project “Brain connectivity underpinnings of visual attention dysfunctions in mild cognitive impairment.”
+- id: lmu-excellent
+  kind: position
+  period: "2021 to 2022"
+  title: LMUexcellent postdoctoral research fellow
+  org: Department of Psychology, LMU Munich
+  place: Munich, Germany
+  highlight: true
+  short: LMUexcellent fellow, LMU Munich
+  detail: "Project: visual processing speed and functional and structural connectivity in older adults with subjective cognitive decline."
+- id: wayne-state
+  kind: position
+  period: "2019 to 2021"
+  title: Postdoctoral research fellow
+  org: Institute of Gerontology and Department of Psychology, Wayne State University
+  place: Detroit, United States
+  highlight: true
+  short: Wayne State University, Institute of Gerontology
+- id: lmu-postdoc
+  kind: position
+  period: "2018 to 2019"
+  title: Postdoctoral research fellow and research supervisor
+  org: General and Experimental Psychology Unit, LMU Munich
+  place: Munich, Germany
+  detail: Research supervisor in the Elite Network of Bavaria M.Sc. program in Neuro-Cognitive Psychology.
+- id: donders
+  kind: position
+  period: "2012 to 2013"
+  title: Research intern
+  org: Donders Institute, Radboud University Nijmegen
+  place: Nijmegen, the Netherlands
+- id: gna-assistant
+  kind: position
+  period: "2008 to 2011"
+  title: Research assistant
+  org: Grupo de Neurociencias de Antioquia (GNA), Universidad de Antioquia
+  place: Medellín, Colombia
+- id: gna-clinical
+  kind: position
+  period: "2008 to 2011"
+  title: Clinical neuropsychologist
+  org: Grupo de Neurociencias de Antioquia (GNA), Universidad de Antioquia
+  place: Medellín, Colombia
+- id: zulia
+  kind: position
+  period: "2007"
+  title: Research intern
+  org: Laboratorio de Neurociencias, Universidad del Zulia
+  place: Maracaibo, Venezuela
+- id: gna-honors
+  kind: position
+  period: "2006 to 2007"
+  title: Research intern, honors program
+  org: Grupo de Neurociencias de Antioquia (GNA), Universidad de Antioquia
+  place: Medellín, Colombia
+
+- id: edu-statistics
+  kind: education
+  period: "2021 to 2022"
+  title: Specialization in Applied Statistics
+  org: Fundación Universitaria Los Libertadores
+  place: Bogotá, Colombia
+  highlight: true
+  short: Specialization in Applied Statistics, Fundación Universitaria Los Libertadores
+  detail: "Thesis: predictors of finding older adults reported missing, based on supervised machine learning models."
+- id: edu-phd
+  kind: education
+  period: "2014 to 2018"
+  title: Ph.D. in Systemic Neurosciences
+  org: Graduate School of Systemic Neurosciences, LMU Munich
+  place: Munich, Germany
+  highlight: true
+  short: Ph.D., Systemic Neurosciences, LMU Munich
+  detail: "Dissertation: Visual processing speed in the aging brain."
+- id: edu-msc
+  kind: education
+  period: "2011 to 2013"
+  title: M.Sc. in Cognitive and Clinical Neuroscience, specialization in Neuropsychology
+  org: Maastricht University
+  place: Maastricht, the Netherlands
+  highlight: true
+  short: M.Sc., Cognitive and Clinical Neuroscience, Maastricht University
+  detail: "Thesis: Neurocognitive processes associated with peer preference in preschool children."
+- id: edu-ba
+  kind: education
+  period: "2003 to 2008"
+  title: B.A. in Psychology
+  org: Universidad de Antioquia
+  place: Medellín, Colombia
+
+- id: supervision-jena
+  kind: teaching
+  period: "2023 to present"
+  title: Doctoral supervisor
+  org: Jena University Hospital
+  place: Jena, Germany
+  detail: Supervises doctoral candidate Hannah Klink, M.Sc.
+- id: supervision-lmu
+  kind: teaching
+  period: "2018 to 2023"
+  title: Supervisor of research internships and master’s theses
+  org: Elite Network of Bavaria M.Sc. program in Neuro-Cognitive Psychology, LMU Munich
+  place: Munich, Germany
+  detail: Six research interns, including an international visiting student, and three master’s theses. Several projects became first-author articles by the students, for example in the European Journal of Neuroscience (2021) and Frontiers in Psychiatry (2023).
+- id: teach-lmu
+  kind: teaching
+  period: "2018 to 2019"
+  title: Lecturer and tutor
+  org: M.Sc. programs in Neuro-Cognitive Psychology and in Psychology, LMU Munich
+  place: Munich, Germany
+  detail: Neuropsychological methods; cognitive neuroscience of aging; functional MRI methods.
+- id: teach-udea
+  kind: teaching
+  period: "2010 to 2011"
+  title: Lecturer
+  org: Department of Psychology, Universidad de Antioquia
+  place: Medellín, Colombia
+  detail: Theories of the mind; biopsychology; neuropsychology.
+- id: teach-udea-medicine
+  kind: teaching
+  period: "2008 to 2010"
+  title: Tutor
+  org: School of Medicine, Universidad de Antioquia
+  place: Medellín, Colombia
+  detail: Memory and amnesias; language and aphasias.

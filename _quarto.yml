@@ -1,0 +1,126 @@
+lang: en
+
+# Share image for every page. Without it Quarto uses each page's first image (on the homepage,
+# the decorative SVG motif, which social networks cannot display).
+# Fallback only: every page sets its own card (assets/social/<page>.png, see scripts/make_social_cards.py).
+image: assets/social/index.png
+image-alt: "Title card: Dr. Adriana L. Ruiz-Rizzo, cognitive and clinical neuroscientist, with her portrait, on a dark background with a network pattern."
+
+language:
+  listing-page-field-categories: "Research themes"
+  listing-page-category-all: "All themes"
+
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+  resources:
+    - files/
+    - assets/
+  # Validates data/*.yml and regenerates the BibTeX export before every full render.
+  pre-render: scripts/prerender.py
+  # Fails the build on broken internal links, missing images, missing alt text
+  # and listing/data count mismatches in the rendered _site.
+  post-render: scripts/check_site.py
+
+# Profile facts (affiliation, e-mail, profile IDs) live in _variables.yml.
+
+website:
+  title: "Dr. Adriana L. Ruiz-Rizzo"
+  description: "Cognitive and clinical neuroscientist studying how aging and early pre-dementia stages alter cognition, behavior and brain network organization."
+  site-url: "https://alruizzo.github.io"
+  favicon: assets/favicon.svg
+  open-graph:
+    locale: en_US
+    site-name: "Dr. Adriana L. Ruiz-Rizzo"
+  twitter-card:
+    creator: "@alruizzo"
+    card-style: summary_large_image
+  page-navigation: false
+  bread-crumbs: false
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    title: "Dr. Adriana L. Ruiz-Rizzo"
+    logo:
+      light: assets/monogram.svg
+      dark: assets/monogram-dark.svg
+    logo-alt: "Home"
+    collapse-below: lg
+    left:
+      - text: "Research"
+        href: research.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Expertise"
+        href: expertise.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - text: "CV (PDF)"
+        href: files/Ruiz-Rizzo_CV.pdf
+        aria-label: "Download CV, PDF, October 2026"
+      - text: "Contact"
+        href: contact.qmd
+  page-footer:
+    left: |
+      **Dr. Adriana L. Ruiz-Rizzo**<br>Department of Neurology, Jena University Hospital
+    # BEGIN profiles footer: generated from data/profiles.yml by `python3 scripts/prerender.py --write-footer`
+    center: |
+        <nav class="rr-social" aria-label="Contact and profiles">
+        <a class="rr-social-link" href="mailto:Adriana.RuizRizzo@med.uni-jena.de"><span class="rr-icon rr-icon-email" aria-hidden="true"></span><span class="rr-social-name">E-mail</span></a>
+        <a class="rr-social-link" href="https://orcid.org/0000-0003-1467-0745"><span class="rr-icon rr-icon-orcid" aria-hidden="true"></span><span class="rr-social-name">ORCID</span></a>
+        <a class="rr-social-link" href="https://scholar.google.com/citations?user=L2v2k5QAAAAJ"><span class="rr-icon rr-icon-scholar" aria-hidden="true"></span><span class="rr-social-name">Google Scholar</span></a>
+        <a class="rr-social-link" href="https://osf.io/z2ke7/"><span class="rr-icon rr-icon-osf" aria-hidden="true"></span><span class="rr-social-name">OSF</span></a>
+        <a class="rr-social-link" href="https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo"><span class="rr-icon rr-icon-researchgate" aria-hidden="true"></span><span class="rr-social-name">ResearchGate</span></a>
+        <a class="rr-social-link" href="https://github.com/alruizzo"><span class="rr-icon rr-icon-github" aria-hidden="true"></span><span class="rr-social-name">GitHub</span></a>
+        <a class="rr-social-link" href="https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"><span class="rr-icon rr-icon-linkedin" aria-hidden="true"></span><span class="rr-social-name">LinkedIn</span></a>
+        <a class="rr-social-link" href="https://x.com/alruizzo"><span class="rr-icon rr-icon-x" aria-hidden="true"></span><span class="rr-social-name">X</span></a>
+        </nav>
+    # END profiles footer
+    right: |
+      © 2026 Adriana L. Ruiz-Rizzo · [Legal notice](legal.qmd) · [Privacy](privacy.qmd)
+
+format:
+  html:
+    theme:
+      light: [default, styles/light.scss, styles/site.scss]
+      dark: [default, styles/dark.scss, styles/site.scss]
+    respect-user-color-scheme: true
+    toc: false
+    filters:
+      - filters/share-meta.lua
+    # The site has no mathematics; this stops Quarto loading MathJax and a polyfill from public CDNs.
+    html-math-method: plain
+    anchor-sections: false
+    smooth-scroll: false
+    link-external-icon: false
+    link-external-newwindow: false
+    grid:
+      body-width: 760px
+      margin-width: 260px
+    include-before-body:
+      # Quarto inserts this after the navbar; the script moves the link to the top of <body> so it is the first Tab stop.
+      - text: |
+          <a class="rr-skip" href="#quarto-document-content">Skip to main content</a>
+          <script>document.body.prepend(document.querySelector(".rr-skip"));</script>
+    # The theme toggle is a link styled as an icon; give it a button role and a label that says what
+    # a click will do, kept in step with Quarto's .alternate class (set while dark mode is active).
+    include-after-body:
+      - text: |
+          <script>
+          (function () {
+            document.querySelectorAll(".quarto-color-scheme-toggle").forEach(function (t) {
+              t.setAttribute("role", "button");
+              var sync = function () {
+                var label = t.classList.contains("alternate") ? "Switch to light mode" : "Switch to dark mode";
+                t.setAttribute("aria-label", label);
+                t.setAttribute("title", label);
+              };
+              new MutationObserver(sync).observe(t, { attributes: true, attributeFilter: ["class"] });
+              sync();
+            });
+          })();
+          </script>

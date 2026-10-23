@@ -1,0 +1,7 @@
+```{=html}
+<ul class="list rr-coauthors">
+<% for (const item of items) { %>
+<li class="rr-coauthor" <%= metadataAttrs(item) %>><span class="rr-coauthor-name"><%- item.name %></span><span class="rr-coauthor-meta rr-num"><%- item.joint %> joint publications · <%- item.first_year === item.last_year ? item.first_year : item.first_year + " to " + item.last_year %></span></li>
+<% } %>
+</ul>
+```

@@ -1,0 +1,67 @@
+/*-- scss:defaults --*/
+// Light theme tokens. Every color except the hero ground is a sample of Fabio Crameri's Scientific Colour Maps
+// (v7.0, doi:10.5281/zenodo.4491293), noted as map[index of 256]; chip tints are 10 % blends of
+// the theme color over white. Contrast (WCAG) is measured on the surface each tone sits on;
+// see README.md "Design system". Re-measure after any change.
+
+$rr-page:      #F5F5F5;   // grayC[9]
+$rr-surface:   #FFFFFF;   // grayC[0]
+$rr-band:      #ECECEC;   // grayC[17]
+$rr-hairline:  #D2D2D2;   // grayC[40]
+$rr-ink:       #1A1A1A;   // grayC[232]  headings          17.4:1 on surface
+$rr-text:      #252525;   // grayC[218]  primary label     15.3:1 on surface
+$rr-text-2:    #474747;   // grayC[178]  secondary label    9.3:1 on surface
+$rr-text-3:    #5B5B5B;   // grayC[156]  tertiary label     6.8:1 on surface, 5.8:1 on band
+$rr-accent:    #6D5480;   // acton[56]   interactive accent 6.5:1 on surface
+$rr-accent-strong: #4D3D68; // acton[30]
+$rr-signal:    #F29D6D;   // batlow[192] warm highlight (decorative, and text only on the hero)
+$rr-hero:      #16132B;   // dark editorial ground (original hero ink, kept by owner choice; not a colour-map sample)
+
+$body-bg: $rr-page;
+$body-color: $rr-text;
+$link-color: $rr-accent;
+$primary: $rr-accent;
+$headings-color: $rr-ink;
+$border-color: $rr-hairline;
+$navbar-bg: $rr-surface;
+$navbar-fg: $rr-text;
+$navbar-hl: $rr-accent;
+$footer-bg: $rr-band;
+$footer-fg: $rr-text-2;
+$code-color: $rr-accent-strong;
+
+/*-- scss:rules --*/
+:root {
+  color-scheme: light;
+  --rr-page: #{$rr-page};
+  --rr-surface: #{$rr-surface};
+  --rr-band: #{$rr-band};
+  --rr-raised: #{$rr-surface};
+  --rr-hairline: #{$rr-hairline};
+  --rr-ink: #{$rr-ink};
+  --rr-text: #{$rr-text};
+  --rr-text-2: #{$rr-text-2};
+  --rr-text-3: #{$rr-text-3};
+  --rr-accent: #{$rr-accent};
+  --rr-accent-strong: #{$rr-accent-strong};
+  --rr-accent-soft: #F0EEF2;
+  --rr-on-accent: #FFFFFF;
+  --rr-signal: #{$rr-signal};
+  --rr-hero: #{$rr-hero};
+  --rr-hero-text: #FFFFFF;
+  --rr-hero-text-2: #DDDDDD;   // grayC[30]  13.3:1 on hero
+  --rr-hero-text-3: #B2B2B2;   // grayC[70]   8.5:1 on hero
+  --rr-hero-accent: #F29D6D;   // batlow[192] 8.5:1 on hero
+  --rr-hero-line: rgba(255, 255, 255, 0.18);
+  --rr-shadow: 0 1px 2px rgba(26, 26, 26, 0.05), 0 8px 24px rgba(26, 26, 26, 0.06);
+  --rr-focus: #{$rr-accent};
+
+  // Research themes: one hue family per theme, each from its own colour map, reused for every
+  // chip, glyph and label. Each tone passes 4.5:1 as text on white, page, band and its own chip.
+  --rr-t-attention: #2C5F9A;  --rr-t-attention-bg: #EAEFF5;   // devon[72]
+  --rr-t-networks:  #205E61;  --rr-t-networks-bg:  #E9EFEF;   // batlow[62]
+  --rr-t-decline:   #7D3130;  --rr-t-decline-bg:   #F2EAEA;   // bilbao[214]
+  --rr-t-lifestyle: #436A25;  --rr-t-lifestyle-bg: #ECF0E9;   // bamako[96]
+  --rr-t-clinical:  #985C34;  --rr-t-clinical-bg:  #F5EFEB;   // hawaii[78]
+  --rr-t-data:      #5D5D5D;  --rr-t-data-bg:      #EFEFEF;   // grayC[154]
+}

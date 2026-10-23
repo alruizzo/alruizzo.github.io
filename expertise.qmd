@@ -1,0 +1,163 @@
+---
+title: "Methods and expertise"
+description: "Theory-based cognitive assessment, multimodal neuroimaging and statistical modeling for research on aging, early cognitive decline and neurological conditions."
+image: assets/social/expertise.png
+image-alt: "Title card: Methods and expertise, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
+listing:
+  - id: outputs
+    contents: data/outputs.yml
+    template: _templates/outputs.ejs
+    sort: false
+    page-size: 100
+---
+
+This page summarizes the methods Adriana works with, the populations she has studied and where that expertise applies. Each item links to published work that uses it.
+
+## A typical study, end to end {#workflow}
+
+Most studies combine a behavioral measurement layer with one or more imaging modalities, then relate the two with an analysis approach matched to the design. The scheme follows Adriana's own overview figure, [*Brain connectivity, visual attention, and visual memory*](https://doi.org/10.6084/m9.figshare.32064264) (figshare, CC BY 4.0).
+
+::: {.rr-pipeline}
+::: {.rr-card .rr-card-quiet .rr-step}
+[1]{.rr-step-num aria-hidden="true"}
+
+### Behavior
+
+- Computerized visual attention and visual memory tasks
+- Parameters from the theory of visual attention: processing speed, short-term memory capacity, top-down control, spatial weighting
+- Neuropsychological assessment and questionnaires on subjective cognition
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[2]{.rr-step-num aria-hidden="true"}
+
+### Brain
+
+- Resting-state functional MRI
+- Diffusion MRI: diffusion tensor and neurite density (NODDI) metrics, tractography
+- Task-based functional MRI
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[3]{.rr-step-num aria-hidden="true"}
+
+### Analysis
+
+- Group-based comparisons
+- Individual-differences analyses
+- Longitudinal modeling, including latent growth curve and mediation models
+:::
+:::
+
+## Methods in detail {#methods}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Computational assessment of visual attention
+
+Whole- and partial-report tasks modeled with Bundesen's theory of visual attention yield independent, latent-level parameters that are separate from motor speed. Used in healthy younger and older adults, amnestic mild cognitive impairment and Parkinson's disease.
+
+[Neurobiology of Aging 2017](https://doi.org/10.1016/j.neurobiolaging.2017.03.029) · [Frontiers in Psychiatry 2023](https://doi.org/10.3389/fpsyt.2023.1063151) · [BMJ Neurology Open 2025](https://doi.org/10.1136/bmjno-2024-000953)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Intrinsic functional connectivity
+
+Resting-state fMRI analyzed with independent component analysis and dual regression, network-level and inter-network connectivity, and frequency-specific analyses across slow-frequency bands.
+
+[Neurobiology of Aging 2019](https://doi.org/10.1016/j.neurobiolaging.2018.09.014) · [European Journal of Neuroscience 2021](https://doi.org/10.1111/ejn.15206) · [European Journal of Neurology 2022](https://doi.org/10.1111/ene.15445)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Diffusion MRI and white matter
+
+Fractional anisotropy and neurite density (NODDI) in major tracts such as the fornix and forceps minor, and probabilistic tractography of thalamo-cortical connections.
+
+[NeuroImage 2022](https://doi.org/10.1016/j.neuroimage.2022.119662) · [Neurobiology of Aging 2024](https://doi.org/10.1016/j.neurobiolaging.2024.01.012) · [Methods in Molecular Biology 2024](https://doi.org/10.1007/978-1-0716-3774-6_8)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Task fMRI and electrophysiology
+
+Memory encoding and retrieval paradigms with functional MRI, and high-density (128-channel) event-related potentials in presymptomatic familial Alzheimer's disease.
+
+[Archives of Clinical Neuropsychology 2022](https://doi.org/10.1093/arclin/acab061) · [Annals of Neurology 2010](https://doi.org/10.1002/ana.22105) · [Neurology 2011](https://doi.org/10.1212/WNL.0b013e318227b1b0)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Longitudinal and intervention designs
+
+Latent growth curve and mediation models for multi-wave cohort data; training studies and randomized controlled trials with cognitive and imaging outcomes.
+
+[Psychological Science 2021](https://doi.org/10.1177/0956797620965520) · [Frontiers in Aging Neuroscience 2023](https://doi.org/10.3389/fnagi.2023.1254194) · [GeroScience 2026](https://doi.org/10.1007/s11357-026-02324-6)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Machine learning
+
+Supervised classification, including gradient boosting and support vector machines with cross-validation, applied to open social data and multimodal MRI.
+
+[Journal of Computational Social Science 2022](https://doi.org/10.1007/s42001-022-00171-x) · [Frontiers in Neuroscience 2025](https://doi.org/10.3389/fnins.2025.1689302)
+:::
+:::
+
+## Populations and cohorts {#populations}
+
+Healthy younger and older adults across the adult lifespan; older adults with subjective cognitive decline; patients with amnestic mild cognitive impairment; presymptomatic carriers of the PSEN1 E280A mutation for familial Alzheimer's disease in Colombia; participants of the DELCODE cohort study; patients with relapsing-remitting multiple sclerosis, Parkinson's disease and major depression.
+
+## Tools and skills {#tools}
+
+<ul class="rr-chips" aria-label="Tools and skills">
+<li><span class="rr-chip plain">Python</span></li>
+<li><span class="rr-chip plain">R</span></li>
+<li><span class="rr-chip plain">MATLAB</span></li>
+<li><span class="rr-chip plain">Git</span></li>
+<li><span class="rr-chip plain">Statistics</span></li>
+<li><span class="rr-chip plain">Machine learning</span></li>
+<li><span class="rr-chip plain">Data science</span></li>
+<li><span class="rr-chip plain">Brain imaging</span></li>
+<li><span class="rr-chip plain">Brain connectivity</span></li>
+<li><span class="rr-chip plain">Scientific writing</span></li>
+<li><span class="rr-chip plain">Project management</span></li>
+<li><span class="rr-chip plain">Mentoring</span></li>
+<li><span class="rr-chip plain">Public speaking</span></li>
+</ul>
+
+## Where this expertise applies {#applications}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Early detection and risk
+
+Sensitive behavioral and imaging markers in people at risk of dementia, from genetic risk to subjective cognitive decline and mild cognitive impairment.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Outcome measures for interventions and trials
+
+Theory-based attention parameters and imaging outcomes for training, lifestyle and clinical studies; early work contributed to composite cognitive endpoints for presymptomatic Alzheimer's disease ([Alzheimer's & Dementia 2011](https://doi.org/10.1016/j.jalz.2011.05.1729)).
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Clinical neurology
+
+Cognitive and network characterization of symptoms such as fatigue, sleep problems and visual processing deficits in multiple sclerosis and Parkinson's disease.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Data for public benefit
+
+Machine learning on open administrative data, as in predicting outcomes for older adults reported missing.
+:::
+:::
+
+## Open science {#open-science}
+
+Data, analysis scripts and workflows for many studies are shared openly on the [Open Science Framework]({{< var links.osf >}}), and several articles were first released as preprints. Each record below links to its repository and, where applicable, to the publication it accompanies.
+
+::: {#outputs}
+:::
+
+::: {.rr-note}
+Interested in working together on any of these methods? See [collaboration and contact](contact.qmd).
+:::

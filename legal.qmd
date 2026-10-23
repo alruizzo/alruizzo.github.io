@@ -1,0 +1,31 @@
+---
+title: "Legal notice"
+description: "Impressum: provider information for this website pursuant to § 5 DDG."
+image: assets/social/legal.png
+image-alt: "Title card: Legal notice, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
+---
+
+## Impressum {#impressum}
+
+Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) / Information pursuant to § 5 DDG:
+
+Dr. Adriana L. Ruiz-Rizzo<br>
+{{< var legal.address >}}
+
+E-mail: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
+
+Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV) / Responsible for content: Dr. Adriana L. Ruiz-Rizzo, address as above.
+
+## Nature of this website {#nature}
+
+This is a personal academic website. It is not an official website of Jena University Hospital or of any other institution named on it; affiliations are stated for information only.
+
+## Links to other websites {#links}
+
+This site links to external websites such as publishers, data repositories and scholarly profiles. Their operators are responsible for their content. No unlawful content was apparent when the links were set; a link will be removed promptly if a violation becomes known.
+
+## Copyright {#copyright}
+
+Texts are by Adriana L. Ruiz-Rizzo unless stated otherwise. Figures reproduced from publications and the logos of funders and institutions remain with their rights holders and are used under the terms given in their credits; logos are shown only to acknowledge funding and affiliations.
+
+[Last reviewed: {{< var legal.reviewed >}}]{.rr-eyebrow style="margin-top: var(--rr-space-6);"}

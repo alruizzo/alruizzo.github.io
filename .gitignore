@@ -1,0 +1,11 @@
+# Build output and Quarto caches (generated; never committed)
+/_site/
+/.quarto/
+/data/generated/
+**/*.quarto_ipynb
+__pycache__/
+*.pyc
+.DS_Store
+
+# Internal notes that never leave this machine
+*.local.md

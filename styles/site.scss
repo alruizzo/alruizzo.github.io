@@ -1,0 +1,767 @@
+/*-- scss:defaults --*/
+// Shared design system. Colors come only from the CSS custom properties defined in
+// light.scss / dark.scss, so every rule below works in both themes.
+
+$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: ui-serif, "New York", "Iowan Old Style", Charter, "Bitstream Charter", Georgia, Cambria, serif;
+$font-size-root: 16px;
+$font-size-base: 1.0625rem;          // 17px body
+$line-height-base: 1.6;
+$headings-font-weight: 600;
+$headings-line-height: 1.15;
+$border-radius: 10px;
+$border-radius-lg: 14px;
+$navbar-padding-y: 0.6rem;
+
+/*-- scss:rules --*/
+
+// ---------- Scale (modular, ratio ~1.25) ----------
+// 13 micro/caption · 15 small · 17 body · 21 lead · 26 h3 · 33 h2 · 44 h1 · clamp(44-68) display
+:root {
+  --rr-fs-micro: 0.8125rem;
+  --rr-fs-small: 0.9375rem;
+  --rr-fs-body: 1.0625rem;
+  --rr-fs-lead: 1.3125rem;
+  --rr-fs-h3: 1.3125rem;
+  --rr-fs-h2: clamp(1.75rem, 1.4rem + 1.2vw, 2.1rem);
+  --rr-fs-h1: clamp(2.2rem, 1.7rem + 1.9vw, 2.85rem);
+  --rr-fs-display: clamp(2.6rem, 1.6rem + 3.6vw, 4.25rem);
+  --rr-font-display: #{$headings-font-family};
+  --rr-font-text: #{$font-family-sans-serif};
+  --rr-space-1: 0.25rem; --rr-space-2: 0.5rem; --rr-space-3: 0.75rem; --rr-space-4: 1rem;
+  --rr-space-5: 1.5rem;  --rr-space-6: 2rem;   --rr-space-7: 3rem;    --rr-space-8: 4rem; --rr-space-9: 6rem;
+  --rr-wide: 1180px;
+  --rr-measure: 68ch;
+  --rr-radius: 14px;
+  --rr-radius-sm: 8px;
+}
+
+html { scrollbar-gutter: stable; }
+body {
+  background: var(--rr-page);
+  color: var(--rr-text);
+  font-family: var(--rr-font-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+p, li { text-wrap: pretty; }
+h1, h2, h3, h4, .title { text-wrap: balance; color: var(--rr-ink); }
+h1, h2, .title { font-family: var(--rr-font-display); letter-spacing: -0.015em; }
+h3, h4, h5 { font-family: var(--rr-font-text); font-weight: 650; letter-spacing: -0.005em; }
+h2 { font-size: var(--rr-fs-h2); margin-top: var(--rr-space-7); margin-bottom: var(--rr-space-4); }
+h3 { font-size: var(--rr-fs-h3); margin-top: var(--rr-space-6); margin-bottom: var(--rr-space-3); }
+h4 { font-size: var(--rr-fs-body); }
+// Quarto draws a hairline under every h2; sections here are separated by bands and spacing instead.
+h2, .h2, main h2, #quarto-document-content h2 { border-bottom: 0 !important; padding-bottom: 0 !important; }
+
+a { color: var(--rr-accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--rr-accent-strong); text-decoration-thickness: 2px; }
+
+// Visible focus for every interactive element (WCAG 2.4.7 / 2.4.11).
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+summary:focus-visible, .nav-link:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--rr-focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.rr-num, .rr-year, table { font-variant-numeric: tabular-nums slashed-zero lining-nums; }
+
+.rr-sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.rr-skip {
+  position: absolute; left: var(--rr-space-4); top: -100px; z-index: 2000;
+  background: var(--rr-accent); color: var(--rr-on-accent) !important; padding: 0.6rem 1rem; border-radius: 999px;
+  font-weight: 650; text-decoration: none;
+}
+.rr-skip:focus { top: var(--rr-space-3); }
+main:focus { outline: none; }
+// The homepage <main> reuses Quarto's content id for the skip link; drop the offsets Quarto gives that id.
+#quarto-document-content.rr-home { margin-top: 0 !important; padding-top: 0 !important; }
+
+// ---------- Navbar ----------
+.navbar {
+  background: var(--rr-surface) !important;
+  border-bottom: 1px solid var(--rr-hairline);
+  box-shadow: none;
+}
+.navbar .navbar-brand, .navbar .navbar-title {
+  font-family: var(--rr-font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--rr-ink) !important;
+}
+.navbar .navbar-brand img { max-height: 30px; }
+// On phones the name matters more than the monogram: keep it whole.
+@media (max-width: 419.98px) {
+  .navbar .navbar-brand .navbar-logo { display: none !important; }
+  .navbar .navbar-brand, .navbar .navbar-title { font-size: 0.95rem; }
+  // Quarto caps the brand at the row width minus 115 px; its default 16 px right margin left the
+  // full "Dr." name 2 px short at 375 px, so it truncated and the search icon wrapped below.
+  .navbar .navbar-brand { margin-right: 0.375rem; }
+  .navbar .navbar-container { flex-wrap: nowrap; }
+}
+.navbar .nav-link {
+  color: var(--rr-text) !important;
+  font-weight: 550;
+  font-size: var(--rr-fs-small);
+  padding: 0.45rem 0.8rem !important;
+  border-radius: 999px;
+}
+.navbar .nav-link:hover { color: var(--rr-accent) !important; background: var(--rr-accent-soft); }
+.navbar .nav-link.active { color: var(--rr-accent) !important; }
+.navbar .nav-link.active .menu-text { text-decoration: underline; text-underline-offset: 0.45em; text-decoration-thickness: 2px; }
+// "Contact" is the one call to action in the navbar.
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link {
+  background: var(--rr-accent);
+  color: var(--rr-on-accent) !important;
+  margin-left: 0.35rem;
+}
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link:hover { background: var(--rr-accent-strong); }
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link.active .menu-text { text-decoration: none; }
+.navbar-toggler { border-color: var(--rr-hairline); }
+.navbar .bi { color: var(--rr-text-2); }
+// Theme toggle: Quarto's default is an on/off switch glyph. Show what the button does instead:
+// a moon in light mode (switch to dark) and a sun in dark mode (Quarto adds .alternate while the
+// dark theme is active). Masks take the navbar text color; hover recolors only the icon.
+.navbar .quarto-color-scheme-toggle {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; padding: 0 !important;
+  color: var(--rr-text-2);
+}
+.navbar .quarto-color-scheme-toggle .bi::before {
+  width: 1.2rem; height: 1.2rem;
+  background-image: none !important; background-color: currentColor;
+  -webkit-mask: url("assets/icons/moon.svg") center / contain no-repeat;
+  mask: url("assets/icons/moon.svg") center / contain no-repeat;
+}
+.navbar .quarto-color-scheme-toggle.alternate .bi::before {
+  -webkit-mask-image: url("assets/icons/sun.svg"); mask-image: url("assets/icons/sun.svg");
+}
+.navbar .quarto-color-scheme-toggle:hover { color: var(--rr-accent); }
+// Phones: keep the name, toggle and search on one row (the target stays 40 px tall).
+@media (max-width: 419.98px) {
+  .navbar .quarto-navbar-tools { flex-wrap: nowrap; }
+  .navbar .quarto-color-scheme-toggle { width: 32px; }
+}
+@media (forced-colors: active) { .navbar .quarto-color-scheme-toggle .bi::before { background-color: CanvasText; } }
+
+// ---------- Page title block (interior pages) ----------
+#title-block-header.quarto-title-block { margin-bottom: var(--rr-space-6); }
+// Quarto emits an empty title block on the title-less homepage; it would leave a gap above the hero.
+#title-block-header:empty { display: none; }
+#title-block-header .title {
+  font-size: var(--rr-fs-h1);
+  font-weight: 600;
+  line-height: 1.08;
+  margin-bottom: var(--rr-space-3);
+}
+#title-block-header .description, #title-block-header .subtitle {
+  font-size: var(--rr-fs-lead);
+  line-height: 1.5;
+  color: var(--rr-text-2);
+  max-width: var(--rr-measure);
+  font-family: var(--rr-font-text);
+  font-weight: 400;
+}
+.rr-eyebrow, #title-block-header .quarto-title-meta-heading {
+  display: block;
+  font-size: var(--rr-fs-micro);
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--rr-text-3);
+  margin-bottom: var(--rr-space-2);
+}
+
+main.content { padding-bottom: var(--rr-space-8); }
+main p, main li { max-width: var(--rr-measure); }
+.rr-lead { font-size: var(--rr-fs-lead); line-height: 1.5; color: var(--rr-text-2); }
+
+// ---------- Layout helpers (homepage uses page-layout: custom) ----------
+.rr-wrap {
+  width: 100%;
+  max-width: calc(var(--rr-wide) + 2 * var(--rr-space-5));
+  margin-inline: auto;
+  padding-inline: var(--rr-space-5);
+}
+@media (max-width: 575.98px) { .rr-wrap { padding-inline: var(--rr-space-4); } }
+.rr-section { padding-block: var(--rr-space-8); }
+.rr-section > .rr-wrap > h2:first-child, .rr-section h2.rr-section-title { margin-top: 0; }
+.rr-band {
+  background: var(--rr-band);
+  border-block: 1px solid var(--rr-hairline);
+}
+.rr-section-head {
+  display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between;
+  gap: var(--rr-space-3) var(--rr-space-6);
+  margin-bottom: var(--rr-space-6);
+}
+.rr-section-head h2 { margin: 0; }
+.rr-section-head p { margin: var(--rr-space-2) 0 0; color: var(--rr-text-2); max-width: 60ch; }
+.rr-more { font-weight: 600; font-size: var(--rr-fs-small); }
+.rr-section-head .rr-more { white-space: nowrap; }
+.rr-more::after { content: " \2192"; }
+
+.rr-grid { display: grid; gap: var(--rr-space-5); }
+.rr-grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.rr-grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); }
+.rr-grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+@media (min-width: 992px) {
+  .rr-grid-4.rr-fixed { grid-template-columns: repeat(4, 1fr); }
+  .rr-grid-3.rr-fixed { grid-template-columns: repeat(3, 1fr); }
+  .rr-grid-2.rr-fixed { grid-template-columns: repeat(2, 1fr); }
+}
+
+// ---------- Buttons ----------
+.rr-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: var(--rr-fs-small);
+  text-decoration: none !important;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.rr-btn-primary { background: var(--rr-accent); color: var(--rr-on-accent) !important; }
+.rr-btn-primary:hover { background: var(--rr-accent-strong); }
+.rr-btn-secondary { border-color: var(--rr-hairline); color: var(--rr-ink) !important; background: var(--rr-surface); }
+.rr-btn-secondary:hover { border-color: var(--rr-accent); color: var(--rr-accent) !important; }
+.rr-actions { display: flex; flex-wrap: wrap; gap: var(--rr-space-3); margin-top: var(--rr-space-5); }
+
+// ---------- Cards ----------
+.rr-card {
+  background: var(--rr-surface);
+  border: 1px solid var(--rr-hairline);
+  border-radius: var(--rr-radius);
+  padding: var(--rr-space-5);
+  box-shadow: var(--rr-shadow);
+  display: flex; flex-direction: column;
+}
+.rr-band .rr-card { background: var(--rr-raised); }
+.rr-card h3 { margin-top: 0; font-size: 1.125rem; line-height: 1.3; }
+.rr-card p { color: var(--rr-text-2); font-size: var(--rr-fs-small); margin-bottom: var(--rr-space-3); }
+.rr-card p:last-child { margin-bottom: 0; }
+.rr-card .rr-card-foot, .rr-card p:has(> .rr-card-foot) { margin-top: auto; padding-top: var(--rr-space-3); font-size: var(--rr-fs-small); }
+.rr-grid + p { margin-top: var(--rr-space-5); color: var(--rr-text-2); }
+.rr-card-quiet { box-shadow: none; }
+
+// Theme identity: a small square glyph plus the theme's name (color is never the only cue).
+.rr-theme { --t: var(--rr-text-2); --t-bg: var(--rr-band); }
+.rr-theme.attention { --t: var(--rr-t-attention); --t-bg: var(--rr-t-attention-bg); }
+.rr-theme.networks  { --t: var(--rr-t-networks);  --t-bg: var(--rr-t-networks-bg); }
+.rr-theme.decline   { --t: var(--rr-t-decline);   --t-bg: var(--rr-t-decline-bg); }
+.rr-theme.lifestyle { --t: var(--rr-t-lifestyle); --t-bg: var(--rr-t-lifestyle-bg); }
+.rr-theme.clinical  { --t: var(--rr-t-clinical);  --t-bg: var(--rr-t-clinical-bg); }
+.rr-theme.data      { --t: var(--rr-t-data);      --t-bg: var(--rr-t-data-bg); }
+.rr-theme-label {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: var(--rr-fs-micro); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--t);
+  margin-bottom: var(--rr-space-3);
+}
+.rr-theme-label::before {
+  content: ""; width: 0.6rem; height: 0.6rem; border-radius: 2px; background: var(--t); flex: none;
+}
+.rr-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: var(--rr-fs-micro); font-weight: 600; line-height: 1.2;
+  padding: 0.28rem 0.6rem; border-radius: 999px;
+  color: var(--t, var(--rr-text-2)); background: var(--t-bg, var(--rr-band));
+  white-space: nowrap; text-decoration: none !important;
+}
+.rr-chip::before { content: ""; width: 0.45rem; height: 0.45rem; border-radius: 2px; background: currentColor; flex: none; }
+.rr-chip.plain::before { display: none; }
+.rr-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+.rr-chips li { max-width: none; }
+
+// ---------- Homepage hero ----------
+.rr-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--rr-hero);
+  color: var(--rr-hero-text-2);
+  padding-block: clamp(3rem, 2rem + 4vw, 6rem) clamp(3rem, 2rem + 3vw, 5rem);
+  isolation: isolate;
+}
+.rr-hero-grid {
+  display: grid; gap: var(--rr-space-7);
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  align-items: center;
+}
+@media (max-width: 899.98px) { .rr-hero-grid { grid-template-columns: 1fr; gap: var(--rr-space-6); } }
+.rr-hero .rr-eyebrow { color: var(--rr-hero-accent); }
+.rr-hero h1 {
+  font-size: var(--rr-fs-display);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--rr-hero-text);
+  margin: 0 0 var(--rr-space-5);
+  font-weight: 600;
+}
+.rr-hero .rr-statement {
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--rr-hero-text);
+  max-width: 34em;
+  margin-bottom: var(--rr-space-4);
+}
+.rr-hero .rr-support { color: var(--rr-hero-text-2); max-width: 38em; margin-bottom: var(--rr-space-4); }
+.rr-hero .rr-affil { color: var(--rr-hero-text-3); font-size: var(--rr-fs-small); display: flex; gap: 0.5rem; align-items: center; }
+.rr-hero .rr-affil svg { flex: none; }
+.rr-hero a:not(.rr-btn) { color: var(--rr-hero-text); }
+.rr-hero .rr-btn-secondary { background: transparent; color: var(--rr-hero-text) !important; border-color: var(--rr-hero-line); }
+.rr-hero .rr-btn-secondary:hover { border-color: var(--rr-hero-text); color: var(--rr-hero-text) !important; }
+.rr-hero .rr-btn-primary { background: #FFFFFF; color: var(--rr-hero) !important; }
+.rr-hero .rr-btn-primary:hover { background: var(--rr-hero-text-2); }
+.rr-hero a:focus-visible { outline-color: var(--rr-hero-accent); }
+.rr-portrait {
+  justify-self: center;
+  width: min(100%, 300px);
+  margin: 0;
+}
+// The portrait source is a 3:2 landscape photograph (1450 x 967). The square frame crops it with
+// object-fit, never stretching it; 43% horizontal keeps her face centered in the crop.
+.rr-portrait img, .rr-about-portrait {
+  display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 43% 50%;
+  border-radius: 22px;
+  border: 1px solid var(--rr-hero-line);
+}
+.rr-about-portrait { width: 160px; flex: none; border-radius: 18px; border-color: var(--rr-hairline); }
+@media (max-width: 899.98px) { .rr-portrait { justify-self: start; width: 168px; order: -1; } }
+// Hero profile links as pills: icon and name on a faint translucent fill (data/profiles.yml, hero: true).
+.rr-hero-profiles { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: var(--rr-space-5) 0 0; padding: 0; list-style: none; }
+.rr-hero-profiles li { margin: 0; max-width: none; }
+.rr-hero a.rr-pill-link {
+  display: inline-flex; align-items: center; gap: 0.55rem; min-height: 40px;
+  padding: 0.45rem 1rem 0.45rem 0.85rem; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06);
+  color: var(--rr-hero-text); font-size: var(--rr-fs-small); font-weight: 550; line-height: 1; text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.rr-hero a.rr-pill-link .rr-icon { font-size: 1.1rem; }
+.rr-hero a.rr-pill-link:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.32); }
+.rr-hero-motif {
+  position: absolute; z-index: -1; pointer-events: none;
+  right: -60px; bottom: -40px; width: min(62vw, 760px); height: auto; opacity: 0.55;
+}
+@media (max-width: 899.98px) { .rr-hero-motif { opacity: 0.28; width: 120vw; right: -30vw; } }
+
+// Hero entrance: motif fades in, portrait
+// rises, accent rule grows, the name is revealed by a block wipe, then statement, details and
+// actions rise in sequence. Base styles are the final visible state. Every entrance animation is
+// scoped to .rr-motion (added by JS only when motion is allowed), and .rr-entered (added by JS
+// after 2.6 s) cancels them, so the name can never stay hidden if a browser pauses animations.
+.rr-hero-head { position: relative; padding-left: 22px; margin-bottom: var(--rr-space-5); }
+.rr-hero-head h1 { margin: 0; }
+.rr-hero-rule {
+  position: absolute; left: 0; top: 0.35em; bottom: 0.3em; width: 4px; border-radius: 2px;
+  background: var(--rr-hero-accent); transform-origin: top;
+}
+.rr-motion .rr-hero-rule { animation: rr-rule-in .6s cubic-bezier(.39, .57, .56, 1) .45s both; }
+.rr-wipe { position: relative; display: inline-block; }
+.rr-wipe::after {
+  content: ""; position: absolute; inset: 0 -6px; background: var(--rr-hero-accent);
+  transform: scaleX(0); transform-origin: left;
+}
+.rr-motion .rr-wipe { animation: rr-wipe-text 1.1s linear .45s both; }
+.rr-motion .rr-wipe::after { animation: rr-wipe-block 1.1s cubic-bezier(.77, 0, .18, 1) .45s both; }
+.rr-motion .rr-hero .rr-eyebrow { animation: rr-rise .6s cubic-bezier(.39, .57, .56, 1) .15s both; }
+.rr-motion .rr-hero .rr-statement { animation: rr-rise .7s cubic-bezier(.39, .57, .56, 1) 1.05s both; }
+.rr-motion .rr-hero .rr-support { animation: rr-rise .7s cubic-bezier(.39, .57, .56, 1) 1.15s both; }
+.rr-motion .rr-hero .rr-affil  { animation: rr-rise .7s cubic-bezier(.39, .57, .56, 1) 1.25s both; }
+.rr-motion .rr-hero .rr-actions { animation: rr-rise .7s cubic-bezier(.39, .57, .56, 1) 1.35s both; }
+.rr-motion .rr-hero .rr-profiles-wrap { animation: rr-rise .7s cubic-bezier(.39, .57, .56, 1) 1.45s both; }
+.rr-motion .rr-portrait img { animation: rr-panel-in .8s cubic-bezier(.39, .57, .56, 1) .15s both; }
+.rr-motion .rr-hero-motif {
+  animation: rr-motif-in 1.4s cubic-bezier(.22, .61, .36, 1) both,
+             rr-drift 28s ease-in-out 1.4s infinite alternate;
+}
+// Living network (inline SVG from scripts/make_motif.py): hub halos breathe and short warm signals
+// travel along a few edges, a few at a time. Slow, low-contrast and decorative; motion only.
+// Signals are hidden by default (dash parked before the path start), so without motion the
+// network is simply static.
+.rr-signal { stroke-dasharray: 0.16 2; stroke-dashoffset: 0.16; opacity: 0; }
+.rr-halo { transform-box: fill-box; transform-origin: center; }
+.rr-motion .rr-signal { animation: rr-signal var(--rr-dur, 8s) cubic-bezier(.45, 0, .55, 1) var(--rr-delay, 0s) infinite; }
+.rr-motion .rr-halo { animation: rr-breathe 6s ease-in-out var(--rr-delay, 0s) infinite alternate; }
+@keyframes rr-signal {
+  0%   { stroke-dashoffset: 0.16; opacity: 0; }
+  4%   { opacity: 0.9; }
+  30%  { opacity: 0.9; }
+  36%  { stroke-dashoffset: -1; opacity: 0; }
+  100% { stroke-dashoffset: -1; opacity: 0; }   // rest: the signal waits before its next pass
+}
+@keyframes rr-breathe {
+  from { transform: scale(1); fill-opacity: 0.1; }
+  to   { transform: scale(1.75); fill-opacity: 0.26; }
+}
+
+// Failsafe: once the entrance has had time to finish, drop it; the pausable motif motion remains.
+.rr-entered .rr-hero *:not(.rr-hero-motif):not(.rr-hero-motif *), .rr-entered .rr-hero *:not(.rr-hero-motif *)::after { animation: none !important; }
+.rr-entered .rr-hero-motif { animation: rr-drift 28s ease-in-out infinite alternate; }
+// The pause button stops every moving part of the motif (WCAG 2.2.2).
+.rr-hero.is-paused .rr-hero-motif, .rr-hero.is-paused .rr-hero-motif * { animation-play-state: paused !important; }
+.rr-hero-toggle {
+  position: absolute; z-index: 2; top: 16px; right: 16px;
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .5); background: rgba(22, 19, 43, .6); color: #FFFFFF; cursor: pointer;
+}
+.rr-hero-toggle[hidden] { display: none; }
+.rr-hero-toggle:hover { background: rgba(22, 19, 43, .9); }
+.rr-hero-toggle:focus-visible { outline: 3px solid var(--rr-hero-accent); outline-offset: 2px; }
+.rr-hero-toggle .icon-play { display: none; }
+.rr-hero.is-paused .rr-hero-toggle .icon-play { display: block; }
+.rr-hero.is-paused .rr-hero-toggle .icon-pause { display: none; }
+@keyframes rr-motif-in { from { opacity: 0; } }
+@keyframes rr-drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(-3%, -2%) scale(1.06); } }
+@keyframes rr-panel-in { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
+@keyframes rr-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes rr-rule-in { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes rr-wipe-text { 0%, 49% { color: transparent; } 50%, 100% { color: var(--rr-hero-text); } }
+@keyframes rr-wipe-block {
+  0%   { transform: scaleX(0); transform-origin: left; }
+  48%  { transform: scaleX(1); transform-origin: left; }
+  52%  { transform: scaleX(1); transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+
+// ---------- Credentials strip ----------
+.rr-credentials { display: grid; gap: var(--rr-space-5) var(--rr-space-6); grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.rr-credentials h2 {
+  font-family: var(--rr-font-text); font-size: var(--rr-fs-micro); text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--rr-text-3); font-weight: 700; margin: 0 0 var(--rr-space-3);
+}
+.rr-credentials ul { list-style: none; padding: 0; margin: 0; }
+.rr-credentials li { padding: 0.35rem 0; border-top: 1px solid var(--rr-hairline); color: var(--rr-text); font-size: var(--rr-fs-small); line-height: 1.4; }
+.rr-credentials li:first-child { border-top: 0; padding-top: 0; }
+.rr-credentials li span { display: block; color: var(--rr-text-3); font-size: var(--rr-fs-micro); }
+.rr-venues { margin-top: var(--rr-space-6); padding-top: var(--rr-space-5); border-top: 1px solid var(--rr-hairline); }
+.rr-venues ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem 1.6rem; }
+.rr-venues li { font-family: var(--rr-font-display); font-style: italic; font-size: 1.05rem; color: var(--rr-text-2); max-width: none; }
+
+// ---------- Fellowships and funder marks ----------
+.rr-fellowship h3 { font-family: var(--rr-font-display); font-weight: 600; font-size: 1.35rem; letter-spacing: -0.01em; margin: var(--rr-space-2) 0 var(--rr-space-3); }
+.rr-fellowship > p { font-size: var(--rr-fs-body); color: var(--rr-text-2); }
+.rr-fellowship .rr-fellowship-org { color: var(--rr-text-3); font-size: var(--rr-fs-small); margin-bottom: var(--rr-space-2); }
+.rr-fellowship .rr-funder-marks { margin-bottom: var(--rr-space-4); }
+.rr-funders-block { margin-top: var(--rr-space-7); padding-top: var(--rr-space-5); border-top: 1px solid var(--rr-hairline); }
+.rr-funder-marks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--rr-space-3); }
+.rr-funder-marks li { max-width: none; margin: 0; }
+// Logos keep their official colors on a white tile in both themes.
+.rr-logo-tile {
+  display: inline-flex; align-items: center; justify-content: center; height: 68px; padding: 8px 14px;
+  background: #FFFFFF; border: 1px solid var(--rr-hairline); border-radius: var(--rr-radius-sm);
+}
+// EU emblem rules (2021-2027): the emblem must be at least as large as the biggest other logo and
+// at least 1 cm (37.8 CSS px) high. The official lockup fills the tile height and its flag is 91 % of
+// the lockup, while other logos use 88 %, so the flag is always the tallest mark (about 45 px here).
+.rr-logo-tile img { height: 88%; width: auto; display: block; }
+.rr-logo-tile.is-eu-emblem img { height: 100%; }
+// Captioned marks (e.g. the Bavarian Landessymbol): name below the logo, inside the same tile.
+// The tile is white in both themes, so the caption uses a fixed dark gray (grayC[178], 9.3:1).
+.rr-logo-tile.has-caption { flex-direction: column; gap: 3px; padding-block: 6px; }
+.rr-logo-tile.has-caption img { height: 38px; }
+.rr-logo-caption { font-size: 0.6875rem; line-height: 1.1; font-weight: 650; color: #474747; white-space: nowrap; }
+.rr-wordmark {
+  display: inline-flex; align-items: center; height: 68px; padding: 0 14px;
+  border: 1px solid var(--rr-hairline); border-radius: var(--rr-radius-sm); background: var(--rr-surface);
+  font-size: var(--rr-fs-small); font-weight: 650; color: var(--rr-text-2); letter-spacing: 0.01em;
+}
+.rr-funder-marks.is-small { margin-top: var(--rr-space-2); }
+// Small tiles: 46 px of content (60 - 2 x 6 padding - 2 x 1 border) keeps the EU flag at about
+// 42 px, clearly above the 1 cm (37.8 px) minimum.
+.rr-funder-marks.is-small .rr-logo-tile { height: 60px; padding: 6px 9px; }
+.rr-funder-marks.is-small .rr-logo-tile.has-caption { padding-block: 4px; }
+.rr-funder-marks.is-small .rr-logo-tile.has-caption img { height: 34px; }
+
+// ---------- Co-author lists (contact page, generated) ----------
+.rr-coauthors { list-style: none; margin: var(--rr-space-4) 0 0; padding: 0; display: grid; gap: var(--rr-space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.rr-coauthor { max-width: none; margin: 0; padding: var(--rr-space-3) var(--rr-space-4); background: var(--rr-surface); border: 1px solid var(--rr-hairline); border-radius: var(--rr-radius-sm); }
+.rr-coauthor-name { display: block; font-weight: 650; color: var(--rr-ink); }
+.rr-coauthor-meta { display: block; font-size: var(--rr-fs-micro); color: var(--rr-text-3); margin-top: 0.1rem; }
+
+// ---------- Narrative intro ----------
+.rr-intro { display: grid; gap: var(--rr-space-6); grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+@media (max-width: 899.98px) { .rr-intro { grid-template-columns: 1fr; } }
+.rr-intro h2 { margin-top: 0; }
+.rr-intro p { font-size: 1.125rem; }
+
+// ---------- Publication entries (generated by _templates/*.ejs) ----------
+.rr-pubs { display: flex; flex-direction: column; gap: 0; }
+.rr-pub {
+  display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: var(--rr-space-4);
+  padding: var(--rr-space-5) 0;
+  border-top: 1px solid var(--rr-hairline);
+}
+.rr-pub:first-child { border-top: 0; }
+.rr-pub .rr-year { font-weight: 650; color: var(--rr-text-3); font-size: var(--rr-fs-small); padding-top: 0.15rem; }
+.rr-pub-title { font-family: var(--rr-font-text); font-size: 1.0625rem; font-weight: 650; line-height: 1.4; margin: 0 0 0.3rem; color: var(--rr-ink); }
+.rr-pub-title a { color: inherit; text-decoration: none; }
+.rr-pub-title a:hover { color: var(--rr-accent); text-decoration: underline; }
+.rr-pub-authors { font-size: var(--rr-fs-small); color: var(--rr-text-2); margin: 0 0 0.2rem; max-width: none; }
+.rr-pub-authors strong { color: var(--rr-ink); font-weight: 650; }
+.rr-pub-venue { font-size: var(--rr-fs-small); color: var(--rr-text-2); margin: 0; max-width: none; }
+.rr-pub-venue em { color: var(--rr-text); }
+.rr-pub-note { font-size: var(--rr-fs-small); color: var(--rr-text-2); margin: 0.35rem 0 0; }
+.rr-pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; margin-top: 0.6rem; font-size: var(--rr-fs-small); }
+.rr-pub-meta a { font-weight: 600; text-decoration: none; }
+.rr-pub-meta a:hover { text-decoration: underline; }
+.rr-pub-meta .rr-badge {
+  font-size: var(--rr-fs-micro); font-weight: 650; color: var(--rr-text-2);
+  border: 1px solid var(--rr-hairline); border-radius: 999px; padding: 0.1rem 0.5rem;
+}
+.rr-pub details { margin-top: 0.6rem; font-size: var(--rr-fs-small); }
+.rr-pub summary { cursor: pointer; color: var(--rr-accent); font-weight: 600; width: fit-content; }
+.rr-pub details p {
+  margin: 0.5rem 0 0; padding: 0.75rem 0.9rem; border-radius: var(--rr-radius-sm);
+  background: var(--rr-band); color: var(--rr-text); user-select: all; max-width: none;
+}
+@media (max-width: 575.98px) {
+  .rr-pub { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+.rr-pubs-compact .rr-pub { padding: var(--rr-space-4) 0; grid-template-columns: 3.75rem minmax(0, 1fr); }
+.rr-pubs-compact .rr-pub-title { font-size: var(--rr-fs-body); font-weight: 600; }
+
+// Featured publication cards (homepage)
+.rr-feature { height: 100%; }
+.rr-feature .rr-feature-venue { font-size: var(--rr-fs-micro); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rr-text-3); margin-bottom: var(--rr-space-2); }
+.rr-feature h3 { font-family: var(--rr-font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.25; letter-spacing: -0.01em; }
+.rr-feature h3 a { color: var(--rr-ink); text-decoration: none; }
+.rr-feature h3 a:hover { color: var(--rr-accent); text-decoration: underline; }
+
+// ---------- News (data/news.yml; homepage shows the latest three, news.qmd all) ----------
+// Lightweight on purpose: a hairline above each item instead of cards, so the list reads as
+// updates and does not compete with the featured publications above it.
+.rr-news {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: var(--rr-space-5) var(--rr-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+.rr-news-item { max-width: none; margin: 0; padding-top: var(--rr-space-4); border-top: 1px solid var(--rr-hairline); }
+.rr-news-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+  margin: 0 0 var(--rr-space-2); font-size: var(--rr-fs-small); color: var(--rr-text-2);
+}
+.rr-news-title {
+  font-family: var(--rr-font-text); font-weight: 650; font-size: 1.05rem; line-height: 1.35;
+  letter-spacing: -0.005em; margin: 0 0 var(--rr-space-2); text-wrap: balance;
+}
+.rr-news-title a { color: var(--rr-ink); text-decoration: none; }
+.rr-news-title a:hover { color: var(--rr-accent); text-decoration: underline; }
+.rr-news-summary { margin: 0; font-size: var(--rr-fs-small); color: var(--rr-text-2); text-wrap: pretty; }
+// The full list on news.qmd is one readable column.
+.rr-news.is-page { grid-template-columns: 1fr; max-width: 44rem; gap: var(--rr-space-5); }
+.rr-news.is-page .rr-news-title { font-size: 1.15rem; margin-top: 0; }
+.rr-feature .rr-feature-summary { font-size: var(--rr-fs-small); color: var(--rr-text-2); }
+.rr-feature .rr-feature-authors { font-size: var(--rr-fs-micro); color: var(--rr-text-3); }
+
+// Listing chrome from Quarto (search, sort, categories)
+.listing-actions-group { justify-content: flex-start !important; }
+.quarto-listing-filter, .quarto-listing-sort { margin-bottom: var(--rr-space-4); max-width: 26rem; margin-left: 0 !important; }
+.quarto-listing-filter .form-control, .quarto-listing-sort .form-select { border-color: var(--rr-hairline); background-color: var(--rr-surface); color: var(--rr-text); min-height: 44px; }
+.quarto-listing-category-title { font-family: var(--rr-font-text); font-size: var(--rr-fs-micro); font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--rr-text-3); }
+.quarto-listing-category .category { font-size: var(--rr-fs-small); color: var(--rr-text-2); padding: 0.25rem 0; cursor: pointer; }
+.quarto-listing-category .category.active { color: var(--rr-accent); font-weight: 650; }
+.quarto-listing-category .category:hover { color: var(--rr-accent); }
+.listing-no-matching { color: var(--rr-text-2); }
+
+// Inline theme filter (publications page): real buttons wired by Quarto's listing script.
+.rr-theme-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; margin: var(--rr-space-4) 0 var(--rr-space-5); }
+.rr-theme-filter[hidden] { display: none; }
+.rr-filter-label { font-size: var(--rr-fs-micro); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--rr-text-3); margin-right: 0.25rem; }
+.rr-theme-filter .rr-filter-btn {
+  --t: var(--rr-accent); --t-bg: var(--rr-accent-soft);
+  min-height: 36px; padding: 0.3rem 0.8rem !important; border-radius: 999px;
+  border: 1px solid var(--rr-hairline); background: var(--rr-surface); color: var(--t);
+  font: inherit; font-size: var(--rr-fs-small); font-weight: 600; cursor: pointer;
+}
+.rr-theme-filter .rr-filter-btn:hover { border-color: var(--t); background: var(--t-bg); color: var(--t); }
+.rr-theme-filter .rr-filter-btn.active { background: var(--t); border-color: var(--t); color: var(--rr-page); font-weight: 650; }
+
+// ---------- Figures ----------
+.rr-figure { margin: var(--rr-space-6) 0; }
+.rr-figure img { width: 100%; height: auto; border-radius: var(--rr-radius-sm); border: 1px solid var(--rr-hairline); background: #FFFFFF; }
+.rr-figure figcaption { margin-top: var(--rr-space-3); font-size: var(--rr-fs-small); color: var(--rr-text-2); line-height: 1.5; max-width: var(--rr-measure); }
+.rr-figure figcaption .rr-credit { display: block; margin-top: 0.35rem; color: var(--rr-text-3); font-size: var(--rr-fs-micro); }
+
+// ---------- Research themes (research page) ----------
+.rr-theme-section { padding-top: var(--rr-space-6); margin-top: var(--rr-space-7); border-top: 1px solid var(--rr-hairline); }
+.rr-theme-section:first-of-type { border-top: 0; margin-top: var(--rr-space-5); }
+// Quarto wraps each heading and its content in <section id=...>; the h2 is that section's first child.
+.rr-theme-section > h2, .rr-theme-section > section > h2:first-child { margin-top: 0.25rem; }
+.rr-theme-section > p:first-child { margin-bottom: var(--rr-space-2); }
+.rr-theme-section > p:first-child .rr-theme-label { margin-bottom: 0; }
+.rr-question { font-family: var(--rr-font-display); font-size: var(--rr-fs-lead); line-height: 1.4; color: var(--rr-ink); font-style: italic; }
+.rr-findings { list-style: none; padding: 0; margin: var(--rr-space-4) 0; display: grid; gap: var(--rr-space-3); }
+.rr-findings li {
+  background: var(--rr-surface); border: 1px solid var(--rr-hairline); border-radius: var(--rr-radius-sm);
+  padding: var(--rr-space-4); font-size: var(--rr-fs-small); color: var(--rr-text); max-width: none;
+}
+.rr-findings li .rr-cite { display: block; margin-top: 0.35rem; color: var(--rr-text-3); font-size: var(--rr-fs-micro); }
+.rr-methods-line { font-size: var(--rr-fs-small); color: var(--rr-text-2); }
+.rr-methods-line strong { color: var(--rr-text); }
+.rr-toc-themes { display: grid; gap: var(--rr-space-3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); margin: var(--rr-space-5) 0 var(--rr-space-6); padding: 0; list-style: none; }
+.rr-toc-themes li { max-width: none; }
+.rr-toc-themes a {
+  display: block; height: 100%; text-decoration: none; padding: var(--rr-space-4);
+  background: var(--rr-surface); border: 1px solid var(--rr-hairline); border-radius: var(--rr-radius-sm);
+  color: var(--rr-ink); font-weight: 600; font-size: var(--rr-fs-small); line-height: 1.35;
+}
+.rr-toc-themes a:hover { border-color: var(--t); }
+.rr-toc-themes .rr-theme-label { display: flex; margin-bottom: 0.35rem; }
+
+// ---------- Method pipeline (expertise page and homepage) ----------
+.rr-pipeline { display: grid; gap: var(--rr-space-4); grid-template-columns: repeat(3, minmax(0, 1fr)); counter-reset: step; position: relative; }
+@media (max-width: 899.98px) { .rr-pipeline { grid-template-columns: 1fr; } }
+.rr-step { position: relative; }
+.rr-step .rr-step-num {
+  display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--rr-accent-soft); color: var(--rr-accent); font-weight: 700; font-size: var(--rr-fs-small);
+  margin-bottom: var(--rr-space-3);
+}
+.rr-step ul { padding-left: 1.1rem; margin: 0; font-size: var(--rr-fs-small); color: var(--rr-text-2); }
+.rr-step li { margin: 0.2rem 0; }
+@media (min-width: 900px) {
+  .rr-step:not(:last-child)::after {
+    content: ""; position: absolute; top: 2.45rem; right: -0.95rem; width: 0.6rem; height: 0.6rem;
+    border-top: 2px solid var(--rr-text-3); border-right: 2px solid var(--rr-text-3); transform: rotate(45deg);
+  }
+}
+
+// ---------- Trajectory (homepage) ----------
+.rr-trajectory { list-style: none; margin: 0 0 var(--rr-space-6); padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; position: relative; }
+.rr-trajectory li { position: relative; padding: 2rem var(--rr-space-4) 0 0; max-width: none; }
+.rr-trajectory li::before { content: ""; position: absolute; top: 0.45rem; left: 0; right: 0; height: 2px; background: var(--rr-hairline); }
+.rr-trajectory li::after { content: ""; position: absolute; top: 0; left: 0; width: 1rem; height: 1rem; border-radius: 50%; background: var(--rr-surface); border: 3px solid var(--rr-accent); }
+.rr-trajectory li:last-child::after { background: var(--rr-accent); }
+.rr-trajectory .rr-when { font-size: var(--rr-fs-micro); font-weight: 700; color: var(--rr-text-3); letter-spacing: 0.04em; }
+.rr-trajectory .rr-where { font-family: var(--rr-font-display); font-size: 1.15rem; color: var(--rr-ink); font-weight: 600; margin: 0.15rem 0; }
+.rr-trajectory .rr-what { font-size: var(--rr-fs-small); color: var(--rr-text-2); line-height: 1.45; }
+@media (max-width: 899.98px) {
+  .rr-trajectory { grid-template-columns: 1fr; }
+  .rr-trajectory li { padding: 0 0 var(--rr-space-5) 2rem; }
+  .rr-trajectory li::before { top: 1rem; bottom: 0; left: 0.45rem; right: auto; width: 2px; height: auto; }
+  .rr-trajectory li:last-child::before { display: none; }
+}
+
+// ---------- Timeline (about page, generated) ----------
+.rr-timeline { list-style: none; margin: 0; padding: 0; }
+.rr-timeline-item {
+  display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: var(--rr-space-4);
+  padding: var(--rr-space-4) 0; border-top: 1px solid var(--rr-hairline); max-width: none;
+}
+.rr-timeline-item:first-child { border-top: 0; }
+.rr-timeline-item .rr-when { font-size: var(--rr-fs-small); color: var(--rr-text-3); font-weight: 600; }
+.rr-timeline-item h3, .rr-timeline-item .rr-item-title { font-size: var(--rr-fs-body); margin: 0 0 0.15rem; font-weight: 650; color: var(--rr-ink); font-family: var(--rr-font-text); }
+.rr-timeline-item .rr-org { font-size: var(--rr-fs-small); color: var(--rr-text-2); margin: 0; }
+.rr-timeline-item .rr-detail { font-size: var(--rr-fs-small); color: var(--rr-text-3); margin: 0.3rem 0 0; }
+@media (max-width: 575.98px) { .rr-timeline-item { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+// ---------- Collaboration / CTA ----------
+.rr-cta {
+  background: var(--rr-hero);
+  color: var(--rr-hero-text-2);
+  border-radius: 22px;
+  padding: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  display: grid; gap: var(--rr-space-6); grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center;
+}
+@media (max-width: 899.98px) { .rr-cta { grid-template-columns: 1fr; } }
+.rr-cta h2 { color: var(--rr-hero-text); margin: 0 0 var(--rr-space-3); }
+.rr-cta p { color: var(--rr-hero-text-2); }
+.rr-cta .rr-eyebrow { color: var(--rr-hero-accent); }
+.rr-cta .rr-btn-primary { background: #FFFFFF; color: var(--rr-hero) !important; }
+.rr-cta .rr-btn-primary:hover { background: var(--rr-hero-text-2); }
+.rr-cta .rr-btn-secondary { background: transparent; color: var(--rr-hero-text) !important; border-color: var(--rr-hero-line); }
+.rr-cta .rr-btn-secondary:hover { border-color: var(--rr-hero-text); }
+.rr-cta a:focus-visible { outline-color: var(--rr-hero-accent); }
+.rr-cta ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--rr-space-3); }
+.rr-cta li { padding: var(--rr-space-3) var(--rr-space-4); border: 1px solid var(--rr-hero-line); border-radius: var(--rr-radius-sm); color: var(--rr-hero-text); font-size: var(--rr-fs-small); max-width: none; }
+.rr-cta li span { display: block; color: var(--rr-hero-text-3); font-size: var(--rr-fs-micro); margin-top: 0.15rem; }
+
+// ---------- Definition-style lists (contact, profiles) ----------
+.rr-deflist { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.6rem 1.5rem; margin: var(--rr-space-4) 0; }
+.rr-deflist dt { font-weight: 650; color: var(--rr-text-3); font-size: var(--rr-fs-small); }
+.rr-deflist dd { margin: 0; }
+@media (max-width: 575.98px) { .rr-deflist { grid-template-columns: 1fr; gap: 0.1rem; } .rr-deflist dd { margin-bottom: 0.6rem; } }
+
+.rr-note { background: var(--rr-band); border-radius: var(--rr-radius-sm); padding: var(--rr-space-4) var(--rr-space-5); font-size: var(--rr-fs-small); color: var(--rr-text-2); }
+.rr-note p { margin: 0; }
+
+// ---------- Network icons (footer row, contact list) ----------
+// Monochrome SVGs from assets/icons/ used as CSS masks, so they take the text color of their link
+// in both themes and need no JavaScript. Paths are relative to the project root; Quarto copies the
+// files next to the compiled stylesheet (site_libs/bootstrap/assets/icons/), so they also resolve
+// on the 404 page. Each icon in data/profiles.yml needs a rule here (checked by prerender.py).
+.rr-icon {
+  display: inline-block; width: 1em; height: 1em; flex: none;
+  background-color: currentColor;
+  -webkit-mask: center / contain no-repeat; mask: center / contain no-repeat;
+}
+.rr-icon-email { -webkit-mask-image: url("assets/icons/email.svg"); mask-image: url("assets/icons/email.svg"); }
+.rr-icon-orcid { -webkit-mask-image: url("assets/icons/orcid.svg"); mask-image: url("assets/icons/orcid.svg"); }
+.rr-icon-scholar { -webkit-mask-image: url("assets/icons/scholar.svg"); mask-image: url("assets/icons/scholar.svg"); }
+.rr-icon-osf { -webkit-mask-image: url("assets/icons/osf.svg"); mask-image: url("assets/icons/osf.svg"); }
+.rr-icon-researchgate { -webkit-mask-image: url("assets/icons/researchgate.svg"); mask-image: url("assets/icons/researchgate.svg"); }
+.rr-icon-github { -webkit-mask-image: url("assets/icons/github.svg"); mask-image: url("assets/icons/github.svg"); }
+.rr-icon-linkedin { -webkit-mask-image: url("assets/icons/linkedin.svg"); mask-image: url("assets/icons/linkedin.svg"); }
+.rr-icon-x { -webkit-mask-image: url("assets/icons/x.svg"); mask-image: url("assets/icons/x.svg"); }
+// Windows high-contrast mode replaces backgrounds; keep the icons visible in the system text color.
+@media (forced-colors: active) { .rr-icon { background-color: CanvasText; } }
+
+// Footer icon row: full width above the name and copyright, icon over its name.
+.nav-footer { flex-wrap: wrap; row-gap: var(--rr-space-5); }
+.nav-footer .nav-footer-center { order: -1; flex: 1 0 100%; display: flex; justify-content: center; }
+.rr-social { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--rr-space-3) var(--rr-space-2); margin: 0; }
+.nav-footer a.rr-social-link {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 0.45rem;
+  min-width: 5.5rem; padding: 0.5rem 0.35rem; border-radius: var(--rr-radius-sm);
+  color: var(--rr-text-2) !important; text-decoration: none;
+}
+.nav-footer a.rr-social-link .rr-icon { font-size: 2.25rem; }
+.nav-footer a.rr-social-link .rr-social-name { font-size: var(--rr-fs-small); line-height: 1.2; text-align: center; }
+// Hover recolors only the icon and its name (accent: 5.5:1 light, 8.3:1 dark on the footer band);
+// no background box, so the link blends into the band.
+.nav-footer a.rr-social-link:hover { color: var(--rr-accent) !important; background: transparent; }
+@media (max-width: 575.98px) {
+  .nav-footer a.rr-social-link { min-width: 4.5rem; }
+  .nav-footer a.rr-social-link .rr-icon { font-size: 1.85rem; }
+}
+
+// Contact page: each network as a list item with its icon as the bullet.
+.rr-profile-list { list-style: none; margin: var(--rr-space-4) 0; padding: 0; display: grid; gap: var(--rr-space-2); }
+.rr-profile-list li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); align-items: center; gap: var(--rr-space-3); max-width: none; margin: 0; padding: var(--rr-space-2) 0; border-top: 1px solid var(--rr-hairline); }
+.rr-profile-list li:first-child { border-top: 0; }
+.rr-profile-list .rr-icon { font-size: 1.6rem; color: var(--rr-accent); justify-self: center; }
+.rr-profile-list a { font-weight: 650; }
+.rr-profile-list .rr-profile-handle { display: block; font-size: var(--rr-fs-small); color: var(--rr-text-3); overflow-wrap: anywhere; }
+
+// ---------- Footer ----------
+.nav-footer {
+  background: var(--rr-band);
+  border-top: 1px solid var(--rr-hairline);
+  font-size: var(--rr-fs-small);
+  color: var(--rr-text-2);
+  padding-block: var(--rr-space-5);
+}
+.nav-footer a { color: var(--rr-text) !important; }
+.nav-footer a:hover { color: var(--rr-accent) !important; }
+.nav-footer strong { color: var(--rr-ink); }
+
+// ---------- Motion ----------
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+// ---------- Print ----------
+@media print {
+  .navbar, .nav-footer, .rr-hero-motif, .quarto-listing-filter, .quarto-listing-sort, #quarto-margin-sidebar { display: none !important; }
+  .rr-hero, .rr-cta { background: none; color: #000; }
+  .rr-hero h1, .rr-cta h2 { color: #000; }
+}

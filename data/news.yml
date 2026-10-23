@@ -1,0 +1,53 @@
+# News: short, dated updates, newest first (the build fails if the order slips).
+# The homepage shows the three most recent; news.qmd lists all of them.
+#
+# Fields
+#   id        lowercase-hyphenated, unique
+#   date      YYYY-MM-DD, or YYYY-MM when only the month is known
+#   category  one of: Publication, Preprint, Talk, Press, Media, Event, Funding, Project
+#   title     short headline (at most 80 characters)
+#   summary   one or two sentences (at most 300 characters)
+#   url       optional external (https://) or internal (page.qmd#anchor) link for the headline
+#   related   optional publication id from publications.yml; the url must then be its DOI link
+#
+# Sources: publications.yml (dates from ORCID/Crossref) and the October 2026 CV.
+- id: fit4brain-noddi-preprint
+  date: "2026-09-04"
+  category: Preprint
+  title: Exercise and white-matter microstructure in later life
+  summary: First-author preprint from the FIT4BRAIN randomized controlled trial reporting higher NODDI-derived neurite density across white-matter tracts after physical exercise in healthy older adults. Not yet peer reviewed.
+  url: https://doi.org/10.64898/2026.08.31.26361810
+  related: ruizrizzo-2026-physical-exercise
+- id: geroscience-online-activity
+  date: "2026-05-21"
+  category: Publication
+  title: Online-guided physical activity trial in GeroScience
+  summary: A randomized controlled trial in healthy older adults on the impact of an online-guided physical activity intervention on cognition, resting-state brain connectivity and the gut microbiome.
+  url: https://doi.org/10.1007/s11357-026-02324-6
+  related: schrenk-2026-impact-online
+- id: klink-top-down-control
+  date: "2026-05-08"
+  category: Publication
+  title: Top-down control in mild cognitive impairment
+  summary: Frontoparietal functional connectivity underlies top-down control impairments in patients with mild cognitive impairment. First-authored by Hannah Klink, the doctoral candidate Adriana supervises, in JoCN Forum.
+  url: https://doi.org/10.21428/8e6ba8ef.2b4f0301
+  related: klink-2026-frontoparietal-functional
+- id: parkinson-multimodal-ml
+  date: "2025-11-26"
+  category: Publication
+  title: Detecting early cognitive impairment in Parkinson’s disease
+  summary: A multimodal MRI framework that uses machine learning to detect beginning cognitive impairment in Parkinson’s disease, in Frontiers in Neuroscience.
+  url: https://doi.org/10.3389/fnins.2025.1689302
+  related: balssuweit-2025-multimodal-mri
+- id: eni-lectures-2024
+  date: "2024-07-08"
+  category: Talk
+  title: ENI Lectures 2024 in Göttingen
+  summary: Lecture “Aging, brain, and cognition” at the European Neuroscience Institute Göttingen, as a candidate shortlisted for an ENI group leader position.
+  url: about.qmd#talks-heading
+- id: izkf-advanced-medical-scientist
+  date: "2023-03"
+  category: Funding
+  title: IZKF Advanced Medical Scientist Program
+  summary: Funding from the Advanced Medical Scientist Program of the Interdisciplinary Center for Clinical Research at Jena University Hospital, 2023 to 2026 (€150,000).
+  url: about.qmd#funding-heading
