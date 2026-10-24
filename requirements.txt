@@ -1,3 +1,2 @@
 # Build-time dependency of scripts/prerender.py and scripts/check_site.py.
 PyYAML==6.0.3
-pytest==8.4.2

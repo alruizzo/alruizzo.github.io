@@ -2,8 +2,8 @@
 
 Icons in this folder are unmodified copies, used as CSS masks (recolored by the site theme).
 
-- `email.svg`, `github.svg`, `linkedin.svg`, `x.svg`, `moon.svg`, `sun.svg`: [Bootstrap Icons](https://icons.getbootstrap.com/)
-  v1.11.3 (`envelope-fill`, `github`, `linkedin`, `twitter-x`, `moon-stars-fill`, `sun-fill`), MIT License,
+- `email.svg`, `github.svg`, `linkedin.svg`, `moon.svg`, `sun.svg`: [Bootstrap Icons](https://icons.getbootstrap.com/)
+  v1.11.3 (`envelope-fill`, `github`, `linkedin`, `moon-stars-fill`, `sun-fill`), MIT License,
   reproduced below.
 - `orcid.svg`, `scholar.svg`, `osf.svg`, `researchgate.svg`: [Simple Icons](https://simpleicons.org/) v13.21.0
   (`orcid`, `googlescholar`, `osf`, `researchgate`), CC0 1.0. Brand icons remain trademarks of their owners and

@@ -113,7 +113,8 @@ main:focus { outline: none; }
   padding: 0.45rem 0.8rem !important;
   border-radius: 999px;
 }
-.navbar .nav-link:hover { color: var(--rr-accent) !important; background: var(--rr-accent-soft); }
+.navbar .nav-link { border: 1px solid transparent; transition: background-color 0.15s ease, border-color 0.15s ease; }
+.navbar .nav-link:hover { background: var(--rr-step-bg); }
 .navbar .nav-link.active { color: var(--rr-accent) !important; }
 .navbar .nav-link.active .menu-text { text-decoration: underline; text-underline-offset: 0.45em; text-decoration-thickness: 2px; }
 // "Contact" is the one call to action in the navbar.
@@ -122,7 +123,7 @@ main:focus { outline: none; }
   color: var(--rr-on-accent) !important;
   margin-left: 0.35rem;
 }
-.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link:hover { background: var(--rr-accent-strong); }
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link:hover { background: var(--rr-accent-strong); border-color: var(--rr-accent-strong); }
 .navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link.active .menu-text { text-decoration: none; }
 .navbar-toggler { border-color: var(--rr-hairline); }
 .navbar .bi { color: var(--rr-text-2); }
@@ -142,7 +143,13 @@ main:focus { outline: none; }
 .navbar .quarto-color-scheme-toggle.alternate .bi::before {
   -webkit-mask-image: url("assets/icons/sun.svg"); mask-image: url("assets/icons/sun.svg");
 }
-.navbar .quarto-color-scheme-toggle:hover { color: var(--rr-accent); }
+.navbar .quarto-color-scheme-toggle, .navbar .aa-DetachedSearchButton {
+  border-radius: 999px; border: 1px solid transparent; transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.navbar .aa-DetachedSearchButton { width: 40px; height: 40px; display: inline-grid; place-items: center; padding: 0; }
+.navbar .quarto-color-scheme-toggle:hover, .navbar .aa-DetachedSearchButton:hover {
+  background: var(--rr-step-bg); color: var(--rr-text-2) !important;
+}
 // Phones: keep the name, toggle and search on one row (the target stays 40 px tall).
 @media (max-width: 419.98px) {
   .navbar .quarto-navbar-tools { flex-wrap: nowrap; }
@@ -218,21 +225,41 @@ main p, main li { max-width: var(--rr-measure); }
 }
 
 // ---------- Buttons ----------
-.rr-btn {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  min-height: 44px;
-  padding: 0.6rem 1.15rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: var(--rr-fs-small);
-  text-decoration: none !important;
-  border: 1px solid transparent;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+// One model for every button, taken from the hero profile pills: a 40 px pill with a 1 px border.
+// Hover never changes the text or icon color; it steps the fill up one level and strengthens the
+// border, so every control answers the pointer the same way. Each context sets four tokens:
+//   --b-bg / --b-bg-hover      fill at rest and on hover
+//   --b-line / --b-line-hover  border at rest and on hover
+// Neutral steps mix the text color into the surface (6% fill, 32% border), mirroring the pills'
+// white overlays on the hero (6% to 12% fill, 16% to 32% border).
+:root {
+  --rr-step-bg: color-mix(in srgb, var(--rr-ink) 6%, var(--rr-surface));
+  --rr-step-line: color-mix(in srgb, var(--rr-ink) 32%, var(--rr-surface));
 }
-.rr-btn-primary { background: var(--rr-accent); color: var(--rr-on-accent) !important; }
-.rr-btn-primary:hover { background: var(--rr-accent-strong); }
-.rr-btn-secondary { border-color: var(--rr-hairline); color: var(--rr-ink) !important; background: var(--rr-surface); }
-.rr-btn-secondary:hover { border-color: var(--rr-accent); color: var(--rr-accent) !important; }
+.rr-btn {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  min-height: 40px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 550;
+  font-size: var(--rr-fs-small);
+  line-height: 1.2;
+  text-decoration: none !important;
+  border: 1px solid var(--b-line);
+  background: var(--b-bg);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.rr-btn:hover { background: var(--b-bg-hover); border-color: var(--b-line-hover); }
+.rr-btn-primary {
+  --b-bg: var(--rr-accent); --b-bg-hover: var(--rr-accent-strong);
+  --b-line: var(--rr-accent); --b-line-hover: var(--rr-accent-strong);
+  color: var(--rr-on-accent) !important;
+}
+.rr-btn-secondary {
+  --b-bg: var(--rr-surface); --b-bg-hover: var(--rr-step-bg);
+  --b-line: var(--rr-hairline); --b-line-hover: var(--rr-step-line);
+  color: var(--rr-ink) !important;
+}
 .rr-actions { display: flex; flex-wrap: wrap; gap: var(--rr-space-3); margin-top: var(--rr-space-5); }
 
 // ---------- Cards ----------
@@ -316,10 +343,22 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-hero .rr-affil { color: var(--rr-hero-text-3); font-size: var(--rr-fs-small); display: flex; gap: 0.5rem; align-items: center; }
 .rr-hero .rr-affil svg { flex: none; }
 .rr-hero a:not(.rr-btn) { color: var(--rr-hero-text); }
-.rr-hero .rr-btn-secondary { background: transparent; color: var(--rr-hero-text) !important; border-color: var(--rr-hero-line); }
-.rr-hero .rr-btn-secondary:hover { border-color: var(--rr-hero-text); color: var(--rr-hero-text) !important; }
-.rr-hero .rr-btn-primary { background: #FFFFFF; color: var(--rr-hero) !important; }
-.rr-hero .rr-btn-primary:hover { background: var(--rr-hero-text-2); }
+// On the dark hero and the closing panel: secondary buttons are the pills themselves; the primary
+// button is the white pill, stepping to grayC[30] on hover.
+.rr-hero, .rr-cta {
+  --rr-hero-step-bg: rgba(255, 255, 255, 0.06); --rr-hero-step-bg-hover: rgba(255, 255, 255, 0.12);
+  --rr-hero-step-line: rgba(255, 255, 255, 0.16); --rr-hero-step-line-hover: rgba(255, 255, 255, 0.32);
+}
+.rr-hero .rr-btn-secondary, .rr-cta .rr-btn-secondary {
+  --b-bg: var(--rr-hero-step-bg); --b-bg-hover: var(--rr-hero-step-bg-hover);
+  --b-line: var(--rr-hero-step-line); --b-line-hover: var(--rr-hero-step-line-hover);
+  color: var(--rr-hero-text) !important;
+}
+.rr-hero .rr-btn-primary, .rr-cta .rr-btn-primary {
+  --b-bg: #FFFFFF; --b-bg-hover: var(--rr-hero-text-2);
+  --b-line: #FFFFFF; --b-line-hover: var(--rr-hero-text-2);
+  color: var(--rr-hero) !important;
+}
 .rr-hero a:focus-visible { outline-color: var(--rr-hero-accent); }
 .rr-portrait {
   justify-self: center;
@@ -341,12 +380,12 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-hero a.rr-pill-link {
   display: inline-flex; align-items: center; gap: 0.55rem; min-height: 40px;
   padding: 0.45rem 1rem 0.45rem 0.85rem; border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06);
-  color: var(--rr-hero-text); font-size: var(--rr-fs-small); font-weight: 550; line-height: 1; text-decoration: none;
+  border: 1px solid var(--rr-hero-step-line); background: var(--rr-hero-step-bg);
+  color: var(--rr-hero-text); font-size: var(--rr-fs-small); font-weight: 550; line-height: 1.2; text-decoration: none;
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 .rr-hero a.rr-pill-link .rr-icon { font-size: 1.1rem; }
-.rr-hero a.rr-pill-link:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.32); }
+.rr-hero a.rr-pill-link:hover { background: var(--rr-hero-step-bg-hover); border-color: var(--rr-hero-step-line-hover); }
 .rr-hero-motif {
   position: absolute; z-index: -1; pointer-events: none;
   right: -60px; bottom: -40px; width: min(62vw, 760px); height: auto; opacity: 0.55;
@@ -411,10 +450,15 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-hero-toggle {
   position: absolute; z-index: 2; top: 16px; right: 16px;
   display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, .5); background: rgba(22, 19, 43, .6); color: #FFFFFF; cursor: pointer;
+  border: 1px solid var(--rr-hero-step-line); color: #FFFFFF; cursor: pointer;
+  background: linear-gradient(var(--rr-hero-step-bg), var(--rr-hero-step-bg)), var(--rr-hero);
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 .rr-hero-toggle[hidden] { display: none; }
-.rr-hero-toggle:hover { background: rgba(22, 19, 43, .9); }
+.rr-hero-toggle:hover {
+  border-color: var(--rr-hero-step-line-hover);
+  background: linear-gradient(var(--rr-hero-step-bg-hover), var(--rr-hero-step-bg-hover)), var(--rr-hero);
+}
 .rr-hero-toggle:focus-visible { outline: 3px solid var(--rr-hero-accent); outline-offset: 2px; }
 .rr-hero-toggle .icon-play { display: none; }
 .rr-hero.is-paused .rr-hero-toggle .icon-play { display: block; }
@@ -578,12 +622,16 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-filter-label { font-size: var(--rr-fs-micro); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--rr-text-3); margin-right: 0.25rem; }
 .rr-theme-filter .rr-filter-btn {
   --t: var(--rr-accent); --t-bg: var(--rr-accent-soft);
-  min-height: 36px; padding: 0.3rem 0.8rem !important; border-radius: 999px;
+  min-height: 40px; padding: 0.45rem 1rem !important; border-radius: 999px;
   border: 1px solid var(--rr-hairline); background: var(--rr-surface); color: var(--t);
-  font: inherit; font-size: var(--rr-fs-small); font-weight: 600; cursor: pointer;
+  font: inherit; font-size: var(--rr-fs-small); font-weight: 550; line-height: 1.2; cursor: pointer;
 }
-.rr-theme-filter .rr-filter-btn:hover { border-color: var(--t); background: var(--t-bg); color: var(--t); }
-.rr-theme-filter .rr-filter-btn.active { background: var(--t); border-color: var(--t); color: var(--rr-page); font-weight: 650; }
+.rr-theme-filter .rr-filter-btn { transition: background-color 0.15s ease, border-color 0.15s ease; }
+.rr-theme-filter .rr-filter-btn:hover:not(.active) {
+  background: color-mix(in srgb, var(--t) 8%, var(--rr-surface));
+  border-color: color-mix(in srgb, var(--t) 45%, var(--rr-surface));
+}
+.rr-theme-filter .rr-filter-btn.active { background: var(--t); border-color: var(--t); color: var(--rr-page); }
 
 // ---------- Figures ----------
 .rr-figure { margin: var(--rr-space-6) 0; }
@@ -614,7 +662,11 @@ main p, main li { max-width: var(--rr-measure); }
   background: var(--rr-surface); border: 1px solid var(--rr-hairline); border-radius: var(--rr-radius-sm);
   color: var(--rr-ink); font-weight: 600; font-size: var(--rr-fs-small); line-height: 1.35;
 }
-.rr-toc-themes a:hover { border-color: var(--t); }
+.rr-toc-themes a { transition: background-color 0.15s ease, border-color 0.15s ease; }
+.rr-toc-themes a:hover {
+  background: color-mix(in srgb, var(--t) 6%, var(--rr-surface));
+  border-color: color-mix(in srgb, var(--t) 45%, var(--rr-surface));
+}
 .rr-toc-themes .rr-theme-label { display: flex; margin-bottom: 0.35rem; }
 
 // ---------- Method pipeline (expertise page and homepage) ----------
@@ -676,10 +728,6 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-cta h2 { color: var(--rr-hero-text); margin: 0 0 var(--rr-space-3); }
 .rr-cta p { color: var(--rr-hero-text-2); }
 .rr-cta .rr-eyebrow { color: var(--rr-hero-accent); }
-.rr-cta .rr-btn-primary { background: #FFFFFF; color: var(--rr-hero) !important; }
-.rr-cta .rr-btn-primary:hover { background: var(--rr-hero-text-2); }
-.rr-cta .rr-btn-secondary { background: transparent; color: var(--rr-hero-text) !important; border-color: var(--rr-hero-line); }
-.rr-cta .rr-btn-secondary:hover { border-color: var(--rr-hero-text); }
 .rr-cta a:focus-visible { outline-color: var(--rr-hero-accent); }
 .rr-cta ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--rr-space-3); }
 .rr-cta li { padding: var(--rr-space-3) var(--rr-space-4); border: 1px solid var(--rr-hero-line); border-radius: var(--rr-radius-sm); color: var(--rr-hero-text); font-size: var(--rr-fs-small); max-width: none; }
@@ -711,7 +759,6 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-icon-researchgate { -webkit-mask-image: url("assets/icons/researchgate.svg"); mask-image: url("assets/icons/researchgate.svg"); }
 .rr-icon-github { -webkit-mask-image: url("assets/icons/github.svg"); mask-image: url("assets/icons/github.svg"); }
 .rr-icon-linkedin { -webkit-mask-image: url("assets/icons/linkedin.svg"); mask-image: url("assets/icons/linkedin.svg"); }
-.rr-icon-x { -webkit-mask-image: url("assets/icons/x.svg"); mask-image: url("assets/icons/x.svg"); }
 // Windows high-contrast mode replaces backgrounds; keep the icons visible in the system text color.
 @media (forced-colors: active) { .rr-icon { background-color: CanvasText; } }
 

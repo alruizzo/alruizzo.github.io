@@ -44,6 +44,7 @@ SOURCES = {"repo", "orcid", "cv", "about+orcid"}
 RECOG_SOURCES = {"orcid", "cv", "orcid+cv", "cv+cordis", "about+orcid+cordis"}
 GENERATED = DATA / "generated"
 FEATURED_MAX = 4
+HIGHLIGHTS_PER_COLUMN = 2   # homepage credentials strip: education, positions, recognition
 
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$")
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -226,6 +227,17 @@ def check_recognition(recognition: list[dict], funders: list[dict]) -> None:
     pending = [f["name"] for f in funders if f.get("logo_status") == "pending"]
     if pending:
         warnings.append(f"funders.yml: logos pending for {', '.join(pending)} (rendered as wordmarks)")
+
+
+def check_highlights(career: list[dict], recognition: list[dict]) -> None:
+    """The credentials strip under the hero shows exactly HIGHLIGHTS_PER_COLUMN items per column."""
+    columns = {"education": [r for r in career if r.get("kind") == "education" and r.get("highlight")],
+               "positions": [r for r in career if r.get("kind") == "position" and r.get("highlight")],
+               "recognition": [r for r in recognition if r.get("highlight")]}
+    for name, items in columns.items():
+        if len(items) != HIGHLIGHTS_PER_COLUMN:
+            errors.append(f"credentials strip: {len(items)} highlighted {name} items "
+                          f"({', '.join(str(r.get('id')) for r in items)}); expected {HIGHLIGHTS_PER_COLUMN}")
 
 
 def write_resolved_recognition(recognition: list[dict], funders: list[dict]) -> None:
@@ -624,6 +636,7 @@ def main() -> int:
             errors.append(f"career.yml ({rec.get('id')}): highlight needs a short label")
     check_simple("recognition.yml", recognition, RECOG_FIELDS, {"award", "funding"})
     check_recognition(recognition, funders)
+    check_highlights(career, recognition)
     coauthors = write_coauthors(pubs)
     check_share_cards()
     profiles = load("profiles.yml")

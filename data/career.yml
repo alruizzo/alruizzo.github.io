@@ -26,7 +26,6 @@
   title: Postdoctoral research fellow
   org: Institute of Gerontology and Department of Psychology, Wayne State University
   place: Detroit, United States
-  highlight: true
   short: Wayne State University, Institute of Gerontology
 - id: lmu-postdoc
   kind: position
@@ -72,7 +71,6 @@
   title: Specialization in Applied Statistics
   org: Fundación Universitaria Los Libertadores
   place: Bogotá, Colombia
-  highlight: true
   short: Specialization in Applied Statistics, Fundación Universitaria Los Libertadores
   detail: "Thesis: predictors of finding older adults reported missing, based on supervised machine learning models."
 - id: edu-phd

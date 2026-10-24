@@ -169,6 +169,17 @@ class DataValidation(unittest.TestCase):
         next(f for f in funders if f["id"] == "eu")["logo_alt"] = "EU flag"
         self.assertCaught(run_checks(*self.fresh(), funders=funders), "alt text must be its funding statement")
 
+    def test_credentials_strip_has_two_per_column(self):
+        pubs, outputs, career, recognition = self.fresh()
+        prerender.errors.clear()
+        prerender.check_highlights(career, recognition)
+        self.assertEqual(prerender.errors, [])
+        next(r for r in career if r["id"] == "edu-statistics")["highlight"] = True
+        next(r for r in recognition if r["highlight"] if "highlight" in r)["highlight"] = False
+        prerender.check_highlights(career, recognition)
+        self.assertCaught(prerender.errors, "3 highlighted education items")
+        self.assertCaught(prerender.errors, "1 highlighted recognition items")
+
     def test_featured_fellowships_present(self):
         recognition = prerender.load("recognition.yml")
         self.assertEqual(sorted(r["id"] for r in recognition if r.get("fellowship")), ["lmu-research-fellows", "msca-phd"])

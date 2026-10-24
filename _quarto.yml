@@ -35,7 +35,6 @@ website:
     locale: en_US
     site-name: "Dr. Adriana L. Ruiz-Rizzo"
   twitter-card:
-    creator: "@alruizzo"
     card-style: summary_large_image
   page-navigation: false
   bread-crumbs: false
@@ -77,7 +76,6 @@ website:
         <a class="rr-social-link" href="https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo"><span class="rr-icon rr-icon-researchgate" aria-hidden="true"></span><span class="rr-social-name">ResearchGate</span></a>
         <a class="rr-social-link" href="https://github.com/alruizzo"><span class="rr-icon rr-icon-github" aria-hidden="true"></span><span class="rr-social-name">GitHub</span></a>
         <a class="rr-social-link" href="https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"><span class="rr-icon rr-icon-linkedin" aria-hidden="true"></span><span class="rr-social-name">LinkedIn</span></a>
-        <a class="rr-social-link" href="https://x.com/alruizzo"><span class="rr-icon rr-icon-x" aria-hidden="true"></span><span class="rr-social-name">X</span></a>
         </nav>
     # END profiles footer
     right: |

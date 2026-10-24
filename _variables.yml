@@ -15,7 +15,6 @@ links:
   researchgate: "https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo"
   github: "https://github.com/alruizzo"
   linkedin: "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
-  x: "https://x.com/alruizzo"
   blog: "https://psicologiayneurocienciaenespanol.blogspot.com/"
 # The CV is Adriana's own PDF ("Curriculum vitae-latest.pdf", 23 October 2026), published exactly as
 # supplied. sha256 pins those bytes: scripts/prerender.py and check_site.py fail if the file or its
