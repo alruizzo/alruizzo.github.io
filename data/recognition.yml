@@ -57,7 +57,7 @@
   kind: funding
   period: "2014 to 2018"
   title: Marie Curie doctoral fellowship
-  org: INDIREA (Individualised Diagnostics and Rehabilitation of Attention), a Marie Curie Initial Training Network of the European Commission's Seventh Framework Programme
+  org: INDIREA, a Marie Curie Initial Training Network on the individualized diagnosis and rehabilitation of attention disorders, in the European Commission's Seventh Framework Program
   programme: FP7-PEOPLE-2013-ITN
   grant: "606901"
   grant_url: https://cordis.europa.eu/project/id/606901
@@ -111,7 +111,7 @@
 - id: alfa
   kind: funding
   period: "2007"
-  title: Studentship, ALFA Programme
+  title: Studentship, ALFA Program
   org: European Commission
   source: cv
   funders: [eu]

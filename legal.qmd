@@ -12,7 +12,7 @@ Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) / Information pursuant to § 
 Dr. Adriana L. Ruiz-Rizzo<br>
 {{< var legal.address >}}
 
-E-mail: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
+Email: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
 
 Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV) / Responsible for content: Dr. Adriana L. Ruiz-Rizzo, address as above.
 
@@ -22,7 +22,7 @@ This is a personal academic website. It is not an official website of Jena Unive
 
 ## Links to other websites {#links}
 
-This site links to external websites such as publishers, data repositories and scholarly profiles. Their operators are responsible for their content. No unlawful content was apparent when the links were set; a link will be removed promptly if a violation becomes known.
+This site links to external websites such as publishers, data repositories, and scholarly profiles. Their operators are responsible for their content. No unlawful content was apparent when the links were set; a link will be removed promptly if a violation becomes known.
 
 ## Copyright {#copyright}
 

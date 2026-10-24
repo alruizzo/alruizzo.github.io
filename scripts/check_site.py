@@ -228,9 +228,9 @@ def main() -> int:
     if not built.is_file():
         errors.append(f"{cv.get('file')}: CV missing from _site")
     elif hashlib.sha256(built.read_bytes()).hexdigest() != cv.get("sha256"):
-        errors.append(f"{cv.get('file')}: CV in _site differs from the supplied PDF (sha256)")
+        errors.append(f"{cv.get('file')}: CV in _site differs from the pinned CV (sha256)")
     else:
-        print(f"  {cv['file']}: identical to the supplied PDF (sha256 {cv['sha256'][:12]}...)")
+        print(f"  {cv['file']}: matches the pinned CV (sha256 {cv['sha256'][:12]}...)")
 
     if errors:
         for e in errors:

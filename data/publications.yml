@@ -445,6 +445,7 @@
   theme: attention
   selected: true
   note: Shared senior authorship
+  equal_contribution: last   # "Finke K*, Ruiz-Rizzo AL*" (CV: * equal contribution)
   preprint: 10.1101/2020.11.11.378406
   data:
   - https://osf.io/nhqg3/
@@ -478,6 +479,7 @@
   featured: true
   selected: true
   note: Shared first authorship; SCHUHFRIED Science Award 2020
+  equal_contribution: first   # "Penning MD*, Ruiz-Rizzo AL*" (CV: * equal contribution)
   summary: Alertness training increased visual processing speed in healthy older adults, and pre-training cingulo-opercular
     network connectivity predicted each person's training gain.
   source: repo
@@ -501,7 +503,6 @@
   - Visual attention
   - Brain networks
   theme: attention
-  selected: true
   preprint: 10.1101/826008
   source: repo
 - id: ruizrizzo-2020-human-subsystems

@@ -24,11 +24,11 @@ project:
   # and listing/data count mismatches in the rendered _site.
   post-render: scripts/check_site.py
 
-# Profile facts (affiliation, e-mail, profile IDs) live in _variables.yml.
+# Profile facts (affiliation, email, profile IDs) live in _variables.yml.
 
 website:
   title: "Dr. Adriana L. Ruiz-Rizzo"
-  description: "Cognitive and clinical neuroscientist studying how aging and early pre-dementia stages alter cognition, behavior and brain network organization."
+  description: "Cognitive and clinical neuroscientist studying how aging and early pre-dementia stages alter cognition, behavior, and brain network organization."
   site-url: "https://alruizzo.github.io"
   favicon: assets/favicon.svg
   open-graph:
@@ -69,7 +69,7 @@ website:
     # BEGIN profiles footer: generated from data/profiles.yml by `python3 scripts/prerender.py --write-footer`
     center: |
         <nav class="rr-social" aria-label="Contact and profiles">
-        <a class="rr-social-link" href="mailto:Adriana.RuizRizzo@med.uni-jena.de"><span class="rr-icon rr-icon-email" aria-hidden="true"></span><span class="rr-social-name">E-mail</span></a>
+        <a class="rr-social-link" href="mailto:Adriana.RuizRizzo@med.uni-jena.de"><span class="rr-icon rr-icon-email" aria-hidden="true"></span><span class="rr-social-name">Email</span></a>
         <a class="rr-social-link" href="https://orcid.org/0000-0003-1467-0745"><span class="rr-icon rr-icon-orcid" aria-hidden="true"></span><span class="rr-social-name">ORCID</span></a>
         <a class="rr-social-link" href="https://scholar.google.com/citations?user=L2v2k5QAAAAJ"><span class="rr-icon rr-icon-scholar" aria-hidden="true"></span><span class="rr-social-name">Google Scholar</span></a>
         <a class="rr-social-link" href="https://osf.io/z2ke7/"><span class="rr-icon rr-icon-osf" aria-hidden="true"></span><span class="rr-social-name">OSF</span></a>

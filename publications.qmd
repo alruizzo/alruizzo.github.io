@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-description: "Peer-reviewed articles, chapters and preprints on visual attention, brain networks and cognitive aging, with DOIs, open data and citation details."
+description: "Peer-reviewed articles, chapters, and preprints on visual attention, brain networks, and cognitive aging, with DOIs, open data, and citation details."
 image: assets/social/publications.png
 image-alt: "Title card: Publications, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
 listing:
@@ -46,9 +46,9 @@ listing:
 [Google Scholar]({{< var links.scholar >}}){.rr-btn .rr-btn-secondary}
 :::
 
-Entries link to the publisher's version through their DOI. Where a study's data, analysis scripts or workflows are openly shared, the entry links to them; the full set is listed under [open science](expertise.qmd#open-science). ORCID and Google Scholar hold the complete and most current record. Filter by research theme, or search titles, authors and journals.
+Entries link to the publisher's version through their DOI. Where a study's data, analysis scripts, or workflows are openly shared, the entry links to them; the full set is listed under [open science](expertise.qmd#open-science). ORCID and Google Scholar hold the complete and most current record. Filter by research theme, or search titles, authors, and journals.
 
-## Articles, chapters and preprints {#articles-and-chapters}
+## Articles, chapters, and preprints {#articles-and-chapters}
 
 ```{=html}
 <div class="quarto-listing-category rr-theme-filter" hidden role="group" aria-label="Filter publications by research theme">

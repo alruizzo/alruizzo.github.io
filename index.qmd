@@ -1,10 +1,10 @@
 ---
 pagetitle: "Dr. Adriana L. Ruiz-Rizzo"
-description: "Cognitive and clinical neuroscientist studying how aging and early cognitive decline reshape attention, memory and brain networks, using multimodal MRI."
+description: "Cognitive and clinical neuroscientist studying how aging and early cognitive decline reshape attention, memory, and brain networks, using multimodal MRI."
 image: assets/social/index.png
 image-alt: "Title card: Dr. Adriana L. Ruiz-Rizzo, cognitive and clinical neuroscientist, with her portrait, on a dark background with a network pattern."
 share-card-title: "Dr. Adriana L. Ruiz-Rizzo"
-share-card-tagline: "Aging, early cognitive decline, visual attention and the organization of brain networks"
+share-card-tagline: "Aging, early cognitive decline, visual attention, and the organization of brain networks"
 open-graph:
   title: "Dr. Adriana L. Ruiz-Rizzo · Cognitive and clinical neuroscientist"
 twitter-card:
@@ -109,7 +109,7 @@ listing:
 
 <div class="rr-hero-head"><span class="rr-hero-rule" aria-hidden="true"></span><h1 id="hero-title"><span class="rr-wipe">Dr. Adriana L. Ruiz-Rizzo</span></h1></div>
 
-[Studying how aging and the earliest stages of cognitive decline reshape attention, memory and the organization of brain networks.]{.rr-statement}
+[Studying how aging and the earliest stages of cognitive decline reshape attention, memory, and the organization of brain networks.]{.rr-statement}
 
 [Her research combines multimodal MRI with computational models of visual attention to identify early markers of decline and to inform prevention and early intervention.]{.rr-support}
 
@@ -216,11 +216,11 @@ Adriana's doctoral and postdoctoral research were each funded through highly com
 ::: {}
 [Why it matters]{.rr-eyebrow}
 
-## Decline begins long before diagnosis {.rr-section-title}
+## Decline may begin before diagnosis {.rr-section-title}
 :::
 
 ::: {}
-Changes in attention, memory and brain connectivity can start years before dementia is diagnosed. In young carriers of a genetic mutation for early-onset Alzheimer's disease, Adriana and colleagues found altered hippocampal activity while memory performance was still indistinguishable from that of non-carriers. In older adults who notice their own decline before standard tests can detect it, her work links those complaints to slower visual processing and, in people with lower neurite density in frontal white matter, to lower connectivity in an attention-related brain network.
+Changes in attention, memory, and brain connectivity can start years before dementia is diagnosed. Adriana showed that patients with amnestic mild cognitive impairment due to Alzheimer's disease, an at-risk stage of dementia, made more errors than matched controls when identifying overlapping shapes, and that these errors went with slower visual processing. In older adults who notice their own decline before standard tests can detect it, her work links those complaints to a similar slowing and, in people with lower neurite density in frontal white matter, to lower connectivity in an attention-related brain network.
 
 Measuring such early changes precisely, and understanding which brain systems carry them, is the basis for detecting decline sooner and for testing interventions, from alertness training to physical activity and diet, that may support cognitive health in aging.
 :::
@@ -275,13 +275,13 @@ From presymptomatic familial Alzheimer's disease to subjective cognitive decline
 
 ### Can attention and brain health be supported?
 
-Alertness training, physical activity and diet, studied in training studies, a randomized controlled trial and a longitudinal cohort.
+Alertness training, physical activity, and diet, studied in training studies, a randomized controlled trial, and a longitudinal cohort.
 
 [Read more](research.qmd#lifestyle-interventions){.rr-more .rr-card-foot aria-label="Read more about lifestyle and interventions"}
 :::
 :::
 
-The same approach extends to [multiple sclerosis, Parkinson's disease and depression](research.qmd#clinical-neuroscience), and to [machine learning on health and social data](research.qmd#data-science).
+The same approach extends to [multiple sclerosis, Parkinson's disease, and depression](research.qmd#clinical-neuroscience), and to [machine learning on health and social data](research.qmd#data-science).
 :::
 :::
 
@@ -325,52 +325,6 @@ Studies that show the range of the research, from mechanisms of attention in agi
 
 ::: {.rr-section style="padding-top: 0;"}
 ::: {.rr-wrap}
-::: {.rr-section-head}
-::: {}
-[Approach]{.rr-eyebrow}
-
-## From measurement to mechanism
-:::
-
-[Methods and expertise](expertise.qmd){.rr-more}
-:::
-
-::: {.rr-pipeline}
-::: {.rr-card .rr-card-quiet .rr-step}
-[1]{.rr-step-num aria-hidden="true"}
-
-### Measure
-
-- Computational assessment of visual attention (whole and partial report)
-- Neuropsychological assessment
-- Resting-state, task and diffusion MRI
-:::
-
-::: {.rr-card .rr-card-quiet .rr-step}
-[2]{.rr-step-num aria-hidden="true"}
-
-### Model
-
-- Group comparisons and individual differences
-- Longitudinal latent growth curve and mediation models
-- Machine learning classification
-:::
-
-::: {.rr-card .rr-card-quiet .rr-step}
-[3]{.rr-step-num aria-hidden="true"}
-
-### Translate
-
-- Early markers of cognitive decline
-- Outcomes for training and lifestyle interventions
-- Applications in neurological conditions
-:::
-:::
-:::
-:::
-
-::: {.rr-section style="padding-top: 0;"}
-::: {.rr-wrap}
 [Trajectory]{.rr-eyebrow}
 
 ## An international research path {.rr-section-title style="margin-bottom: var(--rr-space-6);"}
@@ -383,7 +337,7 @@ Studies that show the range of the research, from mechanisms of attention in agi
 <li><div class="rr-when rr-num">Since 2022</div><div class="rr-where">Jena</div><div class="rr-what">Department of Neurology, Jena University Hospital</div></li>
 </ol>
 
-[Full career, awards and teaching](about.qmd){.rr-more}
+[Full career, awards, and teaching](about.qmd){.rr-more}
 :::
 :::
 
@@ -395,7 +349,7 @@ Studies that show the range of the research, from mechanisms of attention in agi
 
 ## Points of connection
 
-Adriana's expertise spans theory-based cognitive assessment, multimodal neuroimaging and statistical modeling in aging and clinical populations. Researchers, institutions and R&D teams working on related questions are welcome to get in touch.
+Adriana's expertise spans theory-based cognitive assessment, multimodal neuroimaging, and statistical modeling in aging and clinical populations. Researchers, institutions, and R&D teams working on related questions are welcome to get in touch.
 
 ::: {.rr-actions}
 [Get in touch](contact.qmd){.rr-btn .rr-btn-primary}
@@ -403,7 +357,7 @@ Adriana's expertise spans theory-based cognitive assessment, multimodal neuroima
 :::
 :::
 
-- Multimodal MRI analysis [Resting-state, diffusion and task fMRI]{}
+- Multimodal MRI analysis [Resting-state, diffusion, and task fMRI]{}
 - Theory-based assessment of visual attention [Processing speed, short-term memory capacity, alertness]{}
 - Longitudinal and intervention designs [Latent growth curve models, randomized controlled trials]{}
 - Applied machine learning [Clinical imaging and open social data]{}

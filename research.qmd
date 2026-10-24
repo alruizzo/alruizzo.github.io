@@ -1,55 +1,55 @@
 ---
 title: "Research"
-description: "How aging and the earliest stages of cognitive decline alter attention, memory and the organization of brain networks, and what might support cognitive health."
+description: "How aging and the earliest stages of cognitive decline alter attention, memory, and the organization of brain networks, and what might support cognitive health."
 image: assets/social/research.png
 image-alt: "Title card: Research, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
 listing:
   - id: pubs-attention
-    contents: data/publications.yml
-    include: {theme: attention, type: "{article,chapter,preprint}"}
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: attention, type: "{article,chapter,preprint}"}
     template: _templates/pubs-compact.ejs
     sort: "date desc"
     max-items: 5
   - id: pubs-networks
-    contents: data/publications.yml
-    include: {categories: "Brain networks", type: "{article,chapter,preprint}"}
+    contents: data/generated/publications.yml
+    include: {lead: true, categories: "Brain networks", type: "{article,chapter,preprint}"}
     template: _templates/pubs-compact.ejs
     sort: "date desc"
     max-items: 5
   - id: pubs-decline
-    contents: data/publications.yml
-    include: {theme: decline, type: "{article,chapter,preprint}"}
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: decline, type: "{article,chapter,preprint}"}
     template: _templates/pubs-compact.ejs
     sort: "date desc"
     max-items: 5
   - id: pubs-lifestyle
-    contents: data/publications.yml
-    include: {theme: lifestyle, type: "{article,chapter,preprint}"}
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: lifestyle, type: "{article,chapter,preprint}"}
     template: _templates/pubs-compact.ejs
     sort: "date desc"
     max-items: 5
   - id: pubs-clinical
-    contents: data/publications.yml
-    include: {theme: clinical, type: "{article,chapter,preprint}"}
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: clinical, type: "{article,chapter,preprint}"}
     template: _templates/pubs-compact.ejs
     sort: "date desc"
     max-items: 5
   - id: pubs-data
-    contents: data/publications.yml
-    include: {categories: "Data science", type: "{article,chapter,preprint}"}
+    contents: data/generated/publications.yml
+    include: {lead: true, categories: "Data science", type: "{article,chapter,preprint}"}
     template: _templates/pubs-compact.ejs
     sort: "date desc"
     max-items: 5
 ---
 
-Adriana's research asks how aging and the earliest stages of cognitive decline alter cognition, behavior and the organization of brain networks. The work moves between three levels: precise, theory-based measures of attention and memory; the functional and structural brain networks that support them; and the populations and interventions where those measures matter.
+Adriana's research asks how aging and the earliest stages of cognitive decline alter cognition, behavior, and the organization of brain networks. The work moves between three levels: precise, theory-based measures of attention and memory; the functional and structural brain networks that support them; and the populations and interventions where those measures matter.
 
 <ul class="rr-toc-themes">
 <li class="rr-theme attention"><a href="#visual-attention"><span class="rr-theme-label">Visual attention</span>Processing speed and capacity in the aging brain</a></li>
 <li class="rr-theme networks"><a href="#brain-networks"><span class="rr-theme-label">Brain networks</span>Intrinsic connectivity and white-matter pathways</a></li>
 <li class="rr-theme decline"><a href="#cognitive-decline"><span class="rr-theme-label">Cognitive decline and dementia</span>From presymptomatic stages to mild cognitive impairment</a></li>
-<li class="rr-theme lifestyle"><a href="#lifestyle-interventions"><span class="rr-theme-label">Lifestyle and interventions</span>Training, physical activity and diet</a></li>
-<li class="rr-theme clinical"><a href="#clinical-neuroscience"><span class="rr-theme-label">Clinical neuroscience</span>Multiple sclerosis, Parkinson's disease, depression</a></li>
+<li class="rr-theme lifestyle"><a href="#lifestyle-interventions"><span class="rr-theme-label">Lifestyle and interventions</span>Training, physical activity, and diet</a></li>
+<li class="rr-theme clinical"><a href="#clinical-neuroscience"><span class="rr-theme-label">Clinical neuroscience</span>Multiple sclerosis, Parkinson's disease, and depression</a></li>
 <li class="rr-theme data"><a href="#data-science"><span class="rr-theme-label">Data science</span>Machine learning on health and social data</a></li>
 </ul>
 
@@ -68,7 +68,7 @@ Much of daily life depends on how quickly the brain takes in visual information.
 <li>Visual processing speed was associated with resting-state connectivity between right frontoparietal and visual networks, in specific frequency bands of the signal.<span class="rr-cite">Küchenhoff et al., 2021, <a href="https://doi.org/10.1111/ejn.15206"><em>European Journal of Neuroscience</em></a> (shared senior authorship)</span></li>
 </ul>
 
-[**Methods:** TVA-based whole and partial report, phasic alerting paradigms, resting-state fMRI, diffusion tractography.]{.rr-methods-line}
+[**Methods:** TVA-based whole and partial report, phasic alerting paradigms, resting-state fMRI, and diffusion tractography.]{.rr-methods-line}
 
 ### Selected publications {.unlisted}
 
@@ -85,15 +85,14 @@ Much of daily life depends on how quickly the brain takes in visual information.
 
 [How does the brain's intrinsic organization support individual differences in cognition?]{.rr-question}
 
-Even at rest, brain activity is organized into large-scale networks. Adriana studies how this intrinsic functional connectivity, and the white-matter pathways linking brain regions, relate to attention and memory. Her work maps separable attention functions onto distinct networks, tests structural connections proposed by the neural theory of visual attention, and characterizes how subsystems of the medial temporal lobes are embedded in the wider brain.
+Even at rest, brain activity is organized into large-scale networks. Adriana studies how this intrinsic functional connectivity, and the white-matter pathways linking brain regions, relate to attention and memory. Her work maps separable attention functions onto distinct networks and characterizes how subsystems of the medial temporal lobes are embedded in the wider brain.
 
 <ul class="rr-findings">
 <li>In healthy young adults, separable visual attention parameters mapped onto particular intrinsic brain networks.<span class="rr-cite">Ruiz-Rizzo et al., 2018, <a href="https://doi.org/10.3389/fnhum.2018.00089"><em>Frontiers in Human Neuroscience</em></a></span></li>
 <li>Subsystems of the human medial temporal lobes extend locally to amygdala nuclei and globally to a large-scale allostatic-interoceptive system, examined across three independent samples.<span class="rr-cite">Ruiz-Rizzo et al., 2020, <a href="https://doi.org/10.1016/j.neuroimage.2019.116404"><em>NeuroImage</em></a></span></li>
-<li>Age modified the relationship between visual short-term memory capacity and the structural connectivity of the posterior thalamus to occipital cortex.<span class="rr-cite">Menegaux et al., 2020, <a href="https://doi.org/10.1016/j.neuroimage.2019.116440"><em>NeuroImage</em></a></span></li>
 </ul>
 
-[**Methods:** independent component analysis and dual regression, frequency-specific connectivity, probabilistic tractography, diffusion tensor and neurite density (NODDI) metrics.]{.rr-methods-line}
+[**Methods:** independent component analysis and dual regression, frequency-specific connectivity, probabilistic tractography, and diffusion tensor and neurite density (NODDI) metrics.]{.rr-methods-line}
 
 ### Selected publications {.unlisted}
 
@@ -113,7 +112,7 @@ Even at rest, brain activity is organized into large-scale networks. Adriana stu
 The research follows decline from its earliest stages. It began in Colombia, with studies of families carrying the E280A mutation in the presenilin-1 gene, which causes early-onset familial Alzheimer's disease. It continues with older adults who report a decline that standard tests do not yet detect (subjective cognitive decline) and with patients with mild cognitive impairment. A methods chapter on diffusion tensor imaging in Alzheimer's research cautions against overinterpreting diffusion metrics and favors analyses of regions of interest or major white-matter tracts for biomarker studies.
 
 <ul class="rr-findings">
-<li>Young presymptomatic carriers of the PSEN1 E280A mutation showed increased right anterior hippocampal activation while encoding new face-name associations, despite memory performance identical to that of matched controls.<span class="rr-cite">Quiroz et al., 2010, <a href="https://doi.org/10.1002/ana.22105"><em>Annals of Neurology</em></a></span></li>
+<li>Patients with amnestic mild cognitive impairment due to Alzheimer's disease made more errors than matched controls when identifying overlapping shapes, and these errors correlated with reduced visual processing speed.<span class="rr-cite">Ruiz-Rizzo et al., 2017, <a href="https://doi.org/10.1016/j.neurobiolaging.2017.03.029"><em>Neurobiology of Aging</em></a></span></li>
 <li>Older adults with subjective cognitive decline benefited less from perceptual detail when recognizing scenes, suggesting that their memory complaints may reflect a reduced availability of perceptual detail.<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1093/arclin/acab061"><em>Archives of Clinical Neuropsychology</em></a></span></li>
 <li>Subjective cognitive decline predicted lower cingulo-opercular network connectivity in older adults with lower neurite density in the forceps minor (see figure).<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1016/j.neuroimage.2022.119662"><em>NeuroImage</em></a></span></li>
 <li>In healthy older adults from the community, lower visual processing speed correlated with greater subjective cognitive complaints.<span class="rr-cite">Marrero-Polegre et al., 2023, <a href="https://doi.org/10.3389/fpsyt.2023.1063151"><em>Frontiers in Psychiatry</em></a></span></li>
@@ -124,7 +123,7 @@ The research follows decline from its earliest stages. It began in Colombia, wit
 <figcaption>Forceps minor neurite density (A, B) and cingulo-opercular network functional connectivity (C, D) in older adults at baseline and two follow-ups, about 18 months apart. Each line is one participant.<span class="rr-credit">Figure from Ruiz-Rizzo et al. (2022), <a href="https://doi.org/10.1016/j.neuroimage.2022.119662"><em>NeuroImage</em> 263, 119662</a>. Reproduced unmodified under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</span></figcaption>
 </figure>
 
-[**Methods:** task fMRI, high-density event-related potentials, resting-state and diffusion MRI, latent growth curve modeling, neuropsychological assessment.]{.rr-methods-line}
+[**Methods:** task fMRI, high-density event-related potentials, resting-state and diffusion MRI, latent growth curve modeling, and neuropsychological assessment.]{.rr-methods-line}
 
 ### Selected publications {.unlisted}
 
@@ -137,21 +136,20 @@ The research follows decline from its earliest stages. It began in Colombia, wit
 ::: {.rr-theme-section .rr-theme .lifestyle}
 [Lifestyle and interventions]{.rr-theme-label}
 
-## Training, physical activity and diet {#lifestyle-interventions}
+## Training, physical activity, and diet {#lifestyle-interventions}
 
-[Can attention, memory and brain connectivity in older age be supported by training and lifestyle?]{.rr-question}
+[Can attention, memory, and brain connectivity in older age be supported by training and lifestyle?]{.rr-question}
 
-Beyond describing change, the research tests factors that might support cognitive health: cognitive training of alertness, multicomponent physical activity and dietary patterns, studied in training studies, a randomized controlled trial and a longitudinal cohort. Outcomes are measured with the same theory-based attention parameters and multimodal MRI used elsewhere in the work, which makes results comparable across studies.
+Beyond describing change, the research tests factors that might support cognitive health: cognitive training of alertness, multicomponent physical activity, and dietary patterns, studied in training studies, a randomized controlled trial, and a longitudinal cohort. Outcomes are measured with the same theory-based attention parameters and multimodal MRI used elsewhere in the work, which makes results comparable across studies.
 
 <ul class="rr-findings">
 <li>In older adults from the DELCODE cohort (n = 376), fornix white-matter microstructure mediated the association between Mediterranean diet adherence and verbal episodic memory four years later.<span class="rr-cite">Ruiz-Rizzo et al., 2024, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.01.012"><em>Neurobiology of Aging</em></a></span></li>
-<li>In a randomized controlled trial of an eight-week, online-guided physical activity program in 92 healthy older adults, the primary outcome, visual processing speed, did not differ between groups; exploratory analyses suggested gains in inhibition, visual memory and connectivity between visual and dorsal attention networks.<span class="rr-cite">Schrenk et al., 2026, <a href="https://doi.org/10.1007/s11357-026-02324-6"><em>GeroScience</em></a>; protocol: Schrenk et al., 2023, <a href="https://doi.org/10.3389/fnagi.2023.1254194"><em>Frontiers in Aging Neuroscience</em></a></span></li>
 <li>Alertness training increased visual processing speed in healthy older adults. The study received the SCHUHFRIED Science Award 2020.<span class="rr-cite">Penning, Ruiz-Rizzo et al., 2021, <a href="https://doi.org/10.1177/0956797620965520"><em>Psychological Science</em></a></span></li>
 </ul>
 
 A 2026 preprint from the FIT4BRAIN randomized controlled trial, not yet peer reviewed, reports increases in NODDI-derived neurite density across white-matter tracts after physical exercise in healthy older adults ([medRxiv](https://doi.org/10.64898/2026.08.31.26361810)).
 
-[**Methods:** randomized controlled trial design, training studies, longitudinal cohort analysis, latent growth curve and mediation models.]{.rr-methods-line}
+[**Methods:** randomized controlled trial design, training studies, longitudinal cohort analysis, and latent growth curve and mediation models.]{.rr-methods-line}
 
 ### Selected publications {.unlisted}
 
@@ -164,7 +162,7 @@ A 2026 preprint from the FIT4BRAIN randomized controlled trial, not yet peer rev
 ::: {.rr-theme-section .rr-theme .clinical}
 [Clinical neuroscience]{.rr-theme-label}
 
-## Multiple sclerosis, Parkinson's disease and depression {#clinical-neuroscience}
+## Multiple sclerosis, Parkinson's disease, and depression {#clinical-neuroscience}
 
 [What do attention measures and brain networks reveal in neurological and psychiatric conditions?]{.rr-question}
 
@@ -172,7 +170,6 @@ The same measures carry over to clinical populations, where cognitive symptoms a
 
 <ul class="rr-findings">
 <li>In 104 patients with relapsing-remitting multiple sclerosis, fatigue and low sleep quality were associated with distinct patterns of functional connectivity, even though the two symptoms were closely correlated.<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1111/ene.15445"><em>European Journal of Neurology</em></a></span></li>
-<li>Patients with Parkinson's disease and lower cognitive screening scores showed reduced visual processing speed and visual short-term memory capacity.<span class="rr-cite">Gerner et al., 2025, <a href="https://doi.org/10.1136/bmjno-2024-000953"><em>BMJ Neurology Open</em></a></span></li>
 <li>Earlier work in Colombia characterized neuropsychological performance in major depression and in Parkinson's disease with different ages of onset.<span class="rr-cite">Ruiz-Rizzo et al., 2008 and 2009, <a href="https://doi.org/10.17533/udea.iatreia.4479"><em>Iatreia</em></a>; <a href="https://doi.org/10.33588/rn.4903.2008475"><em>Revista de Neurología</em></a></span></li>
 </ul>
 
@@ -191,11 +188,10 @@ The same measures carry over to clinical populations, where cognitive symptoms a
 
 [How can statistical learning address problems that affect older adults inside and outside the clinic?]{.rr-question}
 
-Adriana holds a specialization in applied statistics, and machine learning is part of her toolkit. One study applied supervised learning to open data on missing older adults in Colombia; another combined structural and functional MRI to detect beginning cognitive impairment in Parkinson's disease.
+Adriana holds a specialization in applied statistics, and machine learning is part of her toolkit. One study applied supervised learning to open data on missing older adults in Colombia.
 
 <ul class="rr-findings">
-<li>Using open data on 7,855 cases of older adults reported missing in Colombia, gradient boosting classifiers performed best at predicting whether a missing older adult would be found; the time since the disappearance and the place where it occurred were among the most informative features.<span class="rr-cite">Ruiz-Rizzo, Archila-Meléndez and González Veloza, 2022, <a href="https://doi.org/10.1007/s42001-022-00171-x"><em>Journal of Computational Social Science</em></a></span></li>
-<li>A support vector machine model built on imaging features (gray matter volume and inter-network functional connectivity) classified cognitive performance in patients with Parkinson's disease.<span class="rr-cite">Balßuweit et al., 2025, <a href="https://doi.org/10.3389/fnins.2025.1689302"><em>Frontiers in Neuroscience</em></a></span></li>
+<li>Using open data on 7,855 cases of older adults reported missing in Colombia, gradient boosting classifiers performed best at predicting whether a missing older adult would be found; the time since the disappearance and the place where it occurred were among the most informative features.<span class="rr-cite">Ruiz-Rizzo, Archila-Meléndez, and González Veloza, 2022, <a href="https://doi.org/10.1007/s42001-022-00171-x"><em>Journal of Computational Social Science</em></a></span></li>
 </ul>
 
 ### Selected publications {.unlisted}

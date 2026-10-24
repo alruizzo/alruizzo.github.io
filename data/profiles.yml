@@ -5,7 +5,7 @@
 # `.rr-icon-<icon>` in styles/site.scss. Only networks Adriana actually uses are listed.
 # hero: true also shows the profile as a pill link in the homepage hero.
 - id: email
-  name: E-mail
+  name: Email
   url: "mailto:Adriana.RuizRizzo@med.uni-jena.de"
   icon: email
   handle: Adriana.RuizRizzo@med.uni-jena.de

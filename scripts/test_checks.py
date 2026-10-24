@@ -180,6 +180,31 @@ class DataValidation(unittest.TestCase):
         self.assertCaught(prerender.errors, "3 highlighted education items")
         self.assertCaught(prerender.errors, "1 highlighted recognition items")
 
+    def test_author_role(self):
+        rec = lambda authors, **kw: {"authors": authors, **kw}
+        self.assertEqual(prerender.author_role(rec(["Ruiz-Rizzo AL", "B C"])), "first author")
+        self.assertEqual(prerender.author_role(rec(["B C", "Ruiz-Rizzo AL"])), "last author")
+        self.assertEqual(prerender.author_role(rec(["B C", "Ruiz-Rizzo AL", "D E"])), "a middle author (2 of 3)")
+        self.assertTrue(prerender.is_lead(rec(["B C", "Ruiz-Rizzo AL", "D E"], equal_contribution="first")))
+        self.assertFalse(prerender.is_lead(rec(["B C", "Ruiz-Rizzo AL", "D E"])))
+
+    def test_featured_paper_must_be_led_by_her(self):
+        pubs, outputs, career, recognition = self.fresh()
+        middle = next(p for p in pubs if not prerender.is_lead(p) and p.get("authors"))
+        middle["featured"] = True
+        middle.setdefault("summary", "A summary.")
+        self.assertCaught(run_checks(pubs, outputs, career, recognition), "only papers she leads")
+
+    def test_highlight_links_point_to_led_papers(self):
+        prerender.errors.clear()
+        prerender.check_highlight_links(self.pubs)
+        self.assertEqual(prerender.errors, [], "a curated page links a paper she does not lead")
+        pubs = copy.deepcopy(self.pubs)
+        fornix = next(p for p in pubs if p["id"] == "ruizrizzo-2024-fornix-fractional")  # linked on research.qmd
+        fornix["authors"] = ["Someone A"] + fornix["authors"] + ["Someone B"]
+        prerender.check_highlight_links(pubs)
+        self.assertCaught(prerender.errors, "highlight only papers she leads")
+
     def test_featured_fellowships_present(self):
         recognition = prerender.load("recognition.yml")
         self.assertEqual(sorted(r["id"] for r in recognition if r.get("fellowship")), ["lmu-research-fellows", "msca-phd"])

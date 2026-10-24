@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Cognitive and clinical neuroscientist at the Department of Neurology, Jena University Hospital. Career, recognition, teaching, talks and service."
+description: "Cognitive and clinical neuroscientist at the Department of Neurology, Jena University Hospital. Career, recognition, teaching, talks, and service."
 image: assets/social/about.png
 image-alt: "Title card: About Dr. Adriana L. Ruiz-Rizzo, with her portrait, on a dark background with a network pattern."
 share-card-tagline: "Cognitive and clinical neuroscientist, Department of Neurology, Jena University Hospital"
@@ -49,15 +49,15 @@ listing:
 <img class="rr-about-portrait" src="assets/img/portrait.jpg" width="1450" height="967" alt="Portrait of Adriana L. Ruiz-Rizzo">
 
 ::: {style="flex: 1 1 22rem;"}
-Dr. Adriana L. Ruiz-Rizzo is a cognitive and clinical neuroscientist and associate researcher in the {{< var affiliation.department >}} at {{< var affiliation.institution >}}, Germany. Her research examines how brain networks underlie cognitive and behavioral changes in healthy aging, subjective cognitive decline and mild cognitive impairment, and how brain function, lifestyle and behavior relate across neurological and psychiatric conditions.
+Dr. Adriana L. Ruiz-Rizzo is a cognitive and clinical neuroscientist and associate researcher in the {{< var affiliation.department >}} at {{< var affiliation.institution >}}, Germany. Her research examines how brain networks underlie cognitive and behavioral changes in healthy aging, subjective cognitive decline, and mild cognitive impairment, and how brain function, lifestyle, and behavior relate across neurological and psychiatric conditions.
 :::
 :::
 
 She trained in psychology at the Universidad de Antioquia in Medellín, Colombia, where she worked with the Grupo de Neurociencias de Antioquia on familial Alzheimer's disease, and in cognitive and clinical neuroscience at Maastricht University. She received her Ph.D. in Systemic Neurosciences from the Graduate School of Systemic Neurosciences at LMU Munich, with a dissertation on visual processing speed in the aging brain supported by the European Union's Marie Skłodowska-Curie Actions.
 
-Postdoctoral work followed at LMU Munich, including an LMUexcellent fellowship co-funded by the European Union's Horizon 2020 programme, and as a postdoctoral fellow at the Institute of Gerontology of Wayne State University in Detroit. She also holds a specialization in applied statistics, which brings statistical modeling and machine learning into her research. Her work has appeared in journals including *Psychological Science*, *NeuroImage* and *Neurobiology of Aging*.
+Postdoctoral work followed at LMU Munich, including an LMUexcellent fellowship co-funded by the European Union's Horizon 2020 program, and as a postdoctoral fellow at the Institute of Gerontology of Wayne State University in Detroit. She also holds a specialization in applied statistics, which brings statistical modeling and machine learning into her research. Her work has appeared in journals including *Psychological Science*, *NeuroImage*, and *Neurobiology of Aging*.
 
-At Jena University Hospital she leads a project on the brain connectivity underpinnings of visual attention dysfunctions in mild cognitive impairment, holds an award from the IZKF Advanced Medical Scientist Program (2023 to 2026) and supervises a doctoral candidate. She serves as an academic editor for *Journal of Aging Research* and *BMC Geriatrics*.
+At Jena University Hospital she leads a project on the brain connectivity underpinnings of visual attention dysfunctions in mild cognitive impairment, holds an award from the IZKF Advanced Medical Scientist Program (2023 to 2026) and supervises a doctoral candidate. She serves on the editorial boards of *Journal of Aging Research* and *BMC Geriatrics*.
 
 ::: {.rr-actions}
 [CV (PDF, {{< var cv.date >}})]({{< var cv.file >}}){.rr-btn .rr-btn-primary}
@@ -98,9 +98,9 @@ Selected talks; recordings are linked where they are public.
 
 ## Service {#service}
 
-**Academic editor** for *Journal of Aging Research* and *BMC Geriatrics*.
+**Editorial boards:** academic editor for [*Journal of Aging Research*](https://onlinelibrary.wiley.com/page/journal/9025/homepage/editorial-board) and editorial board member for [*BMC Geriatrics*](https://link.springer.com/journal/12877/editorial-board).
 
-**Peer reviewer** for more than 25 journals, including *Brain*, *Alzheimer's & Dementia*, *NeuroImage*, *Human Brain Mapping*, *Cerebral Cortex*, *Neurobiology of Aging* and *Psychological Medicine*. The full list is in the [CV]({{< var cv.file >}}); verified review activity is recorded on her [ORCID profile]({{< var links.orcid >}}).
+**Peer reviewer** for more than 25 journals, including *Brain*, *Alzheimer's & Dementia*, *NeuroImage*, *Human Brain Mapping*, *Cerebral Cortex*, *Neurobiology of Aging*, and *Psychological Medicine*. The full list is in the [CV]({{< var cv.file >}}); verified review activity is recorded on her [ORCID profile]({{< var links.orcid >}}).
 
 ## Science communication {#science-communication}
 

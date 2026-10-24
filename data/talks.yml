@@ -1,28 +1,22 @@
 # Talks and recordings, newest first (rendered in this order; listing sort is off).
 # Source: "Academic communication" in the October 2026 CV (files/Ruiz-Rizzo_CV.pdf); the recording
-# and programme links are the hyperlinks embedded in that PDF. Talk titles are quoted as given there.
-# links: optional list of {label, url}; label says what the link opens (Recording, Programme).
-- id: eni-lectures-2024
-  period: "2024"
-  title: "“Aging, brain, and cognition”"
-  org: ENI Lectures 2024, European Neuroscience Institute Göttingen
-  place: Göttingen, Germany
-  detail: Invited lecture, 8 July 2024.
+# and program links are the hyperlinks embedded in that PDF. Talk titles are quoted as given there.
+# links: optional list of {label, url}; label says what the link opens (Recording, Program).
 - id: resdem-2022
   period: "2022"
   title: "“Structural MRI connectivity and diet in the DELCODE study”"
   org: 3rd International Conference on Cognitive Reserve in Dementia and Other Disorders (ResDem 2022), LMU Munich
   place: Munich, Germany
-  detail: 19 November 2022.
+  detail: November 19, 2022.
   links:
-    - label: Programme
+    - label: Program
       url: https://www.gedaechtniszentrum-innenstadt.de/dementia/programme.html
 - id: wsu-colloquium-2022
   period: "2022"
   title: "“Visual processing speed in the aging brain”"
   org: Research Colloquium, Institute of Gerontology, Wayne State University
   place: Detroit, United States
-  detail: 27 September 2022.
+  detail: September 27, 2022.
   links:
     - label: Recording
       url: https://www.youtube.com/watch?v=Fl7zi3IR4IM
@@ -30,7 +24,7 @@
   period: "2020 to 2021"
   title: "“Functional connectivity between right frontoparietal and visual networks is linked to visual processing speed”"
   org: Neuromatch Conference 3.0 and Data Blitz at the Cognitive Neuroscience Society (CNS) annual meeting
-  detail: Neuromatch, 29 October 2020; CNS, February 2021.
+  detail: Neuromatch, October 29, 2020; CNS, February 2021.
   links:
     - label: Neuromatch recording
       url: https://www.youtube.com/watch?v=totlbFDuVrc

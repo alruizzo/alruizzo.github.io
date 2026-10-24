@@ -1,5 +1,5 @@
 # Profile facts used across pages via {{< var key >}}. Change them here only.
-# Sources: the previous version of the site (e-mail, profile IDs, biography) and ORCID (affiliation).
+# Sources: the previous version of the site (email, profile IDs, biography) and ORCID (affiliation).
 name: "Dr. Adriana L. Ruiz-Rizzo"
 role: "Cognitive and clinical neuroscientist"
 affiliation:
@@ -16,13 +16,15 @@ links:
   github: "https://github.com/alruizzo"
   linkedin: "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
   blog: "https://psicologiayneurocienciaenespanol.blogspot.com/"
-# The CV is Adriana's own PDF ("Curriculum vitae-latest.pdf", 23 October 2026), published exactly as
-# supplied. sha256 pins those bytes: scripts/prerender.py and check_site.py fail if the file or its
-# rendered copy ever differs (for example after an accidental regeneration or compression).
+# The CV is Adriana's own PDF ("Curriculum vitae-latest.pdf", October 23, 2026, sha256 5ca17aee...),
+# with one change made on her request (October 24, 2026): the 2024 ENI Lectures entry was removed
+# from "Academic communication" on page 3 and the rows below it moved up. The other six pages are
+# unchanged (renders compared pixel for pixel). sha256 pins the published bytes: scripts/prerender.py
+# and check_site.py fail if the file or its rendered copy ever differs.
 cv:
   file: "files/Ruiz-Rizzo_CV.pdf"
   date: "October 2026"
-  sha256: "5ca17aeec98b468b9f28759aa5498fb814b4a0771608d6b2ff0cb68993132de5"
+  sha256: "a3e7f8d99607effdc5191bc93af6a6def8acaffc78e3476055da9048f3cafc6f"
 # Legal notice and privacy statement. The postal address (required by § 5 DDG) was supplied by the
 # site owner; the build warns if it is ever reset to a "TO BE ADDED" placeholder.
 legal:

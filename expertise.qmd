@@ -1,6 +1,6 @@
 ---
 title: "Methods and expertise"
-description: "Theory-based cognitive assessment, multimodal neuroimaging and statistical modeling for research on aging, early cognitive decline and neurological conditions."
+description: "Theory-based cognitive assessment, multimodal neuroimaging, and statistical modeling for studies of aging, early cognitive decline, and neurological conditions."
 image: assets/social/expertise.png
 image-alt: "Title card: Methods and expertise, Dr. Adriana L. Ruiz-Rizzo, on a dark background with a network pattern."
 listing:
@@ -11,7 +11,7 @@ listing:
     page-size: 100
 ---
 
-This page summarizes the methods Adriana works with, the populations she has studied and where that expertise applies. Each item links to published work that uses it.
+This page summarizes the methods Adriana works with, the populations she has studied, and where that expertise applies. Each item links to published work that uses it.
 
 ## A typical study, end to end {#workflow}
 
@@ -55,9 +55,9 @@ Most studies combine a behavioral measurement layer with one or more imaging mod
 ::: {.rr-card .rr-card-quiet}
 ### Computational assessment of visual attention
 
-Whole- and partial-report tasks modeled with Bundesen's theory of visual attention yield independent, latent-level parameters that are separate from motor speed. Used in healthy younger and older adults, amnestic mild cognitive impairment and Parkinson's disease.
+Whole- and partial-report tasks modeled with Bundesen's theory of visual attention yield independent, latent-level parameters that are separate from motor speed. Used in healthy younger and older adults, amnestic mild cognitive impairment, and Parkinson's disease.
 
-[Neurobiology of Aging 2017](https://doi.org/10.1016/j.neurobiolaging.2017.03.029) · [Frontiers in Psychiatry 2023](https://doi.org/10.3389/fpsyt.2023.1063151) · [BMJ Neurology Open 2025](https://doi.org/10.1136/bmjno-2024-000953)
+[Neurobiology of Aging 2017](https://doi.org/10.1016/j.neurobiolaging.2017.03.029) · [Frontiers in Psychiatry 2023](https://doi.org/10.3389/fpsyt.2023.1063151) · [Psychological Science 2021](https://doi.org/10.1177/0956797620965520)
 :::
 
 ::: {.rr-card .rr-card-quiet}
@@ -81,7 +81,7 @@ Fractional anisotropy and neurite density (NODDI) in major tracts such as the fo
 
 Memory encoding and retrieval paradigms with functional MRI, and high-density (128-channel) event-related potentials in presymptomatic familial Alzheimer's disease.
 
-[Archives of Clinical Neuropsychology 2022](https://doi.org/10.1093/arclin/acab061) · [Annals of Neurology 2010](https://doi.org/10.1002/ana.22105) · [Neurology 2011](https://doi.org/10.1212/WNL.0b013e318227b1b0)
+[Archives of Clinical Neuropsychology 2022](https://doi.org/10.1093/arclin/acab061)
 :::
 
 ::: {.rr-card .rr-card-quiet}
@@ -89,21 +89,21 @@ Memory encoding and retrieval paradigms with functional MRI, and high-density (1
 
 Latent growth curve and mediation models for multi-wave cohort data; training studies and randomized controlled trials with cognitive and imaging outcomes.
 
-[Psychological Science 2021](https://doi.org/10.1177/0956797620965520) · [Frontiers in Aging Neuroscience 2023](https://doi.org/10.3389/fnagi.2023.1254194) · [GeroScience 2026](https://doi.org/10.1007/s11357-026-02324-6)
+[Psychological Science 2021](https://doi.org/10.1177/0956797620965520) · [NeuroImage 2022](https://doi.org/10.1016/j.neuroimage.2022.119662) · [Neurobiology of Aging 2024](https://doi.org/10.1016/j.neurobiolaging.2024.01.012) · [medRxiv preprint 2026](https://doi.org/10.64898/2026.08.31.26361810)
 :::
 
 ::: {.rr-card .rr-card-quiet}
 ### Machine learning
 
-Supervised classification, including gradient boosting and support vector machines with cross-validation, applied to open social data and multimodal MRI.
+Supervised classification with cross-validation, such as gradient boosting applied to open social data; in collaborative work, support vector machines on multimodal MRI.
 
-[Journal of Computational Social Science 2022](https://doi.org/10.1007/s42001-022-00171-x) · [Frontiers in Neuroscience 2025](https://doi.org/10.3389/fnins.2025.1689302)
+[Journal of Computational Social Science 2022](https://doi.org/10.1007/s42001-022-00171-x)
 :::
 :::
 
 ## Populations and cohorts {#populations}
 
-Healthy younger and older adults across the adult lifespan; older adults with subjective cognitive decline; patients with amnestic mild cognitive impairment; presymptomatic carriers of the PSEN1 E280A mutation for familial Alzheimer's disease in Colombia; participants of the DELCODE cohort study; patients with relapsing-remitting multiple sclerosis, Parkinson's disease and major depression.
+Healthy younger and older adults across the adult lifespan; older adults with subjective cognitive decline; patients with amnestic mild cognitive impairment; presymptomatic carriers of the PSEN1 E280A mutation for familial Alzheimer's disease in Colombia; participants of the DELCODE cohort study; and patients with relapsing-remitting multiple sclerosis, Parkinson's disease, or major depression.
 
 ## Tools and skills {#tools}
 
@@ -135,13 +135,13 @@ Sensitive behavioral and imaging markers in people at risk of dementia, from gen
 ::: {.rr-card .rr-card-quiet}
 ### Outcome measures for interventions and trials
 
-Theory-based attention parameters and imaging outcomes for training, lifestyle and clinical studies; early work contributed to composite cognitive endpoints for presymptomatic Alzheimer's disease ([Alzheimer's & Dementia 2011](https://doi.org/10.1016/j.jalz.2011.05.1729)).
+Theory-based attention parameters and imaging outcomes for training, lifestyle, and clinical studies; early work contributed to composite cognitive endpoints for presymptomatic Alzheimer's disease.
 :::
 
 ::: {.rr-card .rr-card-quiet}
 ### Clinical neurology
 
-Cognitive and network characterization of symptoms such as fatigue, sleep problems and visual processing deficits in multiple sclerosis and Parkinson's disease.
+Cognitive and network characterization of symptoms such as fatigue, sleep problems, and visual processing deficits in multiple sclerosis and Parkinson's disease.
 :::
 
 ::: {.rr-card .rr-card-quiet}
@@ -153,7 +153,7 @@ Machine learning on open administrative data, as in predicting outcomes for olde
 
 ## Open science {#open-science}
 
-Data, analysis scripts and workflows for many studies are shared openly on the [Open Science Framework]({{< var links.osf >}}), and several articles were first released as preprints. Each record below links to its repository and, where applicable, to the publication it accompanies.
+Data, analysis scripts, and workflows for many studies are shared openly on the [Open Science Framework]({{< var links.osf >}}), and several articles were first released as preprints. Each record below links to its repository and, where applicable, to the publication it accompanies.
 
 ::: {#outputs}
 :::
