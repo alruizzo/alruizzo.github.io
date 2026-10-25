@@ -177,41 +177,38 @@ listing:
 :::
 
 ::: {.rr-venues}
-[Peer-reviewed work published in]{.rr-eyebrow}
+<div class="rr-venues-head"><span class="rr-eyebrow">Peer-reviewed work published in</span><button class="rr-venues-toggle" type="button" aria-label="Pause the moving journal list" hidden><svg class="icon-pause" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg><svg class="icon-play" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 1.5v11l9-5.5z" fill="currentColor"/></svg></button></div>
 
 ::: {#venues}
 :::
 :::
+
+```{=html}
+<script>
+// Journal carousel: moves only under .rr-motion (set by the hero script when motion is allowed).
+// Each row drifts at about 16 px per second, so the duration follows its width. It pauses on
+// hover and with the button (WCAG 2.2.2). Without motion the rows stay still and scroll sideways.
+(function () {
+  var box = document.querySelector(".rr-venues");
+  if (!box || !document.documentElement.classList.contains("rr-motion")) return;
+  box.classList.add("is-moving");
+  box.querySelectorAll(".rr-venue-track").forEach(function (track) {
+    var w = track.querySelector(".rr-venue-list").getBoundingClientRect().width;
+    track.style.setProperty("--rr-venue-dur", Math.max(30, Math.round(w / 16)) + "s");
+  });
+  var btn = box.querySelector(".rr-venues-toggle");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var paused = box.classList.toggle("is-paused");
+    btn.setAttribute("aria-label", paused ? "Play the moving journal list" : "Pause the moving journal list");
+  });
+})();
+</script>
+```
 :::
 :::
 
-::: {.rr-section .rr-fellowships-section}
-::: {.rr-wrap}
-::: {.rr-section-head}
-::: {}
-[Competitive fellowships]{.rr-eyebrow}
-
-## Marie Skłodowska-Curie support at two career stages
-
-Adriana's doctoral and postdoctoral research were each funded through highly competitive fellowship programs co-funded by the European Union's Marie Skłodowska-Curie Actions.
-:::
-
-[Funding and awards](about.qmd#funding-heading){.rr-more}
-:::
-
-::: {#fellowships}
-:::
-
-::: {.rr-funders-block}
-[Research supported by]{.rr-eyebrow}
-
-::: {#funders}
-:::
-:::
-:::
-:::
-
-::: {.rr-section style="padding-top: 0;"}
+::: {.rr-section}
 ::: {.rr-wrap .rr-intro}
 ::: {}
 [Why it matters]{.rr-eyebrow}
@@ -361,6 +358,32 @@ Adriana's expertise spans theory-based cognitive assessment, multimodal neuroima
 - Theory-based assessment of visual attention [Processing speed, short-term memory capacity, alertness]{}
 - Longitudinal and intervention designs [Latent growth curve models, randomized controlled trials]{}
 - Applied machine learning [Clinical imaging and open social data]{}
+:::
+:::
+:::
+
+::: {.rr-section .rr-fellowships-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Competitive fellowships]{.rr-eyebrow}
+
+## Marie Skłodowska-Curie support at two career stages
+
+Adriana's doctoral and postdoctoral research were each funded through highly competitive fellowship programs co-funded by the European Union's Marie Skłodowska-Curie Actions.
+:::
+
+[Funding and awards](about.qmd#funding-heading){.rr-more}
+:::
+
+::: {#fellowships}
+:::
+
+::: {.rr-funders-block}
+[Research supported by]{.rr-eyebrow}
+
+::: {#funders}
+:::
 :::
 :::
 :::

@@ -7,9 +7,20 @@ for (const item of items) {
   counts.set(item.venue, (counts.get(item.venue) || 0) + 1);
 }
 const venues = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map((e) => e[0]);
+// Two single-line rows, alternating so both start with frequent venues. Each row's list is
+// written twice: the second copy (aria-hidden) only makes the slow carousel loop seamlessly and
+// is not displayed when motion is off, so every journal is read exactly once.
+const rows = [venues.filter((_, i) => i % 2 === 0), venues.filter((_, i) => i % 2 === 1)];
 %>
 ```{=html}
-<ul class="list rr-venue-list">
-<% for (const v of venues) { %><li><%- v %></li><% } %>
-</ul>
+<div class="list rr-venue-rows">
+<% for (const [r, row] of rows.entries()) { %>
+<div class="rr-venue-row<%= r ? " is-reverse" : "" %>">
+<div class="rr-venue-track">
+<ul class="rr-venue-list"><% for (const v of row) { %><li><%- v %></li><% } %></ul>
+<ul class="rr-venue-list rr-venue-copy" aria-hidden="true"><% for (const v of row) { %><li><%- v %></li><% } %></ul>
+</div>
+</div>
+<% } %>
+</div>
 ```

@@ -487,8 +487,39 @@ main p, main li { max-width: var(--rr-measure); }
 .rr-credentials li:first-child { border-top: 0; padding-top: 0; }
 .rr-credentials li span { display: block; color: var(--rr-text-3); font-size: var(--rr-fs-micro); }
 .rr-venues { margin-top: var(--rr-space-6); padding-top: var(--rr-space-5); border-top: 1px solid var(--rr-hairline); }
-.rr-venues ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem 1.6rem; }
-.rr-venues li { font-family: var(--rr-font-display); font-style: italic; font-size: 1.05rem; color: var(--rr-text-2); max-width: none; }
+// Journals as two single-line rows. At rest (no JS or reduced motion) each row scrolls sideways
+// and the duplicate copy is hidden. With motion (.is-moving) the rows drift slowly in opposite
+// directions, looping seamlessly over their duplicate, and fade out at both edges.
+.rr-venues-head { display: flex; align-items: center; gap: var(--rr-space-3); margin-bottom: var(--rr-space-3); }
+.rr-venues-head .rr-eyebrow { margin: 0; }
+.rr-venue-rows { display: grid; gap: 0.5rem; }
+.rr-venue-row { overflow-x: auto; scrollbar-width: thin; }
+.rr-venue-track { display: flex; width: max-content; }
+.rr-venues ul.rr-venue-list { list-style: none; margin: 0; padding: 0 2rem 0 0; display: flex; gap: 2rem; flex: none; }
+.rr-venues li { font-family: var(--rr-font-display); font-style: italic; font-size: 1.05rem; line-height: 1.6; color: var(--rr-text-2); max-width: none; white-space: nowrap; }
+.rr-venue-copy { display: none !important; }
+.rr-venues.is-moving .rr-venue-row {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+.rr-venues.is-moving .rr-venue-copy { display: flex !important; }
+.rr-venues.is-moving .rr-venue-track { animation: rr-venue-drift var(--rr-venue-dur, 60s) linear infinite; }
+.rr-venues.is-moving .rr-venue-row.is-reverse .rr-venue-track { animation-direction: reverse; }
+.rr-venues.is-paused .rr-venue-track, .rr-venues.is-moving .rr-venue-rows:hover .rr-venue-track { animation-play-state: paused; }
+@keyframes rr-venue-drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .rr-venues .rr-venue-track { animation: none !important; } }
+// Pause control: the pill model at icon size.
+.rr-venues-toggle {
+  display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; border-radius: 50%;
+  border: 1px solid var(--rr-hairline); background: var(--rr-surface); color: var(--rr-text-2); cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.rr-venues-toggle[hidden] { display: none; }
+.rr-venues-toggle:hover { background: var(--rr-step-bg); border-color: var(--rr-step-line); }
+.rr-venues-toggle .icon-play { display: none; }
+.rr-venues.is-paused .rr-venues-toggle .icon-play { display: block; }
+.rr-venues.is-paused .rr-venues-toggle .icon-pause { display: none; }
 
 // ---------- Fellowships and funder marks ----------
 .rr-fellowship h3 { font-family: var(--rr-font-display); font-weight: 600; font-size: 1.35rem; letter-spacing: -0.01em; margin: var(--rr-space-2) 0 var(--rr-space-3); }
