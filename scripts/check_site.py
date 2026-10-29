@@ -104,6 +104,14 @@ def check_share_meta(page: "Page", expected_url: str, noindex: bool) -> list[str
     return errs
 
 
+def in_translation_dir(path: Path) -> bool:
+    """True for pages under _site/<lang>/, the output of a translation (see scripts/i18n.py)."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import i18n
+    rel = path.relative_to(SITE).parts
+    return len(rel) > 1 and rel[0] in i18n.LANGS and rel[0] != i18n.DEFAULT_LANG
+
+
 def parse(path: Path) -> Page:
     p = Page()
     p.feed(path.read_text(encoding="utf-8", errors="replace"))
@@ -114,11 +122,14 @@ def main() -> int:
     if not SITE.is_dir():
         print("check_site: _site/ not found; run quarto render first.", file=sys.stderr)
         return 1
-    pages = {p: parse(p) for p in SITE.rglob("*.html")}
-    errors: list[str] = []
     # --links-only: the merged multilingual site (scripts/build_site.py). Each language was fully
     # checked by its own build; this pass covers what joins them: the language switcher's links.
     links_only = "--links-only" in sys.argv
+    # Otherwise check only this build's own language. _site/es and _site/de are written by
+    # scripts/build_site.py and checked there; an English-only render (quarto render or quarto
+    # preview) leaves them in place, and they must not be checked against the English data.
+    pages = {p: parse(p) for p in SITE.rglob("*.html") if links_only or not in_translation_dir(p)}
+    errors: list[str] = []
 
     for path, page in pages.items():
         rel = path.relative_to(SITE)

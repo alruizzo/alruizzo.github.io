@@ -2,6 +2,7 @@
 /_site/
 /.quarto/
 /data/generated/
+/.i18n-build/
 **/*.quarto_ipynb
 __pycache__/
 *.pyc

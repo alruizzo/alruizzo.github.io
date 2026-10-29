@@ -1,6 +1,6 @@
 name: Build and deploy
 
-# Every push and pull request runs the validator tests and a full render. The render itself
+# Every push and pull request runs the validator tests and a full render in every language. The render itself
 # fails on invalid data (pre-render) and on broken internal links, missing alt text or
 # listing/data mismatches (post-render). Only pushes to main deploy.
 
@@ -24,9 +24,9 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -40,10 +40,11 @@ jobs:
         with:
           version: 1.10.18
 
-      - name: Render and check the site
-        run: quarto render
+      # English at the root, Spanish under /es/, German under /de/ (see scripts/build_site.py).
+      - name: Render and check the site in all languages
+        run: python scripts/build_site.py
 
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
           path: _site
@@ -57,4 +58,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4

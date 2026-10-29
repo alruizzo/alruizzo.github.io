@@ -564,3 +564,16 @@ class Translations(unittest.TestCase):
             text = (prerender.ROOT / "i18n" / f"{lang}.yml").read_text(encoding="utf-8")
             text += "".join(p.read_text(encoding="utf-8") for p in prerender.ROOT.glob(f"*.{lang}.qmd"))
             self.assertNotIn("—", text, f"em dash in the {lang} translation")
+
+
+class EnglishRenderNextToTranslations(unittest.TestCase):
+    """quarto preview renders English only and leaves _site/es and _site/de in place: the English
+    site check must not judge those translated pages against the English data."""
+
+    def test_translation_dirs_are_skipped_outside_links_only(self):
+        site = check_site.SITE
+        self.assertTrue(check_site.in_translation_dir(site / "es" / "about.html"))
+        self.assertTrue(check_site.in_translation_dir(site / "de" / "index.html"))
+        self.assertFalse(check_site.in_translation_dir(site / "about.html"))
+        self.assertFalse(check_site.in_translation_dir(site / "site_libs" / "x.html"))
+        self.assertFalse(check_site.in_translation_dir(site / "es.html"))
