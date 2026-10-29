@@ -1,0 +1,391 @@
+---
+pagetitle: "Dr. Adriana L. Ruiz-Rizzo"
+description: "Kognitive und klinische Neurowissenschaftlerin. Sie untersucht mit MRT, wie Altern und früher Abbau Aufmerksamkeit, Gedächtnis und Hirnnetzwerke verändern."
+image: assets/social/de/index.png
+image-alt: "Titelkarte: Dr. Adriana L. Ruiz-Rizzo, kognitive und klinische Neurowissenschaftlerin, mit ihrem Porträt, auf dunklem Hintergrund mit Netzwerkmuster."
+share-card-title: "Dr. Adriana L. Ruiz-Rizzo"
+share-card-tagline: "Altern, früher kognitiver Abbau, visuelle Aufmerksamkeit und die Organisation von Hirnnetzwerken"
+open-graph:
+  title: "Dr. Adriana L. Ruiz-Rizzo · Kognitive und klinische Neurowissenschaft"
+twitter-card:
+  title: "Dr. Adriana L. Ruiz-Rizzo · Kognitive und klinische Neurowissenschaft"
+page-layout: custom
+toc: false
+include-in-header:
+  - text: |
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adriana L. Ruiz-Rizzo",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Wissenschaftliche Mitarbeiterin",
+        "description": "Kognitive und klinische Neurowissenschaftlerin",
+        "affiliation": {"@type": "Organization", "name": "Universitätsklinikum Jena", "department": {"@type": "Organization", "name": "Klinik für Neurologie"}},
+        "alumniOf": [
+          {"@type": "CollegeOrUniversity", "name": "Ludwig-Maximilians-Universität München"},
+          {"@type": "CollegeOrUniversity", "name": "Maastricht University"},
+          {"@type": "CollegeOrUniversity", "name": "Universidad de Antioquia"}
+        ],
+        "knowsAbout": ["Kognitives Altern", "Visuelle Aufmerksamkeit", "Subjektiver kognitiver Abbau", "Leichte kognitive Beeinträchtigung", "Funktionelle Konnektivität", "Diffusions-MRT"],
+        "image": "https://alruizzo.github.io/assets/img/portrait.jpg",
+        "url": "https://alruizzo.github.io/de/",
+        "sameAs": [
+          "https://orcid.org/0000-0003-1467-0745",
+          "https://scholar.google.com/citations?user=L2v2k5QAAAAJ",
+          "https://osf.io/z2ke7/",
+          "https://github.com/alruizzo",
+          "https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo",
+          "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
+        ]
+      }
+      </script>
+listing:
+  - id: featured
+    contents: data/publications.yml
+    include:
+      featured: true
+    template: _templates/featured.ejs
+    sort: "date desc"
+  - id: venues
+    contents: data/publications.yml
+    include:
+      type: article
+    template: _templates/venues.ejs
+    page-size: 500
+  - id: cred-education
+    contents: data/career.yml
+    include:
+      kind: education
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+  - id: cred-positions
+    contents: data/career.yml
+    include:
+      kind: position
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+  - id: fellowships
+    contents: data/generated/recognition.yml
+    include:
+      fellowship: true
+    template: _templates/fellowships.ejs
+    sort: false
+  - id: funders
+    contents: data/generated/funders.yml
+    template: _templates/funders-strip.ejs
+    sort: false
+  - id: hero-profiles
+    contents: data/profiles.yml
+    include:
+      hero: true
+    template: _templates/hero-profiles.ejs
+    sort: false
+  - id: news
+    contents: data/generated/news.yml
+    template: _templates/news.ejs
+    sort: false
+    max-items: 3
+  - id: cred-recognition
+    contents: data/recognition.yml
+    include:
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+---
+
+<main id="quarto-document-content" class="rr-home" tabindex="-1">
+
+::: {.rr-hero}
+{{< include _hero-motif.md >}}
+
+<button class="rr-hero-toggle" type="button" aria-label="Hintergrundanimation anhalten" hidden><svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg><svg class="icon-play" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 1.5v11l9-5.5z" fill="currentColor"/></svg></button>
+
+::: {.rr-wrap .rr-hero-grid}
+::: {.rr-hero-copy}
+[{{< var role >}}]{.rr-eyebrow}
+
+<div class="rr-hero-head"><span class="rr-hero-rule" aria-hidden="true"></span><h1 id="hero-title"><span class="rr-wipe">Dr. Adriana L. Ruiz-Rizzo</span></h1></div>
+
+[Sie untersucht, wie Altern und die frühesten Stadien kognitiven Abbaus Aufmerksamkeit, Gedächtnis und die Organisation von Hirnnetzwerken verändern.]{.rr-statement}
+
+[Ihre Forschung verbindet multimodale MRT mit computationalen Modellen visueller Aufmerksamkeit, um frühe Marker des Abbaus zu identifizieren und Prävention und frühe Intervention zu unterstützen.]{.rr-support}
+
+[<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0a5.5 5.5 0 0 0-5.5 5.5C2.5 9.6 8 16 8 16s5.5-6.4 5.5-10.5A5.5 5.5 0 0 0 8 0Zm0 7.75a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z"/></svg>{{< var affiliation.department >}}, {{< var affiliation.institution >}}, {{< var affiliation.city >}}]{.rr-affil}
+
+::: {.rr-actions}
+[Zur Forschung](research.qmd){.rr-btn .rr-btn-primary}
+[Publikationen](publications.qmd){.rr-btn .rr-btn-secondary}
+[Kontakt aufnehmen](contact.qmd){.rr-btn .rr-btn-secondary}
+:::
+
+::: {.rr-profiles-wrap}
+::: {#hero-profiles}
+:::
+:::
+:::
+
+<figure class="rr-portrait">
+<img src="assets/img/portrait.jpg" width="1450" height="967" fetchpriority="high" alt="Porträt von Adriana L. Ruiz-Rizzo">
+</figure>
+:::
+:::
+
+```{=html}
+<script>
+// Hero motion is opt-in: CSS animates only under .rr-motion, added here when motion is allowed.
+// The slow background drift lasts longer than 5 s, so the pause control is revealed with it
+// (WCAG 2.2.2). Without JS or under reduced motion the hero is simply shown in its final state.
+(function () {
+  var hero = document.querySelector(".rr-hero");
+  if (!hero || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  document.documentElement.classList.add("rr-motion");
+  // If the browser paused animations (background tab, power saving), never leave the hero hidden.
+  setTimeout(function () { document.documentElement.classList.add("rr-entered"); }, 2600);
+  var btn = hero.querySelector(".rr-hero-toggle");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var paused = hero.classList.toggle("is-paused");
+    btn.setAttribute("aria-label", paused ? "Hintergrundanimation fortsetzen" : "Hintergrundanimation anhalten");
+  });
+})();
+</script>
+```
+
+::: {.rr-band}
+::: {.rr-wrap .rr-section style="padding-block: var(--rr-space-7);"}
+::: {.rr-credentials}
+::: {}
+## Ausbildung {.unlisted}
+::: {#cred-education}
+:::
+:::
+
+::: {}
+## Forschungspositionen {.unlisted}
+::: {#cred-positions}
+:::
+:::
+
+::: {}
+## Auszeichnungen und Förderung {.unlisted}
+::: {#cred-recognition}
+:::
+:::
+:::
+
+::: {.rr-venues}
+<div class="rr-venues-head"><span class="rr-eyebrow">Begutachtete Arbeiten erschienen in</span><button class="rr-venues-toggle" type="button" aria-label="Bewegte Zeitschriftenliste anhalten" hidden><svg class="icon-pause" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg><svg class="icon-play" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 1.5v11l9-5.5z" fill="currentColor"/></svg></button></div>
+
+::: {#venues}
+:::
+:::
+
+```{=html}
+<script>
+// Journal carousel: moves only under .rr-motion (set by the hero script when motion is allowed).
+// Each row drifts at about 16 px per second, so the duration follows its width. It pauses on
+// hover and with the button (WCAG 2.2.2). Without motion the rows stay still and scroll sideways.
+(function () {
+  var box = document.querySelector(".rr-venues");
+  if (!box || !document.documentElement.classList.contains("rr-motion")) return;
+  box.classList.add("is-moving");
+  box.querySelectorAll(".rr-venue-track").forEach(function (track) {
+    var w = track.querySelector(".rr-venue-list").getBoundingClientRect().width;
+    track.style.setProperty("--rr-venue-dur", Math.max(30, Math.round(w / 16)) + "s");
+  });
+  var btn = box.querySelector(".rr-venues-toggle");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var paused = box.classList.toggle("is-paused");
+    btn.setAttribute("aria-label", paused ? "Bewegte Zeitschriftenliste fortsetzen" : "Bewegte Zeitschriftenliste anhalten");
+  });
+})();
+</script>
+```
+:::
+:::
+
+::: {.rr-section}
+::: {.rr-wrap .rr-intro}
+::: {}
+[Warum es wichtig ist]{.rr-eyebrow}
+
+## Der Abbau kann vor der Diagnose beginnen {.rr-section-title}
+:::
+
+::: {}
+Veränderungen von Aufmerksamkeit, Gedächtnis und Hirnkonnektivität können Jahre vor der Diagnose einer Demenz beginnen. Adriana zeigte, dass Patientinnen und Patienten mit amnestischer leichter kognitiver Beeinträchtigung infolge der Alzheimer-Krankheit, einem Risikostadium der Demenz, beim Erkennen überlappender Formen mehr Fehler machten als passende Kontrollpersonen und dass diese Fehler mit einer langsameren visuellen Verarbeitung einhergingen. Bei älteren Menschen, die ihren eigenen Abbau bemerken, bevor Standardtests ihn erfassen können, verbindet ihre Arbeit diese Beschwerden mit einer ähnlichen Verlangsamung und, bei geringerer Neuritendichte in der frontalen weißen Substanz, mit geringerer Konnektivität in einem aufmerksamkeitsbezogenen Hirnnetzwerk.
+
+Solche frühen Veränderungen genau zu messen und zu verstehen, welche Hirnsysteme sie tragen, ist die Grundlage dafür, Abbau früher zu erkennen und Interventionen zu prüfen, vom Alertness-Training bis zu Bewegung und Ernährung, die die kognitive Gesundheit im Alter unterstützen könnten.
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Forschungsthemen]{.rr-eyebrow}
+
+## Vier verbundene Fragen
+:::
+
+[Alle Forschungsthemen](research.qmd){.rr-more}
+:::
+
+::: {.rr-grid .rr-grid-4 .rr-fixed}
+::: {.rr-card .rr-theme .attention}
+[Visuelle Aufmerksamkeit]{.rr-theme-label}
+
+### Warum verlangsamt sich die visuelle Verarbeitung im Alter?
+
+Theoriebasierte Maße der Aufmerksamkeit wie Verarbeitungsgeschwindigkeit und Kurzzeitgedächtniskapazität, bezogen auf Hirnnetzwerke über die gesamte Erwachsenenlebensspanne.
+
+[Mehr erfahren](research.qmd#visual-attention){.rr-more .rr-card-foot aria-label="Mehr über visuelle Aufmerksamkeit"}
+:::
+
+::: {.rr-card .rr-theme .networks}
+[Hirnnetzwerke]{.rr-theme-label}
+
+### Wie trägt die Organisation des Gehirns die Kognition?
+
+Ruhezustands- und Diffusions-MRT zeigen, wie funktionelle Netzwerke und Bahnen der weißen Substanz mit individuellen Unterschieden in Aufmerksamkeit und Gedächtnis zusammenhängen.
+
+[Mehr erfahren](research.qmd#brain-networks){.rr-more .rr-card-foot aria-label="Mehr über Hirnnetzwerke"}
+:::
+
+::: {.rr-card .rr-theme .decline}
+[Kognitiver Abbau und Demenz]{.rr-theme-label}
+
+### Was sind die frühesten Anzeichen des Abbaus?
+
+Von der präsymptomatischen familiären Alzheimer-Krankheit bis zum subjektiven kognitiven Abbau und zur leichten kognitiven Beeinträchtigung.
+
+[Mehr erfahren](research.qmd#cognitive-decline){.rr-more .rr-card-foot aria-label="Mehr über kognitiven Abbau und Demenz"}
+:::
+
+::: {.rr-card .rr-theme .lifestyle}
+[Lebensstil und Interventionen]{.rr-theme-label}
+
+### Lassen sich Aufmerksamkeit und Hirngesundheit unterstützen?
+
+Alertness-Training, Bewegung und Ernährung, untersucht in Trainingsstudien, einer randomisierten kontrollierten Studie und einer Längsschnittkohorte.
+
+[Mehr erfahren](research.qmd#lifestyle-interventions){.rr-more .rr-card-foot aria-label="Mehr über Lebensstil und Interventionen"}
+:::
+:::
+
+Derselbe Ansatz erstreckt sich auf [Multiple Sklerose, Parkinson-Krankheit und Depression](research.qmd#clinical-neuroscience) sowie auf [Machine Learning mit Gesundheits- und Sozialdaten](research.qmd#data-science).
+:::
+:::
+
+::: {.rr-band}
+::: {.rr-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Ausgewählte Publikationen]{.rr-eyebrow}
+
+## Repräsentative Arbeiten
+
+Studien, die die Bandbreite der Forschung zeigen, von Aufmerksamkeitsmechanismen im Alter bis zu Lebensstil und frühem Abbau. Titel werden wie veröffentlicht zitiert.
+:::
+
+[Alle Publikationen](publications.qmd){.rr-more}
+:::
+
+::: {#featured}
+:::
+:::
+:::
+:::
+
+::: {.rr-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Neuigkeiten]{.rr-eyebrow}
+
+## Aktuelles
+:::
+
+[Alle Neuigkeiten](news.qmd){.rr-more}
+:::
+
+::: {#news}
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+[Werdegang]{.rr-eyebrow}
+
+## Ein internationaler Forschungsweg {.rr-section-title style="margin-bottom: var(--rr-space-6);"}
+
+<ol class="rr-trajectory">
+<li><div class="rr-when rr-num">2003 bis 2011</div><div class="rr-where">Medellín</div><div class="rr-what">Universidad de Antioquia und Grupo de Neurociencias de Antioquia: Forschung zur familiären Alzheimer-Krankheit</div></li>
+<li><div class="rr-when rr-num">2011 bis 2013</div><div class="rr-where">Maastricht</div><div class="rr-what">M.Sc., Maastricht University; Forschungspraktikum am Donders Institute, Nijmegen</div></li>
+<li><div class="rr-when rr-num">2014 bis 2022</div><div class="rr-where">München</div><div class="rr-what">Promotion und Postdoc-Forschung, LMU München</div></li>
+<li><div class="rr-when rr-num">2019 bis 2021</div><div class="rr-where">Detroit</div><div class="rr-what">Postdoktorandin, Institute of Gerontology, Wayne State University</div></li>
+<li><div class="rr-when rr-num">Seit 2022</div><div class="rr-where">Jena</div><div class="rr-what">Klinik für Neurologie, Universitätsklinikum Jena</div></li>
+</ol>
+
+[Vollständiger Werdegang, Auszeichnungen und Lehre](about.qmd){.rr-more}
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-cta}
+::: {}
+[Zusammenarbeit]{.rr-eyebrow}
+
+## Anknüpfungspunkte
+
+Adrianas Expertise umfasst theoriebasierte kognitive Diagnostik, multimodale Bildgebung und statistische Modellierung bei älteren Menschen und klinischen Gruppen. Forschende, Institutionen und F&E-Teams mit verwandten Fragestellungen sind eingeladen, Kontakt aufzunehmen.
+
+::: {.rr-actions}
+[Kontakt aufnehmen](contact.qmd){.rr-btn .rr-btn-primary}
+[Methoden und Expertise](expertise.qmd){.rr-btn .rr-btn-secondary}
+:::
+:::
+
+- Multimodale MRT-Analyse [Ruhezustands-, Diffusions- und aufgabenbasierte fMRT]{}
+- Theoriebasierte Erfassung visueller Aufmerksamkeit [Verarbeitungsgeschwindigkeit, Kurzzeitgedächtniskapazität, Alertness]{}
+- Längsschnitt- und Interventionsdesigns [Latente Wachstumskurvenmodelle, randomisierte kontrollierte Studien]{}
+- Angewandtes Machine Learning [Klinische Bildgebung und offene Sozialdaten]{}
+:::
+:::
+:::
+
+::: {.rr-section .rr-fellowships-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Kompetitive Stipendien]{.rr-eyebrow}
+
+## Marie-Skłodowska-Curie-Förderung in zwei Karrierephasen
+
+Adrianas Promotions- und Postdoc-Forschung wurde jeweils über hochkompetitive Stipendienprogramme gefördert, die von den Marie-Skłodowska-Curie-Maßnahmen der Europäischen Union kofinanziert wurden.
+:::
+
+[Förderung und Auszeichnungen](about.qmd#funding-heading){.rr-more}
+:::
+
+::: {#fellowships}
+:::
+
+::: {.rr-funders-block}
+[Forschung gefördert von]{.rr-eyebrow}
+
+::: {#funders}
+:::
+:::
+:::
+:::
+
+</main>

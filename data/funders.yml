@@ -51,6 +51,12 @@
   url: https://www.uniklinikum-jena.de/izkf/Advanced_Medical_Scientist_Programm.html
   # Supplied file is a screen capture, not a master file; replace with UKJ's original when available.
   logo_source: Supplied by the site owner (logosRuizResearch/IZKF_Jena_logo.png, screen capture), cropped to the artwork
+- id: ukj
+  name: Jena University Hospital
+  logo: assets/logos/ukj.png
+  logo_alt: Logo of Jena University Hospital (Universitätsklinikum Jena)
+  url: https://www.uniklinikum-jena.de/
+  logo_source: Supplied by the site owner (October 29, 2026, 410 x 210 PNG), unmodified
 - id: colfuturo
   name: Colfuturo
   logo: assets/logos/colfuturo.png

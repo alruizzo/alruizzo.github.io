@@ -1,0 +1,34 @@
+---
+title: "Datenschutz"
+description: "Wie diese Website mit personenbezogenen Daten umgeht: Hosting, keine Cookies oder Tracking, lokale Anzeigeeinstellungen und E-Mail."
+image: assets/social/de/privacy.png
+image-alt: "Titelkarte: Datenschutz, Dr. Adriana L. Ruiz-Rizzo, auf dunklem Hintergrund mit Netzwerkmuster."
+---
+
+## Verantwortliche {#controller}
+
+Dr. Adriana L. Ruiz-Rizzo<br>
+{{< var legal.address >}}<br>
+E-Mail: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
+
+## Hosting {#hosting}
+
+Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc. Wenn Sie eine Seite aufrufen, verarbeitet GitHub die für die Auslieferung nötigen technischen Daten, einschließlich Ihrer IP-Adresse, und kann sie aus Sicherheitsgründen protokollieren. Rechtsgrundlage ist das berechtigte Interesse an einer sicheren Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO). GitHub kann diese Daten in den USA verarbeiten; wie GitHub damit umgeht, beschreibt das [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+## Keine Cookies, keine Analyse, keine Inhalte Dritter {#no-tracking}
+
+Diese Website setzt keine Cookies und verwendet keine Analyse-, Tracking- oder Werbedienste. Sie lädt keine Schriften, Skripte oder Medien von anderen Anbietern: Alles wird von der Website selbst ausgeliefert.
+
+## Anzeigeeinstellungen {#preferences}
+
+Wenn Sie den Schalter für hellen und dunklen Modus nutzen, speichert Ihr Browser die Auswahl im lokalen Speicher Ihres Geräts. Sie wird an niemanden übermittelt, und Sie können sie jederzeit löschen, indem Sie die Daten dieser Website in Ihrem Browser entfernen.
+
+## E-Mail {#email}
+
+Wenn Sie eine E-Mail schreiben, werden Ihre Adresse und Ihre Nachricht nur zur Beantwortung verwendet (Art. 6 Abs. 1 lit. b und f DSGVO). Die Adresse ist ein dienstliches Konto des Universitätsklinikums Jena, dessen E-Mail-Dienst die Nachrichten verarbeitet.
+
+## Ihre Rechte {#rights}
+
+Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Thüringer Landesbeauftragten für den Datenschutz und die Informationsfreiheit.
+
+[Zuletzt geprüft: {{< var legal.reviewed >}}]{.rr-eyebrow style="margin-top: var(--rr-space-6);"}

@@ -1,0 +1,107 @@
+---
+title: "Profil"
+description: "Kognitive und klinische Neurowissenschaftlerin an der Klinik für Neurologie, Universitätsklinikum Jena. Werdegang, Auszeichnungen, Lehre und Gremien."
+image: assets/social/de/about.png
+image-alt: "Titelkarte: Profil von Dr. Adriana L. Ruiz-Rizzo, mit ihrem Porträt, auf dunklem Hintergrund mit Netzwerkmuster."
+share-card-tagline: "Kognitive und klinische Neurowissenschaftlerin, Klinik für Neurologie, Universitätsklinikum Jena"
+share-type: profile
+share-profile:
+  first_name: "Adriana"
+  last_name: "Ruiz-Rizzo"
+toc: true
+toc-title: "Auf dieser Seite"
+toc-location: right
+listing:
+  - id: positions
+    contents: data/career.yml
+    include: {kind: position}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: education
+    contents: data/career.yml
+    include: {kind: education}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: awards
+    contents: data/generated/recognition.yml
+    include: {kind: award}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: funding
+    contents: data/generated/recognition.yml
+    include: {kind: funding}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: teaching
+    contents: data/career.yml
+    include: {kind: teaching}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: talks
+    contents: data/talks.yml
+    template: _templates/timeline.ejs
+    sort: false
+---
+
+## Profil {#profile}
+
+::: {style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;"}
+<img class="rr-about-portrait" src="assets/img/portrait.jpg" width="1450" height="967" alt="Porträt von Adriana L. Ruiz-Rizzo">
+
+::: {style="flex: 1 1 22rem;"}
+Dr. Adriana L. Ruiz-Rizzo ist kognitive und klinische Neurowissenschaftlerin und wissenschaftliche Mitarbeiterin an der {{< var affiliation.department >}} am {{< var affiliation.institution >}}. Ihre Forschung untersucht, wie Hirnnetzwerke kognitiven und verhaltensbezogenen Veränderungen beim gesunden Altern, bei subjektivem kognitivem Abbau und bei leichter kognitiver Beeinträchtigung zugrunde liegen und wie Hirnfunktion, Lebensstil und Verhalten bei neurologischen und psychiatrischen Erkrankungen zusammenhängen.
+:::
+:::
+
+Sie studierte Psychologie an der Universidad de Antioquia in Medellín (Kolumbien), wo sie mit der Grupo de Neurociencias de Antioquia zur familiären Alzheimer-Krankheit arbeitete (Forschung, die 2013 mit dem Alejandro-Ángel-Escobar-Nationalpreis ausgezeichnet wurde, einem der renommiertesten Wissenschaftspreise Kolumbiens), und kognitive und klinische Neurowissenschaft an der Universität Maastricht. Ihren Ph.D. in Systemischen Neurowissenschaften erwarb sie an der Graduate School of Systemic Neurosciences der LMU München, mit einer Dissertation zur visuellen Verarbeitungsgeschwindigkeit im alternden Gehirn, gefördert durch die Marie-Skłodowska-Curie-Maßnahmen der Europäischen Union.
+
+Darauf folgten Postdoc-Stationen an der LMU München, unter anderem mit einem LMUexcellent-Stipendium, kofinanziert durch das Programm Horizont 2020 der Europäischen Union, und als Postdoktorandin am Institute of Gerontology der Wayne State University in Detroit. Zudem hat sie ein Spezialisierungsstudium in angewandter Statistik abgeschlossen, das statistische Modellierung und Machine Learning in ihre Forschung einbringt. Ihre Arbeiten sind unter anderem in *Psychological Science*, *NeuroImage* und *Neurobiology of Aging* erschienen.
+
+Am Universitätsklinikum Jena leitet sie ein Projekt zu den Grundlagen der Hirnkonnektivität bei Störungen der visuellen Aufmerksamkeit bei leichter kognitiver Beeinträchtigung, wird im Advanced Medical Scientist-Programm des IZKF gefördert (2023 bis 2026) und betreut eine Doktorandin. Sie gehört den Editorial Boards von *Journal of Aging Research* und *BMC Geriatrics* an.
+
+::: {.rr-actions}
+[Lebenslauf (PDF, auf Englisch, {{< var cv.date >}})]({{< var cv.file >}}){.rr-btn .rr-btn-primary}
+[Kontakt](contact.qmd){.rr-btn .rr-btn-secondary}
+:::
+
+## Forschungspositionen {#positions}
+
+::: {#positions}
+:::
+
+## Ausbildung {#education-heading}
+
+::: {#education}
+:::
+
+## Preise und Auszeichnungen {#awards-heading}
+
+::: {#awards}
+:::
+
+## Förderung und Stipendien {#funding-heading}
+
+::: {#funding}
+:::
+
+## Lehre und Betreuung {#teaching-heading}
+
+::: {#teaching}
+:::
+
+## Vorträge und Aufzeichnungen {#talks-heading}
+
+Ausgewählte Vorträge, auf Englisch; Aufzeichnungen sind verlinkt, wo sie öffentlich sind.
+
+::: {#talks}
+:::
+
+## Gremien und Gutachtertätigkeit {#service}
+
+**Editorial Boards:** Academic Editor bei [*Journal of Aging Research*](https://onlinelibrary.wiley.com/page/journal/9025/homepage/editorial-board) und Mitglied des Editorial Boards von [*BMC Geriatrics*](https://link.springer.com/journal/12877/editorial-board).
+
+**Gutachterin** für mehr als 25 Fachzeitschriften, darunter *Brain*, *Alzheimer's & Dementia*, *NeuroImage*, *Human Brain Mapping*, *Cerebral Cortex*, *Neurobiology of Aging* und *Psychological Medicine*. Die vollständige Liste steht im [Lebenslauf]({{< var cv.file >}}); verifizierte Gutachtertätigkeit ist in ihrem [ORCID-Profil]({{< var links.orcid >}}) dokumentiert.
+
+## Wissenschaftskommunikation {#science-communication}
+
+Adriana vermittelt Psychologie und Neurowissenschaft für ein spanischsprachiges Publikum, etwa im Blog [Psicología y Neurociencia en Español]({{< var links.blog >}}){lang="es"} und in einem populärwissenschaftlichen Artikel über die neuronalen Grundlagen der Aufmerksamkeitskapazität in der *Revista FULL Investiga* ([2021](https://doi.org/10.5281/zenodo.5163080)). Als Studentin in Medellín leitete sie eine Fortbildung zu exekutiven Funktionen für Vorschullehrkräfte, finanziert über den Preis „Talent Young Woman in Science and Technology“.

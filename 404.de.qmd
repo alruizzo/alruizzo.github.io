@@ -1,0 +1,16 @@
+---
+title: "Seite nicht gefunden"
+description: "Die gesuchte Seite existiert nicht oder ist an eine andere Adresse auf dieser Website umgezogen."
+image: assets/social/de/404.png
+image-alt: "Titelkarte: Dr. Adriana L. Ruiz-Rizzo, auf dunklem Hintergrund mit Netzwerkmuster."
+share-noindex: true
+search: false
+---
+
+Möglicherweise ist die Adresse falsch geschrieben, oder die Seite wurde bei einer Überarbeitung dieser Website verschoben.
+
+::: {.rr-actions}
+[Startseite](index.qmd){.rr-btn .rr-btn-primary}
+[Forschung](research.qmd){.rr-btn .rr-btn-secondary}
+[Publikationen](publications.qmd){.rr-btn .rr-btn-secondary}
+:::

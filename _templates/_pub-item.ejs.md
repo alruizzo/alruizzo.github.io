@@ -1,14 +1,15 @@
 <%
 // One publication entry. Shared by pubs.ejs (full) and pubs-compact.ejs.
 // Inputs: item (a record from data/publications.yml), metadataAttrs (Quarto helper), compact (bool).
-const THEME_SLUG = {
-  "Visual attention": "attention",
-  "Brain networks": "networks",
-  "Cognitive decline and dementia": "decline",
-  "Lifestyle and interventions": "lifestyle",
-  "Clinical neuroscience": "clinical",
-  "Data science": "data",
-};
+// Interface strings: English defaults, overridden per language by scripts/build_site.py (T).
+const S = Object.assign({
+  authors: "authors", open_access: "Open access", in_spanish: "In Spanish", doi_for: "DOI for",
+  preprint: "Preprint", preprint_of: "Preprint of", data_code: "Data and code", data_code_for: "Open data and code for",
+  cite: "Cite",
+  types: { preprint: "Preprint, not peer reviewed", abstract: "Conference abstract", thesis: "Thesis", chapter: "Book chapter", scicomm: "Science communication" },
+  themes: { attention: "Visual attention", networks: "Brain networks", decline: "Cognitive decline and dementia", lifestyle: "Lifestyle and interventions", clinical: "Clinical neuroscience", data: "Data science" },
+}, (typeof T !== "undefined" && T) || {});
+const THEME_SLUG = Object.fromEntries(Object.entries(S.themes).map(([slug, name]) => [name, slug]));
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const isMe = (a) => /^Ruiz(?:[- ]Rizzo)?\s+A/.test(a);
 const authors = item.authors || [];
@@ -22,7 +23,7 @@ const fmtAuthors = () => {
   const tail = [];
   if (me >= 6 && me < authors.length - 1) tail.push("…", mark(authors[me]));
   tail.push("…", mark(authors[authors.length - 1]));
-  return head.concat(tail).join(", ") + ` <span class="rr-num">(${authors.length} authors)</span>`;
+  return head.concat(tail).join(", ") + ` <span class="rr-num">(${authors.length} ${S.authors})</span>`;
 };
 const apaName = (a) => {
   const parts = a.split(" ");
@@ -48,7 +49,7 @@ const lang = item.language ? ` lang="${esc(item.language)}"` : "";
 const venueBits = [];
 if (item.volume) venueBits.push(esc(item.volume) + (item.issue ? `(${esc(item.issue)})` : ""));
 if (item.pages) venueBits.push(esc(item.pages));
-const TYPE_LABEL = { preprint: "Preprint, not peer reviewed", abstract: "Conference abstract", thesis: "Thesis", chapter: "Book chapter", scicomm: "Science communication" };
+const TYPE_LABEL = S.types;
 %>
 <article class="rr-pub" id="pub-<%- item.id %>" <%= metadataAttrs(item) %>>
 <div class="rr-year"><%- item.year %></div>
@@ -61,13 +62,13 @@ const TYPE_LABEL = { preprint: "Preprint, not peer reviewed", abstract: "Confere
 <div class="rr-pub-meta">
 <% for (const c of (item.categories || [])) { %><span class="rr-chip rr-theme <%- THEME_SLUG[c] || '' %>"><%- c %></span><% } %>
 <% if (TYPE_LABEL[item.type]) { %><span class="rr-badge"><%- TYPE_LABEL[item.type] %></span><% } %>
-<% if (item.open_access) { %><span class="rr-badge">Open access</span><% } %>
-<% if (item.language === "es") { %><span class="rr-badge">In Spanish</span><% } %>
-<% if (item.doi) { %><a href="https://doi.org/<%= item.doi %>" aria-label="DOI for <%- item.title %>">DOI</a><% } %>
-<% if (item.preprint) { %><a href="https://doi.org/<%= item.preprint %>" aria-label="Preprint of <%- item.title %>">Preprint</a><% } %>
-<% (item.data || []).forEach((d, i) => { %><a href="<%= d %>" aria-label="Open data and code for <%- item.title %>">Data and code<%- (item.data.length > 1) ? " " + (i + 1) : "" %></a><% }) %>
+<% if (item.open_access) { %><span class="rr-badge"><%- S.open_access %></span><% } %>
+<% if (item.language === "es") { %><span class="rr-badge"><%- S.in_spanish %></span><% } %>
+<% if (item.doi) { %><a href="https://doi.org/<%= item.doi %>" aria-label="<%- S.doi_for %> <%- item.title %>">DOI</a><% } %>
+<% if (item.preprint) { %><a href="https://doi.org/<%= item.preprint %>" aria-label="<%- S.preprint_of %> <%- item.title %>"><%- S.preprint %></a><% } %>
+<% (item.data || []).forEach((d, i) => { %><a href="<%= d %>" aria-label="<%- S.data_code_for %> <%- item.title %>"><%- S.data_code %><%- (item.data.length > 1) ? " " + (i + 1) : "" %></a><% }) %>
 </div>
-<details><summary>Cite</summary><p><%= apa() %></p></details>
+<details><summary><%- S.cite %></summary><p><%= apa() %></p></details>
 <% } %>
 </div>
 </article>

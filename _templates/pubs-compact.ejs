@@ -1,7 +1,8 @@
 ```{=html}
+<% const T = Object.assign({}, (typeof templateParams !== "undefined" && templateParams && templateParams.t) || {}); %>
 <div class="list rr-pubs rr-pubs-compact">
 <% for (const item of items) { %>
-<% partial('_pub-item.ejs.md', { item, metadataAttrs, compact: true }) %>
+<% partial('_pub-item.ejs.md', { item, metadataAttrs, compact: true, T }) %>
 <% } %>
 </div>
 ```

@@ -1,0 +1,163 @@
+---
+title: "Methoden und Expertise"
+description: "Theoriebasierte kognitive Diagnostik, multimodale Bildgebung und statistische Modellierung für Studien zu Altern und kognitivem Abbau."
+image: assets/social/de/expertise.png
+image-alt: "Titelkarte: Methoden und Expertise, Dr. Adriana L. Ruiz-Rizzo, auf dunklem Hintergrund mit Netzwerkmuster."
+listing:
+  - id: outputs
+    contents: data/outputs.yml
+    template: _templates/outputs.ejs
+    sort: false
+    page-size: 100
+---
+
+Diese Seite fasst die Methoden zusammen, mit denen Adriana arbeitet, die Gruppen, die sie untersucht hat, und die Bereiche, in denen diese Expertise zum Einsatz kommt. Jeder Abschnitt verlinkt auf veröffentlichte Arbeiten, die sie verwenden.
+
+## Eine typische Studie, von Anfang bis Ende {#workflow}
+
+Die meisten Studien verbinden eine Verhaltensebene mit einer oder mehreren Bildgebungsmodalitäten und setzen beide mit einem zum Design passenden Analyseansatz in Beziehung. Das Schema folgt Adrianas eigener Übersichtsabbildung [*Brain connectivity, visual attention, and visual memory*](https://doi.org/10.6084/m9.figshare.32064264){lang="en"} (figshare, CC BY 4.0).
+
+::: {.rr-pipeline}
+::: {.rr-card .rr-card-quiet .rr-step}
+[1]{.rr-step-num aria-hidden="true"}
+
+### Verhalten
+
+- Computergestützte Aufgaben zu visueller Aufmerksamkeit und visuellem Gedächtnis
+- Parameter der Theorie der visuellen Aufmerksamkeit: Verarbeitungsgeschwindigkeit, Kurzzeitgedächtniskapazität, Top-down-Kontrolle und räumliche Gewichtung
+- Neuropsychologische Diagnostik und Fragebögen zur subjektiven Kognition
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[2]{.rr-step-num aria-hidden="true"}
+
+### Gehirn
+
+- Funktionelle MRT im Ruhezustand
+- Diffusions-MRT: Maße des Diffusionstensors und der Neuritendichte (NODDI), Traktografie
+- Aufgabenbasierte funktionelle MRT
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[3]{.rr-step-num aria-hidden="true"}
+
+### Analyse
+
+- Gruppenvergleiche
+- Analysen individueller Unterschiede
+- Längsschnittmodelle, darunter latente Wachstumskurven- und Mediationsmodelle
+:::
+:::
+
+## Die Methoden im Einzelnen {#methods}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Computationale Erfassung visueller Aufmerksamkeit
+
+Ganz- und Teilberichtsaufgaben, modelliert mit Bundesens Theorie der visuellen Aufmerksamkeit, liefern voneinander unabhängige latente Parameter, die von der motorischen Geschwindigkeit getrennt sind. Eingesetzt bei gesunden jüngeren und älteren Erwachsenen, bei amnestischer leichter kognitiver Beeinträchtigung und bei der Parkinson-Krankheit.
+
+[Neurobiology of Aging 2017](https://doi.org/10.1016/j.neurobiolaging.2017.03.029) · [Frontiers in Psychiatry 2023](https://doi.org/10.3389/fpsyt.2023.1063151) · [Psychological Science 2021](https://doi.org/10.1177/0956797620965520)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Intrinsische funktionelle Konnektivität
+
+Ruhezustands-fMRT, ausgewertet mit Independent Component Analysis und Dual Regression, Konnektivität innerhalb von und zwischen Netzwerken sowie frequenzspezifische Analysen in langsamen Frequenzbändern.
+
+[Neurobiology of Aging 2019](https://doi.org/10.1016/j.neurobiolaging.2018.09.014) · [European Journal of Neuroscience 2021](https://doi.org/10.1111/ejn.15206) · [European Journal of Neurology 2022](https://doi.org/10.1111/ene.15445)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Diffusions-MRT und weiße Substanz
+
+Fraktionelle Anisotropie und Neuritendichte (NODDI) in großen Bahnen wie Fornix und Forceps minor sowie probabilistische Traktografie thalamokortikaler Verbindungen.
+
+[NeuroImage 2022](https://doi.org/10.1016/j.neuroimage.2022.119662) · [Neurobiology of Aging 2024](https://doi.org/10.1016/j.neurobiolaging.2024.01.012) · [Methods in Molecular Biology 2024](https://doi.org/10.1007/978-1-0716-3774-6_8)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Aufgabenbasierte fMRT und Elektrophysiologie
+
+Paradigmen zur Enkodierung und zum Abruf von Gedächtnisinhalten mit funktioneller MRT sowie hochauflösende ereigniskorrelierte Potenziale (128 Kanäle) bei präsymptomatischer familiärer Alzheimer-Krankheit.
+
+[Archives of Clinical Neuropsychology 2022](https://doi.org/10.1093/arclin/acab061)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Längsschnitt- und Interventionsdesigns
+
+Latente Wachstumskurven- und Mediationsmodelle für Kohortendaten mit mehreren Messzeitpunkten; Trainingsstudien und randomisierte kontrollierte Studien mit kognitiven und bildgebenden Zielgrößen.
+
+[Psychological Science 2021](https://doi.org/10.1177/0956797620965520) · [NeuroImage 2022](https://doi.org/10.1016/j.neuroimage.2022.119662) · [Neurobiology of Aging 2024](https://doi.org/10.1016/j.neurobiolaging.2024.01.012) · [medRxiv-Preprint 2026](https://doi.org/10.64898/2026.08.31.26361810)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Machine Learning
+
+Überwachte Klassifikation mit Kreuzvalidierung, etwa Gradient Boosting auf offenen Sozialdaten und, in kooperativen Arbeiten, Support Vector Machines mit multimodaler MRT.
+
+[Journal of Computational Social Science 2022](https://doi.org/10.1007/s42001-022-00171-x)
+:::
+:::
+
+## Gruppen und Kohorten {#populations}
+
+Gesunde jüngere und ältere Erwachsene über die gesamte Erwachsenenlebensspanne; ältere Menschen mit subjektivem kognitivem Abbau; Patientinnen und Patienten mit amnestischer leichter kognitiver Beeinträchtigung; präsymptomatische Trägerinnen und Träger der PSEN1-E280A-Mutation für familiäre Alzheimer-Krankheit in Kolumbien; Teilnehmende der DELCODE-Kohortenstudie; sowie Patientinnen und Patienten mit schubförmig remittierender Multipler Sklerose, Parkinson-Krankheit oder Major Depression.
+
+## Werkzeuge und Kompetenzen {#tools}
+
+<ul class="rr-chips" aria-label="Werkzeuge und Kompetenzen">
+<li><span class="rr-chip plain">Python</span></li>
+<li><span class="rr-chip plain">R</span></li>
+<li><span class="rr-chip plain">MATLAB</span></li>
+<li><span class="rr-chip plain">Git</span></li>
+<li><span class="rr-chip plain">Statistik</span></li>
+<li><span class="rr-chip plain">Machine Learning</span></li>
+<li><span class="rr-chip plain">Data Science</span></li>
+<li><span class="rr-chip plain">Bildgebung des Gehirns</span></li>
+<li><span class="rr-chip plain">Hirnkonnektivität</span></li>
+<li><span class="rr-chip plain">Wissenschaftliches Schreiben</span></li>
+<li><span class="rr-chip plain">Projektmanagement</span></li>
+<li><span class="rr-chip plain">Mentoring</span></li>
+<li><span class="rr-chip plain">Vortragen</span></li>
+</ul>
+
+## Anwendungsfelder {#applications}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Früherkennung und Risiko
+
+Sensitive verhaltensbezogene und bildgebende Marker bei Menschen mit Demenzrisiko, vom genetischen Risiko bis zum subjektiven kognitiven Abbau und zur leichten kognitiven Beeinträchtigung.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Zielgrößen für Interventionen und Studien
+
+Theoriebasierte Aufmerksamkeitsparameter und bildgebende Zielgrößen für Trainings-, Lebensstil- und klinische Studien; frühe Arbeiten trugen zu kombinierten kognitiven Endpunkten für die präsymptomatische Alzheimer-Krankheit bei.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Klinische Neurologie
+
+Kognitive und netzwerkbasierte Charakterisierung von Symptomen wie Fatigue, Schlafproblemen und Störungen der visuellen Verarbeitung bei Multipler Sklerose und Parkinson-Krankheit.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Daten im öffentlichen Interesse
+
+Machine Learning mit offenen Verwaltungsdaten, etwa zur Vorhersage, ob vermisst gemeldete ältere Menschen gefunden werden.
+:::
+:::
+
+## Open Science {#open-science}
+
+Daten, Analyseskripte und Workflows vieler Studien sind offen im [Open Science Framework]({{< var links.osf >}}) geteilt, und mehrere Artikel erschienen zuerst als Preprints. Jeder Eintrag verlinkt auf sein Repositorium und, wo zutreffend, auf die zugehörige Publikation. Die Titel der Einträge werden in der Originalsprache angegeben.
+
+::: {#outputs}
+:::
+
+::: {.rr-note}
+Interesse an einer Zusammenarbeit zu einer dieser Methoden? Siehe [Zusammenarbeit und Kontakt](contact.qmd).
+:::

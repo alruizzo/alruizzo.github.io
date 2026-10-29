@@ -1,0 +1,203 @@
+---
+title: "Forschung"
+description: "Wie Altern und früher kognitiver Abbau Aufmerksamkeit, Gedächtnis und Hirnnetzwerke verändern und was die kognitive Gesundheit unterstützen könnte."
+image: assets/social/de/research.png
+image-alt: "Titelkarte: Forschung, Dr. Adriana L. Ruiz-Rizzo, auf dunklem Hintergrund mit Netzwerkmuster."
+listing:
+  - id: pubs-attention
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: attention, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-networks
+    contents: data/generated/publications.yml
+    include: {lead: true, categories: "Hirnnetzwerke", type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-decline
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: decline, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-lifestyle
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: lifestyle, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-clinical
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: clinical, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-data
+    contents: data/generated/publications.yml
+    include: {lead: true, categories: "Data Science", type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+---
+
+Adrianas Forschung fragt, wie Altern und die frühesten Stadien kognitiven Abbaus Kognition, Verhalten und die Organisation von Hirnnetzwerken verändern. Die Arbeit bewegt sich auf drei Ebenen: präzise, theoriebasierte Maße von Aufmerksamkeit und Gedächtnis; die funktionellen und strukturellen Hirnnetzwerke, die sie tragen; und die Gruppen und Interventionen, für die diese Maße wichtig sind.
+
+<ul class="rr-toc-themes">
+<li class="rr-theme attention"><a href="#visual-attention"><span class="rr-theme-label">Visuelle Aufmerksamkeit</span>Verarbeitungsgeschwindigkeit und Kapazität im alternden Gehirn</a></li>
+<li class="rr-theme networks"><a href="#brain-networks"><span class="rr-theme-label">Hirnnetzwerke</span>Intrinsische Konnektivität und Bahnen der weißen Substanz</a></li>
+<li class="rr-theme decline"><a href="#cognitive-decline"><span class="rr-theme-label">Kognitiver Abbau und Demenz</span>Von präsymptomatischen Stadien zur leichten kognitiven Beeinträchtigung</a></li>
+<li class="rr-theme lifestyle"><a href="#lifestyle-interventions"><span class="rr-theme-label">Lebensstil und Interventionen</span>Training, Bewegung und Ernährung</a></li>
+<li class="rr-theme clinical"><a href="#clinical-neuroscience"><span class="rr-theme-label">Klinische Neurowissenschaft</span>Multiple Sklerose, Parkinson-Krankheit und Depression</a></li>
+<li class="rr-theme data"><a href="#data-science"><span class="rr-theme-label">Data Science</span>Machine Learning mit Gesundheits- und Sozialdaten</a></li>
+</ul>
+
+::: {.rr-theme-section .rr-theme .attention}
+[Visuelle Aufmerksamkeit]{.rr-theme-label}
+
+## Verarbeitungsgeschwindigkeit und Kapazität im alternden Gehirn {#visual-attention}
+
+[Warum verlangsamt sich die visuelle Verarbeitung im Alter, und welche Hirnsysteme halten sie effizient?]{.rr-question}
+
+Vieles im Alltag hängt davon ab, wie schnell das Gehirn visuelle Information aufnimmt. Adriana nutzt Bundesens Theorie der visuellen Aufmerksamkeit (TVA), um für jede Person aus Ganz- und Teilberichtsaufgaben trennbare Parameter wie die visuelle Verarbeitungsgeschwindigkeit und die Kapazität des visuellen Kurzzeitgedächtnisses zu schätzen. Da diese Parameter unabhängig von der motorischen Geschwindigkeit geschätzt werden, sind sie sensitive Maße der Aufmerksamkeitskapazität im gesunden Altern und in Patientengruppen und lassen sich direkt auf Hirnnetzwerke beziehen.
+
+<ul class="rr-findings">
+<li>Bei 91 Erwachsenen im Alter von 20 bis 77 Jahren vermittelte eine geringere Konnektivität innerhalb des cingulo-operkulären Netzwerks, besonders in der linken Insula, die altersbedingte Verlangsamung der visuellen Verarbeitungsgeschwindigkeit.<span class="rr-cite">Ruiz-Rizzo et al., 2019, <a href="https://doi.org/10.1016/j.neurobiolaging.2018.09.014"><em>Neurobiology of Aging</em></a></span></li>
+<li>Ein Alertness-Training steigerte die visuelle Verarbeitungsgeschwindigkeit bei gesunden älteren Menschen, und die cingulo-operkuläre Konnektivität vor dem Training sagte den individuellen Trainingsgewinn voraus.<span class="rr-cite">Penning, Ruiz-Rizzo et al., 2021, <a href="https://doi.org/10.1177/0956797620965520"><em>Psychological Science</em></a> (geteilte Erstautorschaft)</span></li>
+<li>Die visuelle Verarbeitungsgeschwindigkeit hing mit der Ruhezustands-Konnektivität zwischen dem rechten frontoparietalen Netzwerk und visuellen Netzwerken zusammen, in bestimmten Frequenzbändern des Signals.<span class="rr-cite">Küchenhoff et al., 2021, <a href="https://doi.org/10.1111/ejn.15206"><em>European Journal of Neuroscience</em></a> (geteilte Letztautorschaft)</span></li>
+</ul>
+
+[**Methoden:** TVA-basierter Ganz- und Teilbericht, Paradigmen zur phasischen Alertness, Ruhezustands-fMRT und Diffusions-Traktografie.]{.rr-methods-line}
+
+### Ausgewählte Publikationen {.unlisted}
+
+::: {#pubs-attention}
+:::
+
+[Alle Publikationen zu visueller Aufmerksamkeit](publications.qmd#category=Visuelle%20Aufmerksamkeit){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .networks}
+[Hirnnetzwerke]{.rr-theme-label}
+
+## Intrinsische Konnektivität und Bahnen der weißen Substanz {#brain-networks}
+
+[Wie trägt die intrinsische Organisation des Gehirns individuelle Unterschiede in der Kognition?]{.rr-question}
+
+Auch in Ruhe ist die Hirnaktivität in großräumigen Netzwerken organisiert. Adriana untersucht, wie diese intrinsische funktionelle Konnektivität und die Bahnen der weißen Substanz, die Hirnregionen verbinden, mit Aufmerksamkeit und Gedächtnis zusammenhängen. Ihre Arbeit ordnet trennbare Aufmerksamkeitsfunktionen bestimmten Netzwerken zu und beschreibt, wie Subsysteme der medialen Temporallappen in das übrige Gehirn eingebettet sind.
+
+<ul class="rr-findings">
+<li>Bei gesunden jungen Erwachsenen ließen sich trennbare Parameter der visuellen Aufmerksamkeit bestimmten intrinsischen Hirnnetzwerken zuordnen.<span class="rr-cite">Ruiz-Rizzo et al., 2018, <a href="https://doi.org/10.3389/fnhum.2018.00089"><em>Frontiers in Human Neuroscience</em></a></span></li>
+<li>Subsysteme der menschlichen medialen Temporallappen reichen lokal bis in Kerne der Amygdala und global in ein großräumiges allostatisch-interozeptives System, untersucht in drei unabhängigen Stichproben.<span class="rr-cite">Ruiz-Rizzo et al., 2020, <a href="https://doi.org/10.1016/j.neuroimage.2019.116404"><em>NeuroImage</em></a></span></li>
+</ul>
+
+[**Methoden:** Independent Component Analysis und Dual Regression, frequenzspezifische Konnektivität, probabilistische Traktografie sowie Maße des Diffusionstensors und der Neuritendichte (NODDI).]{.rr-methods-line}
+
+### Ausgewählte Publikationen {.unlisted}
+
+::: {#pubs-networks}
+:::
+
+[Alle Publikationen zu Hirnnetzwerken](publications.qmd#category=Hirnnetzwerke){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .decline}
+[Kognitiver Abbau und Demenz]{.rr-theme-label}
+
+## Von präsymptomatischen Stadien zur leichten kognitiven Beeinträchtigung {#cognitive-decline}
+
+[Was sind die frühesten messbaren Anzeichen dafür, dass die Kognition nachzulassen beginnt?]{.rr-question}
+
+Die Forschung verfolgt den Abbau von seinen frühesten Stadien an. Sie begann in Kolumbien mit Studien an Familien, die die E280A-Mutation im Presenilin-1-Gen tragen, die eine früh beginnende familiäre Alzheimer-Krankheit verursacht. Sie setzt sich fort mit älteren Menschen, die einen Abbau berichten, den Standardtests noch nicht erfassen (subjektiver kognitiver Abbau), und mit Patientinnen und Patienten mit leichter kognitiver Beeinträchtigung. Ein Methodenkapitel zur Diffusionstensor-Bildgebung in der Alzheimer-Forschung warnt vor einer Überinterpretation von Diffusionsmaßen und empfiehlt für Biomarkerstudien Analysen von Regionen von Interesse oder großen Bahnen der weißen Substanz.
+
+<ul class="rr-findings">
+<li>Patientinnen und Patienten mit amnestischer leichter kognitiver Beeinträchtigung infolge der Alzheimer-Krankheit machten beim Erkennen überlappender Formen mehr Fehler als passende Kontrollpersonen, und diese Fehler korrelierten mit einer verringerten visuellen Verarbeitungsgeschwindigkeit.<span class="rr-cite">Ruiz-Rizzo et al., 2017, <a href="https://doi.org/10.1016/j.neurobiolaging.2017.03.029"><em>Neurobiology of Aging</em></a></span></li>
+<li>Ältere Menschen mit subjektivem kognitivem Abbau profitierten beim Wiedererkennen von Szenen weniger von perzeptuellen Details; ihre Gedächtnisbeschwerden könnten also eine geringere Verfügbarkeit solcher Details widerspiegeln.<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1093/arclin/acab061"><em>Archives of Clinical Neuropsychology</em></a></span></li>
+<li>Subjektiver kognitiver Abbau sagte eine geringere Konnektivität des cingulo-operkulären Netzwerks bei älteren Menschen mit geringerer Neuritendichte im Forceps minor voraus (siehe Abbildung).<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1016/j.neuroimage.2022.119662"><em>NeuroImage</em></a></span></li>
+<li>Bei gesunden älteren Menschen aus der Allgemeinbevölkerung ging eine geringere visuelle Verarbeitungsgeschwindigkeit mit stärkeren subjektiven kognitiven Beschwerden einher.<span class="rr-cite">Marrero-Polegre et al., 2023, <a href="https://doi.org/10.3389/fpsyt.2023.1063151"><em>Frontiers in Psychiatry</em></a></span></li>
+</ul>
+
+<figure class="rr-figure">
+<img src="assets/figures/ruiz-rizzo-2022-neuroimage-figure.jpg" width="1886" height="1518" loading="lazy" alt="Abbildung mit vier Teilen. A: Hirnschnitte mit orange hervorgehobenem Forceps minor. B: Neuritendichte des Forceps minor (ICVF, etwa 0,43 bis 0,66) für jede teilnehmende Person zu Beginn und bei zwei Folgemessungen, eine Linie pro Person. C: Hirnschnitte mit hervorgehobenen Regionen des cingulo-operkulären Netzwerks. D: mittlere cingulo-operkuläre funktionelle Konnektivität (z-Wert, etwa 0,3 bis 1,4) für jede teilnehmende Person zu denselben drei Zeitpunkten.">
+<figcaption>Neuritendichte des Forceps minor (A, B) und funktionelle Konnektivität des cingulo-operkulären Netzwerks (C, D) bei älteren Menschen zu Beginn und bei zwei Folgemessungen im Abstand von etwa 18 Monaten. Jede Linie steht für eine teilnehmende Person.<span class="rr-credit">Abbildung aus Ruiz-Rizzo et al. (2022), <a href="https://doi.org/10.1016/j.neuroimage.2022.119662"><em>NeuroImage</em> 263, 119662</a>. Unverändert wiedergegeben unter <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</span></figcaption>
+</figure>
+
+[**Methoden:** aufgabenbasierte fMRT, hochauflösende ereigniskorrelierte Potenziale, Ruhezustands- und Diffusions-MRT, latente Wachstumskurvenmodelle und neuropsychologische Diagnostik.]{.rr-methods-line}
+
+### Ausgewählte Publikationen {.unlisted}
+
+::: {#pubs-decline}
+:::
+
+[Alle Publikationen zu kognitivem Abbau und Demenz](publications.qmd#category=Kognitiver%20Abbau%20und%20Demenz){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .lifestyle}
+[Lebensstil und Interventionen]{.rr-theme-label}
+
+## Training, Bewegung und Ernährung {#lifestyle-interventions}
+
+[Lassen sich Aufmerksamkeit, Gedächtnis und Hirnkonnektivität im Alter durch Training und Lebensstil unterstützen?]{.rr-question}
+
+Über die Beschreibung von Veränderungen hinaus prüft die Forschung Faktoren, die die kognitive Gesundheit unterstützen könnten: kognitives Training der Alertness, multimodale körperliche Aktivität und Ernährungsmuster, untersucht in Trainingsstudien, einer randomisierten kontrollierten Studie und einer Längsschnittkohorte. Gemessen wird mit denselben theoriebasierten Aufmerksamkeitsparametern und derselben multimodalen MRT wie in der übrigen Arbeit, sodass sich die Ergebnisse zwischen Studien vergleichen lassen.
+
+<ul class="rr-findings">
+<li>Bei älteren Menschen der DELCODE-Kohorte (n = 376) vermittelte die Mikrostruktur der weißen Substanz im Fornix den Zusammenhang zwischen mediterraner Ernährung und verbalem episodischem Gedächtnis vier Jahre später.<span class="rr-cite">Ruiz-Rizzo et al., 2024, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.01.012"><em>Neurobiology of Aging</em></a></span></li>
+<li>Ein Alertness-Training steigerte die visuelle Verarbeitungsgeschwindigkeit bei gesunden älteren Menschen. Die Studie erhielt den SCHUHFRIED-Wissenschaftspreis 2020.<span class="rr-cite">Penning, Ruiz-Rizzo et al., 2021, <a href="https://doi.org/10.1177/0956797620965520"><em>Psychological Science</em></a></span></li>
+</ul>
+
+Ein Preprint von 2026 aus der randomisierten kontrollierten Studie FIT4BRAIN, noch nicht begutachtet, berichtet nach körperlichem Training bei gesunden älteren Menschen eine höhere, mit NODDI bestimmte Neuritendichte in Bahnen der weißen Substanz ([medRxiv](https://doi.org/10.64898/2026.08.31.26361810)).
+
+[**Methoden:** Design randomisierter kontrollierter Studien, Trainingsstudien, Analyse von Längsschnittkohorten sowie latente Wachstumskurven- und Mediationsmodelle.]{.rr-methods-line}
+
+### Ausgewählte Publikationen {.unlisted}
+
+::: {#pubs-lifestyle}
+:::
+
+[Alle Publikationen zu Lebensstil und Interventionen](publications.qmd#category=Lebensstil%20und%20Interventionen){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .clinical}
+[Klinische Neurowissenschaft]{.rr-theme-label}
+
+## Multiple Sklerose, Parkinson-Krankheit und Depression {#clinical-neuroscience}
+
+[Was zeigen Aufmerksamkeitsmaße und Hirnnetzwerke bei neurologischen und psychiatrischen Erkrankungen?]{.rr-question}
+
+Dieselben Maße lassen sich auf klinische Gruppen übertragen, in denen kognitive Symptome häufig, aber oft schlecht charakterisiert sind.
+
+<ul class="rr-findings">
+<li>Bei 104 Patientinnen und Patienten mit schubförmig remittierender Multipler Sklerose gingen Fatigue und schlechte Schlafqualität mit unterschiedlichen Mustern funktioneller Konnektivität einher, obwohl beide Symptome eng korrelierten.<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1111/ene.15445"><em>European Journal of Neurology</em></a></span></li>
+<li>Frühere Arbeiten in Kolumbien beschrieben die neuropsychologische Leistung bei Major Depression und bei der Parkinson-Krankheit mit unterschiedlichem Erkrankungsalter.<span class="rr-cite">Ruiz-Rizzo et al., 2008 und 2009, <a href="https://doi.org/10.17533/udea.iatreia.4479"><em>Iatreia</em></a>; <a href="https://doi.org/10.33588/rn.4903.2008475"><em>Revista de Neurología</em></a></span></li>
+</ul>
+
+### Ausgewählte Publikationen {.unlisted}
+
+::: {#pubs-clinical}
+:::
+
+[Alle Publikationen zur klinischen Neurowissenschaft](publications.qmd#category=Klinische%20Neurowissenschaft){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .data}
+[Data Science]{.rr-theme-label}
+
+## Machine Learning mit Gesundheits- und Sozialdaten {#data-science}
+
+[Wie kann statistisches Lernen Probleme angehen, die ältere Menschen innerhalb und außerhalb der Klinik betreffen?]{.rr-question}
+
+Adriana hat ein Spezialisierungsstudium in angewandter Statistik abgeschlossen, und Machine Learning gehört zu ihren Werkzeugen. Eine Studie wandte überwachtes Lernen auf offene Daten zu vermissten älteren Menschen in Kolumbien an.
+
+<ul class="rr-findings">
+<li>Mit offenen Daten zu 7.855 Fällen vermisst gemeldeter älterer Menschen in Kolumbien sagten Gradient-Boosting-Klassifikatoren am besten vorher, ob eine vermisste ältere Person gefunden wird; die Zeit seit dem Verschwinden und der Ort, an dem es geschah, gehörten zu den aussagekräftigsten Merkmalen.<span class="rr-cite">Ruiz-Rizzo, Archila-Meléndez und González Veloza, 2022, <a href="https://doi.org/10.1007/s42001-022-00171-x"><em>Journal of Computational Social Science</em></a></span></li>
+</ul>
+
+### Ausgewählte Publikationen {.unlisted}
+
+::: {#pubs-data}
+:::
+
+[Alle Publikationen zu Data Science](publications.qmd#category=Data%20Science){.rr-more}
+:::

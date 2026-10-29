@@ -1,4 +1,5 @@
 ```{=html}
+<% const T = Object.assign({}, (typeof templateParams !== "undefined" && templateParams && templateParams.t) || {}); const S = Object.assign({ grant: "grant", funding: "Funding", funded_by: "Funded by", new_tab: "opens in a new tab" }, T); %>
 <ol class="list rr-timeline">
 <% for (const item of items) { %>
 <li class="rr-timeline-item" <%= metadataAttrs(item) %>>
@@ -7,10 +8,10 @@
 <p class="rr-item-title"><%- item.title %></p>
 <% if (item.org) { %><p class="rr-org"><%- item.org %><% if (item.place) { %>, <%- item.place %><% } %></p><% } %>
 <% if (item.detail) { %><p class="rr-detail"><%- item.detail %></p><% } %>
-<% if (item.amount) { %><p class="rr-detail rr-num">Funding: <%- item.amount %></p><% } %>
-<% if (item.links) { %><p class="rr-detail rr-links"><% for (const [i, l] of item.links.entries()) { %><%= i ? " · " : "" %><a href="<%= l.url %>"><%- l.label %></a><% } %></p><% } %>
-<% if (item.grant_url) { %><p class="rr-detail"><a href="<%= item.grant_url %>"><%- item.programme %>, grant <%- item.grant %></a></p><% } %>
-<% const logos = (item.funder_list || []).filter((f) => f.logo); if (logos.length) { %><% partial('_funder-marks.ejs.md', { funders: logos, small: true }) %><% } %>
+<% if (item.amount) { %><p class="rr-detail rr-num"><%- S.funding %>: <%- item.amount %></p><% } %>
+<% if (item.links) { %><p class="rr-detail rr-links"><% for (const [i, l] of item.links.entries()) { %><%= i ? " · " : "" %><a href="<%= l.url %>"<%= l.lang ? ` hreflang="${l.lang}"` : "" %><%= l.new_tab ? ' target="_blank" rel="noopener"' : "" %>><%- l.label %><% if (l.new_tab) { %><span class="visually-hidden"> (<%- S.new_tab %>)</span><% } %></a><% } %></p><% } %>
+<% if (item.grant_url) { %><p class="rr-detail"><a href="<%= item.grant_url %>"><%- item.programme %>, <%- S.grant %> <%- item.grant %></a></p><% } %>
+<% const logos = (item.funder_list || []).filter((f) => f.logo); if (logos.length) { %><% partial('_funder-marks.ejs.md', { funders: logos, small: true, label: S.funded_by }) %><% } %>
 </div>
 </li>
 <% } %>

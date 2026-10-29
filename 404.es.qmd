@@ -1,0 +1,16 @@
+---
+title: "Página no encontrada"
+description: "La página que busca no existe o se ha trasladado a otra dirección de este sitio."
+image: assets/social/es/404.png
+image-alt: "Tarjeta: Dra. Adriana L. Ruiz-Rizzo, sobre un fondo oscuro con un patrón de red."
+share-noindex: true
+search: false
+---
+
+Es posible que la dirección tenga un error o que la página haya cambiado de lugar al rediseñar este sitio.
+
+::: {.rr-actions}
+[Inicio](index.qmd){.rr-btn .rr-btn-primary}
+[Investigación](research.qmd){.rr-btn .rr-btn-secondary}
+[Publicaciones](publications.qmd){.rr-btn .rr-btn-secondary}
+:::

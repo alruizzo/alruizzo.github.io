@@ -1,0 +1,33 @@
+---
+title: "Aviso legal"
+description: "Impressum: información sobre la persona responsable de este sitio web conforme al § 5 DDG de la legislación alemana."
+image: assets/social/es/legal.png
+image-alt: "Tarjeta: Aviso legal, Dra. Adriana L. Ruiz-Rizzo, sobre un fondo oscuro con un patrón de red."
+---
+
+## Impressum {#impressum}
+
+Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) / Información conforme al § 5 de la Ley alemana de Servicios Digitales (DDG):
+
+Dra. Adriana L. Ruiz-Rizzo<br>
+{{< var legal.address >}}
+
+Correo electrónico: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
+
+Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV) / Responsable del contenido: Dra. Adriana L. Ruiz-Rizzo, dirección indicada arriba.
+
+## Naturaleza de este sitio web {#nature}
+
+Este es un sitio web académico personal. No es un sitio oficial del Hospital Universitario de Jena ni de ninguna otra institución mencionada en él; las afiliaciones se indican solo a título informativo.
+
+## Enlaces a otros sitios web {#links}
+
+Este sitio enlaza a sitios web externos como editoriales, repositorios de datos y perfiles académicos. Sus operadores son responsables de su contenido. Al crear los enlaces no se detectó ningún contenido ilícito; si se tiene conocimiento de alguna infracción, el enlace se retirará de inmediato.
+
+## Derechos de autor {#copyright}
+
+Los textos son de Adriana L. Ruiz-Rizzo, salvo que se indique otra cosa. Las figuras reproducidas de publicaciones y los logotipos de financiadores e instituciones pertenecen a sus titulares y se usan en las condiciones indicadas en sus créditos; los logotipos solo se muestran para reconocer la financiación y las afiliaciones.
+
+Esta traducción se ofrece para facilitar la lectura; en caso de duda, prevalece la versión alemana del Impressum.
+
+[Última revisión: {{< var legal.reviewed >}}]{.rr-eyebrow style="margin-top: var(--rr-space-6);"}

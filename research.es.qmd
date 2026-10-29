@@ -1,0 +1,203 @@
+---
+title: "Investigación"
+description: "Cómo el envejecimiento y el deterioro cognitivo temprano alteran la atención, la memoria y las redes cerebrales, y qué podría proteger la salud cognitiva."
+image: assets/social/es/research.png
+image-alt: "Tarjeta: Investigación, Dra. Adriana L. Ruiz-Rizzo, sobre un fondo oscuro con un patrón de red."
+listing:
+  - id: pubs-attention
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: attention, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-networks
+    contents: data/generated/publications.yml
+    include: {lead: true, categories: "Redes cerebrales", type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-decline
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: decline, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-lifestyle
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: lifestyle, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-clinical
+    contents: data/generated/publications.yml
+    include: {lead: true, theme: clinical, type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+  - id: pubs-data
+    contents: data/generated/publications.yml
+    include: {lead: true, categories: "Ciencia de datos", type: "{article,chapter,preprint}"}
+    template: _templates/pubs-compact.ejs
+    sort: "date desc"
+    max-items: 5
+---
+
+La investigación de Adriana pregunta cómo el envejecimiento y las primeras fases del deterioro cognitivo alteran la cognición, la conducta y la organización de las redes cerebrales. El trabajo se mueve entre tres niveles: medidas precisas y basadas en teoría de la atención y la memoria; las redes cerebrales funcionales y estructurales que las sustentan; y las poblaciones e intervenciones en las que esas medidas importan.
+
+<ul class="rr-toc-themes">
+<li class="rr-theme attention"><a href="#visual-attention"><span class="rr-theme-label">Atención visual</span>Velocidad y capacidad de procesamiento en el cerebro que envejece</a></li>
+<li class="rr-theme networks"><a href="#brain-networks"><span class="rr-theme-label">Redes cerebrales</span>Conectividad intrínseca y vías de sustancia blanca</a></li>
+<li class="rr-theme decline"><a href="#cognitive-decline"><span class="rr-theme-label">Deterioro cognitivo y demencia</span>De las fases presintomáticas al deterioro cognitivo leve</a></li>
+<li class="rr-theme lifestyle"><a href="#lifestyle-interventions"><span class="rr-theme-label">Estilo de vida e intervenciones</span>Entrenamiento, actividad física y alimentación</a></li>
+<li class="rr-theme clinical"><a href="#clinical-neuroscience"><span class="rr-theme-label">Neurociencia clínica</span>Esclerosis múltiple, enfermedad de Parkinson y depresión</a></li>
+<li class="rr-theme data"><a href="#data-science"><span class="rr-theme-label">Ciencia de datos</span>Aprendizaje automático con datos de salud y datos sociales</a></li>
+</ul>
+
+::: {.rr-theme-section .rr-theme .attention}
+[Atención visual]{.rr-theme-label}
+
+## Velocidad y capacidad de procesamiento en el cerebro que envejece {#visual-attention}
+
+[¿Por qué se vuelve más lento el procesamiento visual con la edad y qué sistemas cerebrales lo mantienen eficiente?]{.rr-question}
+
+Gran parte de la vida diaria depende de la rapidez con que el cerebro capta la información visual. Adriana utiliza la teoría de la atención visual de Bundesen (TVA) para estimar, en cada persona, parámetros separables como la velocidad de procesamiento visual y la capacidad de la memoria visual a corto plazo a partir de tareas de informe total y parcial. Como estos parámetros se estiman con independencia de la velocidad motora, ofrecen medidas sensibles de la capacidad atencional en el envejecimiento sano y en grupos de pacientes, y pueden relacionarse directamente con las redes cerebrales.
+
+<ul class="rr-findings">
+<li>En 91 adultos de 20 a 77 años, la menor conectividad dentro de la red cíngulo-opercular, en especial en la ínsula izquierda, medió el enlentecimiento de la velocidad de procesamiento visual asociado a la edad.<span class="rr-cite">Ruiz-Rizzo et al., 2019, <a href="https://doi.org/10.1016/j.neurobiolaging.2018.09.014"><em>Neurobiology of Aging</em></a></span></li>
+<li>El entrenamiento de la alerta aumentó la velocidad de procesamiento visual en personas mayores sanas, y la conectividad cíngulo-opercular previa al entrenamiento predijo la ganancia de cada persona.<span class="rr-cite">Penning, Ruiz-Rizzo et al., 2021, <a href="https://doi.org/10.1177/0956797620965520"><em>Psychological Science</em></a> (primera autoría compartida)</span></li>
+<li>La velocidad de procesamiento visual se asoció con la conectividad en reposo entre la red frontoparietal derecha y las redes visuales, en bandas de frecuencia específicas de la señal.<span class="rr-cite">Küchenhoff et al., 2021, <a href="https://doi.org/10.1111/ejn.15206"><em>European Journal of Neuroscience</em></a> (autoría sénior compartida)</span></li>
+</ul>
+
+[**Métodos:** informe total y parcial basado en la TVA, paradigmas de alerta fásica, resonancia magnética funcional en reposo y tractografía de difusión.]{.rr-methods-line}
+
+### Publicaciones seleccionadas {.unlisted}
+
+::: {#pubs-attention}
+:::
+
+[Todas las publicaciones sobre atención visual](publications.qmd#category=Atenci%C3%B3n%20visual){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .networks}
+[Redes cerebrales]{.rr-theme-label}
+
+## Conectividad intrínseca y vías de sustancia blanca {#brain-networks}
+
+[¿Cómo sustenta la organización intrínseca del cerebro las diferencias individuales en la cognición?]{.rr-question}
+
+Incluso en reposo, la actividad cerebral se organiza en redes a gran escala. Adriana estudia cómo esta conectividad funcional intrínseca, y las vías de sustancia blanca que unen las regiones cerebrales, se relacionan con la atención y la memoria. Su trabajo asigna funciones atencionales separables a redes distintas y describe cómo los subsistemas de los lóbulos temporales mediales se integran en el resto del cerebro.
+
+<ul class="rr-findings">
+<li>En adultos jóvenes sanos, parámetros separables de la atención visual se correspondieron con redes cerebrales intrínsecas concretas.<span class="rr-cite">Ruiz-Rizzo et al., 2018, <a href="https://doi.org/10.3389/fnhum.2018.00089"><em>Frontiers in Human Neuroscience</em></a></span></li>
+<li>Los subsistemas de los lóbulos temporales mediales humanos se extienden localmente a los núcleos de la amígdala y globalmente a un sistema alostático-interoceptivo a gran escala, según tres muestras independientes.<span class="rr-cite">Ruiz-Rizzo et al., 2020, <a href="https://doi.org/10.1016/j.neuroimage.2019.116404"><em>NeuroImage</em></a></span></li>
+</ul>
+
+[**Métodos:** análisis de componentes independientes y regresión dual, conectividad específica por frecuencia, tractografía probabilística y métricas del tensor de difusión y de densidad de neuritas (NODDI).]{.rr-methods-line}
+
+### Publicaciones seleccionadas {.unlisted}
+
+::: {#pubs-networks}
+:::
+
+[Todas las publicaciones sobre redes cerebrales](publications.qmd#category=Redes%20cerebrales){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .decline}
+[Deterioro cognitivo y demencia]{.rr-theme-label}
+
+## De las fases presintomáticas al deterioro cognitivo leve {#cognitive-decline}
+
+[¿Cuáles son los primeros signos medibles de que la cognición empieza a declinar?]{.rr-question}
+
+La investigación sigue el deterioro desde sus primeras fases. Comenzó en Colombia, con estudios de familias portadoras de la mutación E280A en el gen de la presenilina 1, que causa la enfermedad de Alzheimer familiar de inicio temprano. Continúa con personas mayores que refieren un deterioro que las pruebas habituales aún no detectan (deterioro cognitivo subjetivo) y con pacientes con deterioro cognitivo leve. Un capítulo metodológico sobre la imagen por tensor de difusión en la investigación del Alzheimer advierte contra la sobreinterpretación de las métricas de difusión y recomienda, para los estudios de biomarcadores, análisis de regiones de interés o de los tractos principales de sustancia blanca.
+
+<ul class="rr-findings">
+<li>Los pacientes con deterioro cognitivo leve amnésico debido a la enfermedad de Alzheimer cometieron más errores que controles emparejados al identificar formas superpuestas, y esos errores se correlacionaron con una menor velocidad de procesamiento visual.<span class="rr-cite">Ruiz-Rizzo et al., 2017, <a href="https://doi.org/10.1016/j.neurobiolaging.2017.03.029"><em>Neurobiology of Aging</em></a></span></li>
+<li>Las personas mayores con deterioro cognitivo subjetivo se beneficiaron menos del detalle perceptivo al reconocer escenas, lo que sugiere que sus quejas de memoria podrían reflejar una menor disponibilidad de ese detalle.<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1093/arclin/acab061"><em>Archives of Clinical Neuropsychology</em></a></span></li>
+<li>El deterioro cognitivo subjetivo predijo una menor conectividad de la red cíngulo-opercular en personas mayores con menor densidad de neuritas en el fórceps menor (véase la figura).<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1016/j.neuroimage.2022.119662"><em>NeuroImage</em></a></span></li>
+<li>En personas mayores sanas de la comunidad, una menor velocidad de procesamiento visual se correlacionó con más quejas cognitivas subjetivas.<span class="rr-cite">Marrero-Polegre et al., 2023, <a href="https://doi.org/10.3389/fpsyt.2023.1063151"><em>Frontiers in Psychiatry</em></a></span></li>
+</ul>
+
+<figure class="rr-figure">
+<img src="assets/figures/ruiz-rizzo-2022-neuroimage-figure.jpg" width="1886" height="1518" loading="lazy" alt="Figura de cuatro paneles. A: cortes cerebrales con el tracto de sustancia blanca del fórceps menor resaltado en naranja. B: densidad de neuritas del fórceps menor (ICVF, de 0,43 a 0,66 aproximadamente) de cada participante en la medición inicial y dos seguimientos, una línea por participante. C: cortes cerebrales con las regiones de la red cíngulo-opercular resaltadas. D: conectividad funcional cíngulo-opercular media (puntuación z, de 0,3 a 1,4 aproximadamente) de cada participante en los mismos tres momentos.">
+<figcaption>Densidad de neuritas del fórceps menor (A, B) y conectividad funcional de la red cíngulo-opercular (C, D) en personas mayores en la medición inicial y dos seguimientos, con unos 18 meses de intervalo. Cada línea es una persona participante.<span class="rr-credit">Figura de Ruiz-Rizzo et al. (2022), <a href="https://doi.org/10.1016/j.neuroimage.2022.119662"><em>NeuroImage</em> 263, 119662</a>. Reproducida sin modificaciones bajo <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</span></figcaption>
+</figure>
+
+[**Métodos:** resonancia magnética funcional con tareas, potenciales relacionados con eventos de alta densidad, resonancia magnética en reposo y de difusión, modelos de curva de crecimiento latente y evaluación neuropsicológica.]{.rr-methods-line}
+
+### Publicaciones seleccionadas {.unlisted}
+
+::: {#pubs-decline}
+:::
+
+[Todas las publicaciones sobre deterioro cognitivo y demencia](publications.qmd#category=Deterioro%20cognitivo%20y%20demencia){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .lifestyle}
+[Estilo de vida e intervenciones]{.rr-theme-label}
+
+## Entrenamiento, actividad física y alimentación {#lifestyle-interventions}
+
+[¿Pueden el entrenamiento y el estilo de vida sostener la atención, la memoria y la conectividad cerebral en la vejez?]{.rr-question}
+
+Más allá de describir el cambio, la investigación pone a prueba factores que podrían favorecer la salud cognitiva: el entrenamiento cognitivo de la alerta, la actividad física multicomponente y los patrones de alimentación, estudiados en estudios de entrenamiento, un ensayo controlado aleatorizado y una cohorte longitudinal. Los resultados se miden con los mismos parámetros de atención basados en teoría y la misma resonancia magnética multimodal que en el resto del trabajo, lo que permite comparar los resultados entre estudios.
+
+<ul class="rr-findings">
+<li>En personas mayores de la cohorte DELCODE (n = 376), la microestructura de la sustancia blanca del fórnix medió la asociación entre la adherencia a la dieta mediterránea y la memoria episódica verbal cuatro años después.<span class="rr-cite">Ruiz-Rizzo et al., 2024, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.01.012"><em>Neurobiology of Aging</em></a></span></li>
+<li>El entrenamiento de la alerta aumentó la velocidad de procesamiento visual en personas mayores sanas. El estudio recibió el Premio Científico SCHUHFRIED 2020.<span class="rr-cite">Penning, Ruiz-Rizzo et al., 2021, <a href="https://doi.org/10.1177/0956797620965520"><em>Psychological Science</em></a></span></li>
+</ul>
+
+Un preprint de 2026 del ensayo controlado aleatorizado FIT4BRAIN, aún sin revisión por pares, informa aumentos de la densidad de neuritas derivada de NODDI en los tractos de sustancia blanca tras el ejercicio físico en personas mayores sanas ([medRxiv](https://doi.org/10.64898/2026.08.31.26361810)).
+
+[**Métodos:** diseño de ensayo controlado aleatorizado, estudios de entrenamiento, análisis de cohortes longitudinales y modelos de curva de crecimiento latente y de mediación.]{.rr-methods-line}
+
+### Publicaciones seleccionadas {.unlisted}
+
+::: {#pubs-lifestyle}
+:::
+
+[Todas las publicaciones sobre estilo de vida e intervenciones](publications.qmd#category=Estilo%20de%20vida%20e%20intervenciones){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .clinical}
+[Neurociencia clínica]{.rr-theme-label}
+
+## Esclerosis múltiple, enfermedad de Parkinson y depresión {#clinical-neuroscience}
+
+[¿Qué revelan las medidas de atención y las redes cerebrales en las enfermedades neurológicas y psiquiátricas?]{.rr-question}
+
+Las mismas medidas se trasladan a poblaciones clínicas, en las que los síntomas cognitivos son frecuentes pero a menudo están mal caracterizados.
+
+<ul class="rr-findings">
+<li>En 104 pacientes con esclerosis múltiple remitente-recurrente, la fatiga y la mala calidad del sueño se asociaron con patrones distintos de conectividad funcional, aunque ambos síntomas estaban estrechamente correlacionados.<span class="rr-cite">Ruiz-Rizzo et al., 2022, <a href="https://doi.org/10.1111/ene.15445"><em>European Journal of Neurology</em></a></span></li>
+<li>Trabajos anteriores en Colombia describieron el rendimiento neuropsicológico en la depresión mayor y en la enfermedad de Parkinson con distintas edades de inicio.<span class="rr-cite">Ruiz-Rizzo et al., 2008 y 2009, <a href="https://doi.org/10.17533/udea.iatreia.4479"><em>Iatreia</em></a>; <a href="https://doi.org/10.33588/rn.4903.2008475"><em>Revista de Neurología</em></a></span></li>
+</ul>
+
+### Publicaciones seleccionadas {.unlisted}
+
+::: {#pubs-clinical}
+:::
+
+[Todas las publicaciones de neurociencia clínica](publications.qmd#category=Neurociencia%20cl%C3%ADnica){.rr-more}
+:::
+
+::: {.rr-theme-section .rr-theme .data}
+[Ciencia de datos]{.rr-theme-label}
+
+## Aprendizaje automático con datos de salud y datos sociales {#data-science}
+
+[¿Cómo puede el aprendizaje estadístico abordar problemas que afectan a las personas mayores dentro y fuera de la clínica?]{.rr-question}
+
+Adriana tiene una especialización en estadística aplicada, y el aprendizaje automático forma parte de sus herramientas. Un estudio aplicó aprendizaje supervisado a datos abiertos sobre personas mayores desaparecidas en Colombia.
+
+<ul class="rr-findings">
+<li>Con datos abiertos de 7.855 casos de personas mayores reportadas como desaparecidas en Colombia, los clasificadores de gradient boosting fueron los que mejor predijeron si una persona mayor desaparecida sería encontrada; el tiempo transcurrido desde la desaparición y el lugar donde ocurrió estuvieron entre las variables más informativas.<span class="rr-cite">Ruiz-Rizzo, Archila-Meléndez y González Veloza, 2022, <a href="https://doi.org/10.1007/s42001-022-00171-x"><em>Journal of Computational Social Science</em></a></span></li>
+</ul>
+
+### Publicaciones seleccionadas {.unlisted}
+
+::: {#pubs-data}
+:::
+
+[Todas las publicaciones de ciencia de datos](publications.qmd#category=Ciencia%20de%20datos){.rr-more}
+:::

@@ -1,0 +1,340 @@
+# German version of the site. Everything that is not a page: configuration overrides, variables,
+# interface strings and the translated fields of every data record (scripts/i18n.py explains the
+# format; scripts/build_site.py applies it). Pages are translated in <page>.de.qmd.
+# Not translated on purpose: publication, talk and dataset titles, journal and conference names,
+# and official names of programs, institutes and awards that have no established German form.
+# Translation drafted October 2026; to be reviewed before publication.
+lang: de
+label: DE
+name: Deutsch
+locale: de_DE
+
+config:
+  image-alt: "Titelkarte: Dr. Adriana L. Ruiz-Rizzo, kognitive und klinische Neurowissenschaftlerin, mit ihrem Porträt, auf dunklem Hintergrund mit Netzwerkmuster."
+  language:
+    listing-page-field-categories: "Forschungsthemen"
+    listing-page-category-all: "Alle Themen"
+  website.title: "Dr. Adriana L. Ruiz-Rizzo"
+  website.description: "Kognitive und klinische Neurowissenschaftlerin. Sie untersucht, wie Altern und frühe Stadien vor einer Demenz Kognition, Verhalten und die Organisation von Hirnnetzwerken verändern."
+  website.open-graph.site-name: "Dr. Adriana L. Ruiz-Rizzo"
+  website.navbar.title: "Dr. Adriana L. Ruiz-Rizzo"
+  website.navbar.logo-alt: "Startseite"
+  website.navbar.left:
+    - text: "Forschung"
+      href: research.qmd
+    - text: "Publikationen"
+      href: publications.qmd
+    - text: "Methoden"
+      href: expertise.qmd
+    - text: "Profil"
+      href: about.qmd
+  website.navbar.right:
+    - text: "Kontakt"
+      href: contact.qmd
+  website.page-footer.left: |
+    **Dr. Adriana L. Ruiz-Rizzo**<br>Klinik für Neurologie, Universitätsklinikum Jena
+  website.page-footer.right: |
+    © 2026 Adriana L. Ruiz-Rizzo · [Impressum](legal.qmd) · [Datenschutz](privacy.qmd)
+
+vars:
+  role: "Kognitive und klinische Neurowissenschaftlerin"
+  affiliation:
+    department: "Klinik für Neurologie"
+    institution: "Universitätsklinikum Jena"
+    city: "Jena, Deutschland"
+  cv:
+    date: "Oktober 2026"
+
+period:
+  to: "bis"
+  present: "heute"
+month_year: "{month} {year}"
+months: [Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+
+themes:
+  attention: "Visuelle Aufmerksamkeit"
+  networks: "Hirnnetzwerke"
+  decline: "Kognitiver Abbau und Demenz"
+  lifestyle: "Lebensstil und Interventionen"
+  clinical: "Klinische Neurowissenschaft"
+  data: "Data Science"
+types:
+  preprint: "Preprint, nicht begutachtet"
+  abstract: "Konferenzbeitrag (Abstract)"
+  thesis: "Abschlussarbeit"
+  chapter: "Buchkapitel"
+  scicomm: "Wissenschaftskommunikation"
+
+ui:
+  skip_link: "Zum Hauptinhalt springen"
+  to_light: "Zum hellen Modus wechseln"
+  to_dark: "Zum dunklen Modus wechseln"
+  footer_profiles: "Kontakt und Profile"
+  language: "Sprache"
+  authors: "Autorinnen und Autoren"
+  open_access: "Open Access"
+  in_spanish: "Auf Spanisch"
+  doi_for: "DOI zu"
+  preprint: "Preprint"
+  preprint_of: "Preprint zu"
+  data_code: "Daten und Code"
+  data_code_for: "Offene Daten und Code zu"
+  cite: "Zitieren"
+  joint: "gemeinsame Publikationen"
+  to: "bis"
+  project_record: "EU-Projekteintrag"
+  grant: "Förderkennzeichen"
+  funded_by: "Gefördert von"
+  related: "Zugehörige Publikation"
+  funding: "Fördersumme"
+  new_tab: "öffnet in einem neuen Tab"
+  news_categories:
+    Publication: "Publikation"
+    Preprint: "Preprint"
+    Talk: "Vortrag"
+    Press: "Presse"
+    Media: "Medien"
+    Event: "Veranstaltung"
+    Funding: "Förderung"
+    Project: "Projekt"
+
+link_labels:
+  Program: "Programm"
+  Recording: "Aufzeichnung"
+  Neuromatch recording: "Aufzeichnung Neuromatch"
+  CNS Data Blitz recording: "Aufzeichnung CNS Data Blitz"
+  El Universal (in Spanish): "El Universal (auf Spanisch)"
+  La Silla Vacía (in Spanish): "La Silla Vacía (auf Spanisch)"
+
+cards:
+  name: "Dr. Adriana L. Ruiz-Rizzo"
+  index_eyebrow: "Kognitive und klinische Neurowissenschaft"
+
+data:
+  career:
+    jena-neurology:
+      title: "Wissenschaftliche Mitarbeiterin"
+      org: "Klinik für Neurologie, Universitätsklinikum Jena"
+      place: "Jena, Deutschland"
+      detail: "Leitet das Projekt „Brain connectivity underpinnings of visual attention dysfunctions in mild cognitive impairment“ (Grundlagen der Hirnkonnektivität bei Störungen der visuellen Aufmerksamkeit bei leichter kognitiver Beeinträchtigung)."
+      short: "Universitätsklinikum Jena, Klinik für Neurologie"
+    lmu-excellent:
+      title: "Postdoktorandin, LMUexcellent-Stipendiatin"
+      org: "Department Psychologie, LMU München"
+      place: "München, Deutschland"
+      detail: "Projekt: visuelle Verarbeitungsgeschwindigkeit sowie funktionelle und strukturelle Konnektivität bei älteren Menschen mit subjektivem kognitivem Abbau."
+      short: "LMUexcellent-Stipendiatin, LMU München"
+    wayne-state:
+      title: "Postdoktorandin"
+      org: "Institute of Gerontology und Department of Psychology, Wayne State University"
+      place: "Detroit, USA"
+      short: "Wayne State University, Institute of Gerontology"
+    lmu-postdoc:
+      title: "Postdoktorandin und Betreuerin von Forschungsprojekten"
+      org: "Lehrstuhl für Allgemeine und Experimentelle Psychologie, LMU München"
+      place: "München, Deutschland"
+      detail: "Forschungsbetreuerin im Elitestudiengang Neuro-Cognitive Psychology (M.Sc.) des Elitenetzwerks Bayern."
+    donders:
+      title: "Forschungspraktikantin"
+      org: "Donders Institute, Radboud University Nijmegen"
+      place: "Nijmegen, Niederlande"
+    gna-assistant:
+      title: "Forschungsassistentin"
+      org: "Grupo de Neurociencias de Antioquia (GNA), Universidad de Antioquia"
+      place: "Medellín, Kolumbien"
+    gna-clinical:
+      title: "Klinische Neuropsychologin"
+      org: "Grupo de Neurociencias de Antioquia (GNA), Universidad de Antioquia"
+      place: "Medellín, Kolumbien"
+    zulia:
+      title: "Forschungspraktikantin"
+      org: "Laboratorio de Neurociencias, Universidad del Zulia"
+      place: "Maracaibo, Venezuela"
+    gna-honors:
+      title: "Forschungspraktikantin, Honors-Programm"
+      org: "Grupo de Neurociencias de Antioquia (GNA), Universidad de Antioquia"
+      place: "Medellín, Kolumbien"
+    edu-statistics:
+      title: "Spezialisierungsstudium Angewandte Statistik"
+      org: "Fundación Universitaria Los Libertadores"
+      place: "Bogotá, Kolumbien"
+      detail: "Abschlussarbeit: Prädiktoren für das Auffinden vermisst gemeldeter älterer Menschen auf Grundlage überwachter Machine-Learning-Modelle."
+      short: "Spezialisierungsstudium Angewandte Statistik, Fundación Universitaria Los Libertadores"
+    edu-phd:
+      title: "Ph.D. in Systemischen Neurowissenschaften"
+      org: "Graduate School of Systemic Neurosciences, LMU München"
+      place: "München, Deutschland"
+      detail: "Dissertation: Visual processing speed in the aging brain (Visuelle Verarbeitungsgeschwindigkeit im alternden Gehirn)."
+      short: "Ph.D., Systemische Neurowissenschaften, LMU München"
+    edu-msc:
+      title: "M.Sc. in Cognitive and Clinical Neuroscience, Schwerpunkt Neuropsychologie"
+      org: "Maastricht University"
+      place: "Maastricht, Niederlande"
+      detail: "Masterarbeit: neurokognitive Prozesse im Zusammenhang mit Präferenzen unter Gleichaltrigen bei Vorschulkindern."
+      short: "M.Sc., Cognitive and Clinical Neuroscience, Maastricht University"
+    edu-ba:
+      title: "B.A. in Psychologie"
+      org: "Universidad de Antioquia"
+      place: "Medellín, Kolumbien"
+    supervision-jena:
+      title: "Promotionsbetreuerin"
+      org: "Universitätsklinikum Jena"
+      place: "Jena, Deutschland"
+      detail: "Betreut die Doktorandin Hannah Klink, M.Sc."
+    supervision-lmu:
+      title: "Betreuerin von Forschungspraktika und Masterarbeiten"
+      org: "Elitestudiengang Neuro-Cognitive Psychology (M.Sc.) des Elitenetzwerks Bayern, LMU München"
+      place: "München, Deutschland"
+      detail: "Sechs Forschungspraktika, eines davon international und im Bachelorstudium, sowie drei Masterarbeiten. Mehrere Projekte mündeten in Artikel mit den Studierenden als Erstautorinnen und Erstautoren, etwa im European Journal of Neuroscience (2021) und in Frontiers in Psychiatry (2023)."
+    teach-lmu:
+      title: "Dozentin und Tutorin"
+      org: "Masterstudiengänge Neuro-Cognitive Psychology und Psychologie, LMU München"
+      place: "München, Deutschland"
+      detail: "Neuropsychologische Methoden; kognitive Neurowissenschaft des Alterns; Methoden der funktionellen MRT."
+    teach-udea:
+      title: "Dozentin"
+      org: "Institut für Psychologie, Universidad de Antioquia"
+      place: "Medellín, Kolumbien"
+      detail: "Theorien des Geistes; Biopsychologie; Neuropsychologie."
+    teach-udea-medicine:
+      title: "Tutorin"
+      org: "Medizinische Fakultät, Universidad de Antioquia"
+      place: "Medellín, Kolumbien"
+      detail: "Gedächtnis und Amnesien; Sprache und Aphasien."
+
+  recognition:
+    izkf-ams:
+      title: "Advanced Medical Scientist-Programm (IZKF)"
+      org: "Interdisziplinäres Zentrum für Klinische Forschung, Universitätsklinikum Jena"
+    schuhfried-award:
+      title: "SCHUHFRIED-Wissenschaftspreis"
+      org: "Für die Arbeit „Alertness training increases visual processing speed in healthy older adults“. Österreich."
+    wsu-poster:
+      title: "Erster Platz, Posterpreis (Postdoc-Kategorie)"
+      org: "10th Annual Graduate and Postdoctoral Research Symposium, Wayne State University"
+    lmu-research-fellows:
+      title: "LMUexcellent-Postdoc-Stipendium"
+      org: "Programm LMU Research Fellows, kofinanziert durch das COFUND-Programm der Marie-Skłodowska-Curie-Maßnahmen der Europäischen Union im Rahmen von Horizont 2020, und LMUexcellent, gefördert vom Bundesministerium für Bildung und Forschung (BMBF) und vom Freistaat Bayern"
+      summary: "Kompetitives Postdoc-Stipendium an der LMU München im Rahmen von LMUexcellent, dem Programm der Universität in der Exzellenzstrategie, kofinanziert durch die Marie-Skłodowska-Curie-Maßnahmen der Europäischen Union."
+      detail: "Vergeben als LMU Outgoing Research Fellowship für herausragende Postdocs."
+    jena-talk:
+      title: "Preis für den zweitbesten Vortrag"
+      org: "Klausurtagung der Klinik für Neurologie, Universitätsklinikum Jena"
+    fens-travel:
+      title: "FENS-IBRO/PERC-Reisestipendium"
+      org: "FENS Forum of Neuroscience 2016, Kopenhagen"
+    msca-phd:
+      title: "Marie-Curie-Promotionsstipendium"
+      org: "INDIREA, ein Marie-Curie-Initial-Training-Network zur individualisierten Diagnostik und Rehabilitation von Aufmerksamkeitsstörungen im Siebten Rahmenprogramm der Europäischen Kommission"
+      summary: "Kompetitives Promotionsstipendium in einem internationalen Ausbildungsnetzwerk zur Diagnostik und Rehabilitation von Aufmerksamkeitsstörungen, das ihre Promotion zur visuellen Verarbeitungsgeschwindigkeit im alternden Gehirn an der LMU München förderte."
+    escobar-award:
+      title: "Alejandro-Ángel-Escobar-Nationalpreis in Biologie und Physik"
+      org: "Für die Forschung zur genetisch bedingten Alzheimer-Krankheit durch die E280A-Mutation im Presenilin-1-Gen in Familien aus Antioquia. Kolumbien."
+      detail: "Die ältesten und beständigsten Wissenschaftspreise Kolumbiens, 1955 geschaffen und mitunter „kolumbianischer Nobelpreis“ genannt."
+    colfuturo:
+      title: "Nationales Colfuturo-Stipendium für besonders begabte Studierende für ein Masterstudium im Ausland"
+      org: "Kolumbien"
+    enlazamundos:
+      title: "Regionales Enlazamundos-Stipendium für besonders begabte Studierende für ein Masterstudium im Ausland"
+      org: "Antioquia, Kolumbien"
+    talent-project:
+      title: "Projektförderung: Fortbildung zu exekutiven Funktionen für Vorschullehrkräfte in Medellín"
+      org: "Preis „Talent Young Woman in Science and Technology“, Kolumbien"
+    outstanding-undergrad:
+      title: "Auszeichnung als herausragende studentische Nachwuchsforscherin"
+      org: "Stadtverwaltung Medellín, Kolumbien"
+    talent-award:
+      title: "Preis „Talent Young Woman in Science and Technology“"
+      org: "Stadtverwaltung Medellín, Kolumbien"
+    national-exam:
+      title: "Bestes Ergebnis in der nationalen Qualitätsprüfung der Hochschulbildung im Fach Psychologie"
+      org: "Ehrung, Fakultät für Human- und Sozialwissenschaften, Universidad de Antioquia"
+    alfa:
+      title: "Stipendium, ALFA-Programm"
+      org: "Europäische Kommission"
+    deans-list:
+      title: "Ehrenliste des Dekanats"
+      org: "Universidad de Antioquia"
+    seed-grant:
+      title: "Anschubfinanzierung für die Abschlussarbeit"
+      org: "Forschungszentrum für Human- und Sozialwissenschaften, Universidad de Antioquia"
+    best-student:
+      title: "Beste fortgeschrittene Studentin der Psychologie (2004)"
+      org: "Universidad de Antioquia"
+
+  news:
+    fit4brain-noddi-preprint:
+      title: "Bewegung und Mikrostruktur der weißen Substanz im Alter"
+      summary: "Preprint als Erstautorin aus der randomisierten kontrollierten Studie FIT4BRAIN: Nach körperlichem Training zeigte sich bei gesunden älteren Menschen eine höhere, mit NODDI bestimmte Neuritendichte in den Bahnen der weißen Substanz. Noch nicht begutachtet."
+    klink-top-down-control:
+      title: "Top-down-Kontrolle bei leichter kognitiver Beeinträchtigung"
+      summary: "Frontoparietale funktionelle Konnektivität liegt Störungen der Top-down-Kontrolle bei Patientinnen und Patienten mit leichter kognitiver Beeinträchtigung zugrunde. Erstautorin ist Hannah Klink, die von Adriana betreute Doktorandin; erschienen in JoCN Forum."
+    izkf-advanced-medical-scientist:
+      title: "Advanced Medical Scientist-Programm des IZKF"
+      summary: "Förderung im Advanced Medical Scientist-Programm des Interdisziplinären Zentrums für Klinische Forschung am Universitätsklinikum Jena, 2023 bis 2026 (150.000 €)."
+
+  talks:
+    resdem-2022:
+      org: "3rd International Conference on Cognitive Reserve in Dementia and Other Disorders (ResDem 2022), LMU München"
+      place: "München, Deutschland"
+      detail: "19. November 2022."
+    wsu-colloquium-2022:
+      org: "Forschungskolloquium, Institute of Gerontology, Wayne State University"
+      place: "Detroit, USA"
+      detail: "27. September 2022."
+    neuromatch-cns-2020:
+      org: "Neuromatch Conference 3.0 und Data Blitz auf der Jahrestagung der Cognitive Neuroscience Society (CNS)"
+      detail: "Neuromatch, 29. Oktober 2020; CNS, Februar 2021."
+
+  outputs:
+    figshare-methods-figure:
+      kind: "Abbildung"
+      description: "Übersichtsabbildung der Forschungsmethoden, mit denen Zusammenhänge zwischen Gehirn und Verhalten in verschiedenen Populationen untersucht werden."
+    osf-medi-fornix: {kind: "Sammlung"}
+    osf-scd: {kind: "Workflow"}
+    osf-ms: {kind: "Workflow"}
+    osf-con-forceps: {kind: "Sammlung"}
+    osf-missing: {kind: "Sammlung"}
+    osf-roi-masks: {kind: "Bilddaten"}
+    osf-scene-object-load: {kind: "Sammlung"}
+    osf-inter-fc: {kind: "Workflow"}
+    osf-a-mtl: {kind: "Workflow"}
+    osf-scripts: {kind: "Software"}
+
+  funders:
+    # The EU emblems carry their statement in English, so the alt text repeats it as printed.
+    eu: {name: "Europäische Union", logo_alt: "Funded by the European Union"}
+    eu-cofunded: {name: "Europäische Union (Kofinanzierung)", logo_alt: "Co-funded by the European Union"}
+    lmu: {name: "LMU München", logo_alt: "Logo der Ludwig-Maximilians-Universität München (LMU)"}
+    bmbf: {name: "Bundesministerium für Bildung und Forschung (BMBF)", logo_alt: "Logo des Bundesministeriums für Bildung und Forschung"}
+    bavaria: {name: "Freistaat Bayern", logo_alt: "Bayerisches Landessymbol", logo_caption: "Freistaat Bayern"}
+    izkf: {name: "IZKF, Universitätsklinikum Jena", logo_alt: "Logo des Interdisziplinären Zentrums für Klinische Forschung (IZKF) Jena"}
+    ukj: {name: "Universitätsklinikum Jena", logo_alt: "Logo des Universitätsklinikums Jena"}
+    colfuturo: {name: "Colfuturo", logo_alt: "COLFUTURO-Logo"}
+    fens: {name: "FENS", logo_alt: "Logo der Federation of European Neuroscience Societies (FENS)"}
+    ibro-perc: {name: "IBRO-PERC", logo_alt: "Logo des IBRO Pan-Europe Regional Committee (IBRO-PERC)"}
+    udea: {name: "Universidad de Antioquia", logo_alt: "Wappen der Universidad de Antioquia"}
+
+  profiles:
+    email: {name: "E-Mail", handle: "Adriana.RuizRizzo@med.uni-jena.de"}
+    orcid: {name: "ORCID", handle: "0000-0003-1467-0745"}
+    scholar: {name: "Google Scholar", handle: "Publikationen und Zitationen"}
+    osf: {name: "OSF", handle: "Open Science Framework, Daten und Code"}
+    researchgate: {name: "ResearchGate", handle: "Adriana-Ruiz-Rizzo"}
+    github: {name: "GitHub", handle: "alruizzo"}
+    linkedin: {name: "LinkedIn", handle: "Berufliches Profil"}
+
+  publications:
+    ruizrizzo-2024-fornix-fractional:
+      summary: "Bei 376 älteren Menschen der DELCODE-Kohorte vermittelte die Mikrostruktur der weißen Substanz im Fornix den Zusammenhang zwischen mediterraner Ernährung und verbalem episodischem Gedächtnis vier Jahre später."
+    schrenk-2023-impact-online:
+      note: "Studienprotokoll"
+    ruizrizzo-2022-subjective-cognitive:
+      summary: "Mit Ruhezustands- und Diffusions-MRT über drei Jahre sagte subjektiver kognitiver Abbau eine geringere Konnektivität des cingulo-operkulären Netzwerks bei älteren Menschen mit geringerer Neuritendichte im Forceps minor voraus."
+    kuchenhoff-2021-visual-processing:
+      note: "Geteilte Letztautorschaft"
+    penning-2021-alertness-training:
+      summary: "Ein Alertness-Training steigerte die visuelle Verarbeitungsgeschwindigkeit bei gesunden älteren Menschen, und die Konnektivität des cingulo-operkulären Netzwerks vor dem Training sagte den individuellen Trainingsgewinn voraus."
+      note: "Geteilte Erstautorschaft; SCHUHFRIED-Wissenschaftspreis 2020"
+    ruizrizzo-2019-decreased-cingulo:
+      summary: "Bei 91 Erwachsenen im Alter von 20 bis 77 Jahren vermittelte eine verringerte Konnektivität innerhalb des cingulo-operkulären Netzwerks, besonders in der linken Insula, den Effekt des Alters auf die visuelle Verarbeitungsgeschwindigkeit."

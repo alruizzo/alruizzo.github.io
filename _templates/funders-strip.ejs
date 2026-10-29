@@ -1,5 +1,6 @@
 ```{=html}
 <div class="list rr-funder-strip">
-<% partial('_funder-marks.ejs.md', { funders: items, small: false }) %>
+<% const T = Object.assign({}, (typeof templateParams !== "undefined" && templateParams && templateParams.t) || {}); %>
+<% partial('_funder-marks.ejs.md', { funders: items, small: false, label: T.funded_by }) %>
 </div>
 ```

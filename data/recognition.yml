@@ -12,7 +12,7 @@
   highlight: true
   amount_eur: 150000
   source: orcid+cv
-  funders: [izkf]
+  funders: [izkf, ukj]
 - id: schuhfried-award
   kind: award
   period: "2020"
@@ -70,6 +70,18 @@
   period: "2013"
   title: Alejandro Ángel Escobar National Award in Biological Sciences and Physics
   org: For research on genetic Alzheimer’s disease due to the E280A mutation in the presenilin-1 gene in families of Antioquia. Colombia.
+  # Prestige, as reported: El Universal (2024) quotes the foundation's director ("los más antiguos y
+  # constantes en el país"); La Silla Vacía (2022): created in 1955, sometimes called the "Nobel colombiano".
+  detail: Colombia's oldest and longest-running science prizes, created in 1955 and sometimes called the Colombian Nobel.
+  links:
+    - label: El Universal (in Spanish)
+      lang: es
+      new_tab: true
+      url: https://www.eluniversal.com.co/ambiente/2024/04/03/participa-premios-de-ciencias-y-solidaridad-entregan-50-millones-de-pesos/
+    - label: La Silla Vacía (in Spanish)
+      lang: es
+      new_tab: true
+      url: https://www.lasillavacia.com/?p=32218
   source: cv
 - id: colfuturo
   kind: funding

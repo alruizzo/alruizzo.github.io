@@ -1,0 +1,163 @@
+---
+title: "Métodos y experiencia"
+description: "Evaluación cognitiva basada en teoría, neuroimagen multimodal y modelización estadística para estudiar el envejecimiento y el deterioro cognitivo."
+image: assets/social/es/expertise.png
+image-alt: "Tarjeta: Métodos y experiencia, Dra. Adriana L. Ruiz-Rizzo, sobre un fondo oscuro con un patrón de red."
+listing:
+  - id: outputs
+    contents: data/outputs.yml
+    template: _templates/outputs.ejs
+    sort: false
+    page-size: 100
+---
+
+Esta página resume los métodos con los que trabaja Adriana, las poblaciones que ha estudiado y los ámbitos donde se aplica esa experiencia. Cada apartado enlaza a trabajos publicados que los utilizan.
+
+## Un estudio típico, de principio a fin {#workflow}
+
+La mayoría de los estudios combinan un nivel de medición conductual con una o más modalidades de neuroimagen y relacionan ambos con un enfoque de análisis adecuado al diseño. El esquema sigue la figura de síntesis de la propia Adriana, [*Brain connectivity, visual attention, and visual memory*](https://doi.org/10.6084/m9.figshare.32064264){lang="en"} (figshare, CC BY 4.0).
+
+::: {.rr-pipeline}
+::: {.rr-card .rr-card-quiet .rr-step}
+[1]{.rr-step-num aria-hidden="true"}
+
+### Conducta
+
+- Tareas computarizadas de atención visual y memoria visual
+- Parámetros de la teoría de la atención visual: velocidad de procesamiento, capacidad de la memoria a corto plazo, control descendente y ponderación espacial
+- Evaluación neuropsicológica y cuestionarios sobre la cognición subjetiva
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[2]{.rr-step-num aria-hidden="true"}
+
+### Cerebro
+
+- Resonancia magnética funcional en reposo
+- Resonancia magnética de difusión: métricas del tensor de difusión y de densidad de neuritas (NODDI), tractografía
+- Resonancia magnética funcional con tareas
+:::
+
+::: {.rr-card .rr-card-quiet .rr-step}
+[3]{.rr-step-num aria-hidden="true"}
+
+### Análisis
+
+- Comparaciones entre grupos
+- Análisis de diferencias individuales
+- Modelización longitudinal, incluidos modelos de curva de crecimiento latente y de mediación
+:::
+:::
+
+## Los métodos en detalle {#methods}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Evaluación computacional de la atención visual
+
+Las tareas de informe total y parcial, modeladas con la teoría de la atención visual de Bundesen, aportan parámetros latentes independientes entre sí y separados de la velocidad motora. Se han aplicado en adultos jóvenes y mayores sanos, en el deterioro cognitivo leve amnésico y en la enfermedad de Parkinson.
+
+[Neurobiology of Aging 2017](https://doi.org/10.1016/j.neurobiolaging.2017.03.029) · [Frontiers in Psychiatry 2023](https://doi.org/10.3389/fpsyt.2023.1063151) · [Psychological Science 2021](https://doi.org/10.1177/0956797620965520)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Conectividad funcional intrínseca
+
+Resonancia magnética funcional en reposo analizada con análisis de componentes independientes y regresión dual, conectividad dentro de las redes y entre ellas, y análisis específicos de las bandas de baja frecuencia.
+
+[Neurobiology of Aging 2019](https://doi.org/10.1016/j.neurobiolaging.2018.09.014) · [European Journal of Neuroscience 2021](https://doi.org/10.1111/ejn.15206) · [European Journal of Neurology 2022](https://doi.org/10.1111/ene.15445)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Resonancia magnética de difusión y sustancia blanca
+
+Anisotropía fraccional y densidad de neuritas (NODDI) en tractos principales como el fórnix y el fórceps menor, y tractografía probabilística de las conexiones tálamo-corticales.
+
+[NeuroImage 2022](https://doi.org/10.1016/j.neuroimage.2022.119662) · [Neurobiology of Aging 2024](https://doi.org/10.1016/j.neurobiolaging.2024.01.012) · [Methods in Molecular Biology 2024](https://doi.org/10.1007/978-1-0716-3774-6_8)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Resonancia funcional con tareas y electrofisiología
+
+Paradigmas de codificación y recuperación de la memoria con resonancia magnética funcional, y potenciales relacionados con eventos de alta densidad (128 canales) en la enfermedad de Alzheimer familiar presintomática.
+
+[Archives of Clinical Neuropsychology 2022](https://doi.org/10.1093/arclin/acab061)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Diseños longitudinales y de intervención
+
+Modelos de curva de crecimiento latente y de mediación para datos de cohortes con varias mediciones; estudios de entrenamiento y ensayos controlados aleatorizados con medidas cognitivas y de neuroimagen.
+
+[Psychological Science 2021](https://doi.org/10.1177/0956797620965520) · [NeuroImage 2022](https://doi.org/10.1016/j.neuroimage.2022.119662) · [Neurobiology of Aging 2024](https://doi.org/10.1016/j.neurobiolaging.2024.01.012) · [Preprint en medRxiv 2026](https://doi.org/10.64898/2026.08.31.26361810)
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Aprendizaje automático
+
+Clasificación supervisada con validación cruzada, como el gradient boosting aplicado a datos sociales abiertos y, en trabajos colaborativos, máquinas de vectores de soporte con resonancia magnética multimodal.
+
+[Journal of Computational Social Science 2022](https://doi.org/10.1007/s42001-022-00171-x)
+:::
+:::
+
+## Poblaciones y cohortes {#populations}
+
+Adultos jóvenes y mayores sanos a lo largo de la vida adulta; personas mayores con deterioro cognitivo subjetivo; pacientes con deterioro cognitivo leve amnésico; portadores presintomáticos de la mutación PSEN1 E280A de la enfermedad de Alzheimer familiar en Colombia; participantes del estudio de cohorte DELCODE; y pacientes con esclerosis múltiple remitente-recurrente, enfermedad de Parkinson o depresión mayor.
+
+## Herramientas y competencias {#tools}
+
+<ul class="rr-chips" aria-label="Herramientas y competencias">
+<li><span class="rr-chip plain">Python</span></li>
+<li><span class="rr-chip plain">R</span></li>
+<li><span class="rr-chip plain">MATLAB</span></li>
+<li><span class="rr-chip plain">Git</span></li>
+<li><span class="rr-chip plain">Estadística</span></li>
+<li><span class="rr-chip plain">Aprendizaje automático</span></li>
+<li><span class="rr-chip plain">Ciencia de datos</span></li>
+<li><span class="rr-chip plain">Neuroimagen</span></li>
+<li><span class="rr-chip plain">Conectividad cerebral</span></li>
+<li><span class="rr-chip plain">Redacción científica</span></li>
+<li><span class="rr-chip plain">Gestión de proyectos</span></li>
+<li><span class="rr-chip plain">Mentoría</span></li>
+<li><span class="rr-chip plain">Hablar en público</span></li>
+</ul>
+
+## Dónde se aplica esta experiencia {#applications}
+
+::: {.rr-grid .rr-grid-2}
+::: {.rr-card .rr-card-quiet}
+### Detección temprana y riesgo
+
+Marcadores conductuales y de neuroimagen sensibles en personas con riesgo de demencia, desde el riesgo genético hasta el deterioro cognitivo subjetivo y el deterioro cognitivo leve.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Medidas de resultado para intervenciones y ensayos
+
+Parámetros de atención basados en teoría y medidas de neuroimagen para estudios de entrenamiento, de estilo de vida y clínicos; un trabajo temprano contribuyó a criterios de valoración cognitivos compuestos para la enfermedad de Alzheimer presintomática.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Neurología clínica
+
+Caracterización cognitiva y de redes de síntomas como la fatiga, los problemas de sueño y los déficits de procesamiento visual en la esclerosis múltiple y la enfermedad de Parkinson.
+:::
+
+::: {.rr-card .rr-card-quiet}
+### Datos de interés público
+
+Aprendizaje automático con datos administrativos abiertos, como la predicción de desenlaces de personas mayores reportadas como desaparecidas.
+:::
+:::
+
+## Ciencia abierta {#open-science}
+
+Los datos, los scripts de análisis y los flujos de trabajo de muchos estudios se comparten abiertamente en el [Open Science Framework]({{< var links.osf >}}), y varios artículos se publicaron primero como preprints. Cada registro enlaza a su repositorio y, cuando corresponde, a la publicación que acompaña. Los títulos de los registros se citan en el idioma original.
+
+::: {#outputs}
+:::
+
+::: {.rr-note}
+¿Le interesa colaborar con alguno de estos métodos? Vea [colaboración y contacto](contact.qmd).
+:::

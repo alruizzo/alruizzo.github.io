@@ -1,4 +1,5 @@
 ```{=html}
+<% const T = Object.assign({}, (typeof templateParams !== "undefined" && templateParams && templateParams.t) || {}); const S = Object.assign({ related: "Related publication", doi_for: "DOI for" }, T); %>
 <div class="list rr-grid rr-grid-3">
 <% for (const item of items) { %>
 <article class="rr-card rr-card-quiet" <%= metadataAttrs(item) %>>
@@ -6,8 +7,8 @@
 <h3><a href="<%= item.url %>"><%- item.title %></a></h3>
 <% if (item.description) { %><p><%- item.description %></p><% } %>
 <div class="rr-card-foot">
-<% if (item.related) { %><a href="publications.html#pub-<%= item.related %>">Related publication</a> · <% } %>
-<a href="https://doi.org/<%= item.doi %>" aria-label="DOI for <%- item.title %>">DOI</a><% if (item.license) { %> · <%- item.license %><% } %>
+<% if (item.related) { %><a href="publications.html#pub-<%= item.related %>"><%- S.related %></a> · <% } %>
+<a href="https://doi.org/<%= item.doi %>" aria-label="<%- S.doi_for %> <%- item.title %>">DOI</a><% if (item.license) { %> · <%- item.license %><% } %>
 </div>
 </article>
 <% } %>

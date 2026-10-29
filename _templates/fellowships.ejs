@@ -1,14 +1,15 @@
 ```{=html}
+<% const T = Object.assign({}, (typeof templateParams !== "undefined" && templateParams && templateParams.t) || {}); const S = Object.assign({ project_record: "EU project record", grant: "grant", funded_by: "Funded by" }, T); %>
 <div class="list rr-grid rr-grid-2 rr-fixed">
 <% for (const item of items) { const logos = (item.funder_list || []).filter((f) => f.logo); %>
 <article class="rr-card rr-fellowship" <%= metadataAttrs(item) %>>
-<% partial('_funder-marks.ejs.md', { funders: logos, small: false }) %>
+<% partial('_funder-marks.ejs.md', { funders: logos, small: false, label: S.funded_by }) %>
 <span class="rr-eyebrow"><span class="rr-num"><%- item.period %></span> · Marie Skłodowska-Curie Actions</span>
 <h3><%- item.title %></h3>
 <p><%- item.summary %></p>
 <div class="rr-card-foot">
 <p class="rr-fellowship-org"><%- item.org %></p>
-<% if (item.grant_url) { %><p><a href="<%= item.grant_url %>">EU project record <%- item.programme %>, grant <%- item.grant %></a></p><% } %>
+<% if (item.grant_url) { %><p><a href="<%= item.grant_url %>"><%- S.project_record %> <%- item.programme %>, <%- S.grant %> <%- item.grant %></a></p><% } %>
 </div>
 </article>
 <% } %>

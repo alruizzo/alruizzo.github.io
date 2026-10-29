@@ -1,0 +1,391 @@
+---
+pagetitle: "Dra. Adriana L. Ruiz-Rizzo"
+description: "Neurocientífica cognitiva y clínica que estudia cómo el envejecimiento transforma la atención, la memoria y las redes cerebrales, con resonancia magnética."
+image: assets/social/es/index.png
+image-alt: "Tarjeta: Dra. Adriana L. Ruiz-Rizzo, neurocientífica cognitiva y clínica, con su retrato, sobre un fondo oscuro con un patrón de red."
+share-card-title: "Dra. Adriana L. Ruiz-Rizzo"
+share-card-tagline: "Envejecimiento, deterioro cognitivo temprano, atención visual y organización de las redes cerebrales"
+open-graph:
+  title: "Dra. Adriana L. Ruiz-Rizzo · Neurocientífica cognitiva y clínica"
+twitter-card:
+  title: "Dra. Adriana L. Ruiz-Rizzo · Neurocientífica cognitiva y clínica"
+page-layout: custom
+toc: false
+include-in-header:
+  - text: |
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adriana L. Ruiz-Rizzo",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Investigadora asociada",
+        "description": "Neurocientífica cognitiva y clínica",
+        "affiliation": {"@type": "Organization", "name": "Hospital Universitario de Jena", "department": {"@type": "Organization", "name": "Departamento de Neurología"}},
+        "alumniOf": [
+          {"@type": "CollegeOrUniversity", "name": "Ludwig-Maximilians-Universität München"},
+          {"@type": "CollegeOrUniversity", "name": "Maastricht University"},
+          {"@type": "CollegeOrUniversity", "name": "Universidad de Antioquia"}
+        ],
+        "knowsAbout": ["Envejecimiento cognitivo", "Atención visual", "Deterioro cognitivo subjetivo", "Deterioro cognitivo leve", "Conectividad funcional", "Resonancia magnética de difusión"],
+        "image": "https://alruizzo.github.io/assets/img/portrait.jpg",
+        "url": "https://alruizzo.github.io/es/",
+        "sameAs": [
+          "https://orcid.org/0000-0003-1467-0745",
+          "https://scholar.google.com/citations?user=L2v2k5QAAAAJ",
+          "https://osf.io/z2ke7/",
+          "https://github.com/alruizzo",
+          "https://www.researchgate.net/profile/Adriana-Ruiz-Rizzo",
+          "https://www.linkedin.com/in/adriana-l-ruiz-rizzo-ph-d-06851772"
+        ]
+      }
+      </script>
+listing:
+  - id: featured
+    contents: data/publications.yml
+    include:
+      featured: true
+    template: _templates/featured.ejs
+    sort: "date desc"
+  - id: venues
+    contents: data/publications.yml
+    include:
+      type: article
+    template: _templates/venues.ejs
+    page-size: 500
+  - id: cred-education
+    contents: data/career.yml
+    include:
+      kind: education
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+  - id: cred-positions
+    contents: data/career.yml
+    include:
+      kind: position
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+  - id: fellowships
+    contents: data/generated/recognition.yml
+    include:
+      fellowship: true
+    template: _templates/fellowships.ejs
+    sort: false
+  - id: funders
+    contents: data/generated/funders.yml
+    template: _templates/funders-strip.ejs
+    sort: false
+  - id: hero-profiles
+    contents: data/profiles.yml
+    include:
+      hero: true
+    template: _templates/hero-profiles.ejs
+    sort: false
+  - id: news
+    contents: data/generated/news.yml
+    template: _templates/news.ejs
+    sort: false
+    max-items: 3
+  - id: cred-recognition
+    contents: data/recognition.yml
+    include:
+      highlight: true
+    template: _templates/highlights.ejs
+    sort: false
+---
+
+<main id="quarto-document-content" class="rr-home" tabindex="-1">
+
+::: {.rr-hero}
+{{< include _hero-motif.md >}}
+
+<button class="rr-hero-toggle" type="button" aria-label="Pausar la animación de fondo" hidden><svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg><svg class="icon-play" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 1.5v11l9-5.5z" fill="currentColor"/></svg></button>
+
+::: {.rr-wrap .rr-hero-grid}
+::: {.rr-hero-copy}
+[{{< var role >}}]{.rr-eyebrow}
+
+<div class="rr-hero-head"><span class="rr-hero-rule" aria-hidden="true"></span><h1 id="hero-title"><span class="rr-wipe">Dra. Adriana L. Ruiz-Rizzo</span></h1></div>
+
+[Estudia cómo el envejecimiento y las primeras fases del deterioro cognitivo transforman la atención, la memoria y la organización de las redes cerebrales.]{.rr-statement}
+
+[Su investigación combina la resonancia magnética multimodal con modelos computacionales de la atención visual para identificar marcadores tempranos del deterioro y orientar la prevención y la intervención temprana.]{.rr-support}
+
+[<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0a5.5 5.5 0 0 0-5.5 5.5C2.5 9.6 8 16 8 16s5.5-6.4 5.5-10.5A5.5 5.5 0 0 0 8 0Zm0 7.75a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z"/></svg>{{< var affiliation.department >}}, {{< var affiliation.institution >}}, {{< var affiliation.city >}}]{.rr-affil}
+
+::: {.rr-actions}
+[Explorar la investigación](research.qmd){.rr-btn .rr-btn-primary}
+[Publicaciones](publications.qmd){.rr-btn .rr-btn-secondary}
+[Contactar](contact.qmd){.rr-btn .rr-btn-secondary}
+:::
+
+::: {.rr-profiles-wrap}
+::: {#hero-profiles}
+:::
+:::
+:::
+
+<figure class="rr-portrait">
+<img src="assets/img/portrait.jpg" width="1450" height="967" fetchpriority="high" alt="Retrato de Adriana L. Ruiz-Rizzo">
+</figure>
+:::
+:::
+
+```{=html}
+<script>
+// Hero motion is opt-in: CSS animates only under .rr-motion, added here when motion is allowed.
+// The slow background drift lasts longer than 5 s, so the pause control is revealed with it
+// (WCAG 2.2.2). Without JS or under reduced motion the hero is simply shown in its final state.
+(function () {
+  var hero = document.querySelector(".rr-hero");
+  if (!hero || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  document.documentElement.classList.add("rr-motion");
+  // If the browser paused animations (background tab, power saving), never leave the hero hidden.
+  setTimeout(function () { document.documentElement.classList.add("rr-entered"); }, 2600);
+  var btn = hero.querySelector(".rr-hero-toggle");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var paused = hero.classList.toggle("is-paused");
+    btn.setAttribute("aria-label", paused ? "Reanudar la animación de fondo" : "Pausar la animación de fondo");
+  });
+})();
+</script>
+```
+
+::: {.rr-band}
+::: {.rr-wrap .rr-section style="padding-block: var(--rr-space-7);"}
+::: {.rr-credentials}
+::: {}
+## Formación {.unlisted}
+::: {#cred-education}
+:::
+:::
+
+::: {}
+## Puestos de investigación {.unlisted}
+::: {#cred-positions}
+:::
+:::
+
+::: {}
+## Premios y financiación {.unlisted}
+::: {#cred-recognition}
+:::
+:::
+:::
+
+::: {.rr-venues}
+<div class="rr-venues-head"><span class="rr-eyebrow">Investigación revisada por pares publicada en revistas científicas</span><button class="rr-venues-toggle" type="button" aria-label="Pausar la lista de revistas en movimiento" hidden><svg class="icon-pause" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg><svg class="icon-play" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.5 1.5v11l9-5.5z" fill="currentColor"/></svg></button></div>
+
+::: {#venues}
+:::
+:::
+
+```{=html}
+<script>
+// Journal carousel: moves only under .rr-motion (set by the hero script when motion is allowed).
+// Each row drifts at about 16 px per second, so the duration follows its width. It pauses on
+// hover and with the button (WCAG 2.2.2). Without motion the rows stay still and scroll sideways.
+(function () {
+  var box = document.querySelector(".rr-venues");
+  if (!box || !document.documentElement.classList.contains("rr-motion")) return;
+  box.classList.add("is-moving");
+  box.querySelectorAll(".rr-venue-track").forEach(function (track) {
+    var w = track.querySelector(".rr-venue-list").getBoundingClientRect().width;
+    track.style.setProperty("--rr-venue-dur", Math.max(30, Math.round(w / 16)) + "s");
+  });
+  var btn = box.querySelector(".rr-venues-toggle");
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    var paused = box.classList.toggle("is-paused");
+    btn.setAttribute("aria-label", paused ? "Reanudar la lista de revistas en movimiento" : "Pausar la lista de revistas en movimiento");
+  });
+})();
+</script>
+```
+:::
+:::
+
+::: {.rr-section}
+::: {.rr-wrap .rr-intro}
+::: {}
+[Por qué importa]{.rr-eyebrow}
+
+## El deterioro puede empezar antes del diagnóstico {.rr-section-title}
+:::
+
+::: {}
+Los cambios en la atención, la memoria y la conectividad cerebral pueden empezar años antes de que se diagnostique una demencia. Adriana mostró que los pacientes con deterioro cognitivo leve amnésico debido a la enfermedad de Alzheimer, una fase de riesgo de demencia, cometían más errores que controles emparejados al identificar formas superpuestas, y que esos errores iban unidos a un procesamiento visual más lento. En personas mayores que notan su propio deterioro antes de que las pruebas habituales puedan detectarlo, su trabajo relaciona esas quejas con un enlentecimiento similar y, en personas con menor densidad de neuritas en la sustancia blanca frontal, con una menor conectividad en una red cerebral relacionada con la atención.
+
+Medir con precisión estos cambios tempranos, y entender qué sistemas cerebrales los sostienen, es la base para detectar antes el deterioro y para poner a prueba intervenciones, del entrenamiento de la alerta a la actividad física y la alimentación, que podrían favorecer la salud cognitiva en el envejecimiento.
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Temas de investigación]{.rr-eyebrow}
+
+## Cuatro preguntas conectadas
+:::
+
+[Todos los temas de investigación](research.qmd){.rr-more}
+:::
+
+::: {.rr-grid .rr-grid-4 .rr-fixed}
+::: {.rr-card .rr-theme .attention}
+[Atención visual]{.rr-theme-label}
+
+### ¿Por qué se vuelve más lento el procesamiento visual con la edad?
+
+Medidas de la atención basadas en teoría, como la velocidad de procesamiento y la capacidad de la memoria a corto plazo, relacionadas con las redes cerebrales a lo largo de la vida adulta.
+
+[Leer más](research.qmd#visual-attention){.rr-more .rr-card-foot aria-label="Leer más sobre atención visual"}
+:::
+
+::: {.rr-card .rr-theme .networks}
+[Redes cerebrales]{.rr-theme-label}
+
+### ¿Cómo sustenta la organización del cerebro la cognición?
+
+La resonancia magnética en reposo y de difusión muestra cómo las redes funcionales y las vías de sustancia blanca se relacionan con las diferencias individuales en la atención y la memoria.
+
+[Leer más](research.qmd#brain-networks){.rr-more .rr-card-foot aria-label="Leer más sobre redes cerebrales"}
+:::
+
+::: {.rr-card .rr-theme .decline}
+[Deterioro cognitivo y demencia]{.rr-theme-label}
+
+### ¿Cuáles son los primeros signos del deterioro?
+
+De la enfermedad de Alzheimer familiar presintomática al deterioro cognitivo subjetivo y al deterioro cognitivo leve.
+
+[Leer más](research.qmd#cognitive-decline){.rr-more .rr-card-foot aria-label="Leer más sobre deterioro cognitivo y demencia"}
+:::
+
+::: {.rr-card .rr-theme .lifestyle}
+[Estilo de vida e intervenciones]{.rr-theme-label}
+
+### ¿Se pueden favorecer la atención y la salud cerebral?
+
+Entrenamiento de la alerta, actividad física y alimentación, estudiados en estudios de entrenamiento, un ensayo controlado aleatorizado y una cohorte longitudinal.
+
+[Leer más](research.qmd#lifestyle-interventions){.rr-more .rr-card-foot aria-label="Leer más sobre estilo de vida e intervenciones"}
+:::
+:::
+
+El mismo enfoque se extiende a la [esclerosis múltiple, la enfermedad de Parkinson y la depresión](research.qmd#clinical-neuroscience), y al [aprendizaje automático con datos de salud y datos sociales](research.qmd#data-science).
+:::
+:::
+
+::: {.rr-band}
+::: {.rr-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Publicaciones seleccionadas]{.rr-eyebrow}
+
+## Trabajos representativos
+
+Estudios que muestran el alcance de la investigación, de los mecanismos de la atención en el envejecimiento al estilo de vida y el deterioro temprano. Los títulos se citan tal como se publicaron.
+:::
+
+[Todas las publicaciones](publications.qmd){.rr-more}
+:::
+
+::: {#featured}
+:::
+:::
+:::
+:::
+
+::: {.rr-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Novedades]{.rr-eyebrow}
+
+## Lo más reciente
+:::
+
+[Todas las novedades](news.qmd){.rr-more}
+:::
+
+::: {#news}
+:::
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+[Trayectoria]{.rr-eyebrow}
+
+## Una trayectoria de investigación internacional {.rr-section-title style="margin-bottom: var(--rr-space-6);"}
+
+<ol class="rr-trajectory">
+<li><div class="rr-when rr-num">2003 a 2011</div><div class="rr-where">Medellín</div><div class="rr-what">Universidad de Antioquia y Grupo de Neurociencias de Antioquia: investigación sobre la enfermedad de Alzheimer familiar</div></li>
+<li><div class="rr-when rr-num">2011 a 2013</div><div class="rr-where">Maastricht</div><div class="rr-what">Maestría, Maastricht University; pasantía de investigación en el Donders Institute, Nimega</div></li>
+<li><div class="rr-when rr-num">2014 a 2022</div><div class="rr-where">Múnich</div><div class="rr-what">Doctorado e investigación posdoctoral, LMU Múnich</div></li>
+<li><div class="rr-when rr-num">2019 a 2021</div><div class="rr-where">Detroit</div><div class="rr-what">Investigadora posdoctoral, Instituto de Gerontología, Wayne State University</div></li>
+<li><div class="rr-when rr-num">Desde 2022</div><div class="rr-where">Jena</div><div class="rr-what">Departamento de Neurología, Hospital Universitario de Jena</div></li>
+</ol>
+
+[Trayectoria completa, premios y docencia](about.qmd){.rr-more}
+:::
+:::
+
+::: {.rr-section style="padding-top: 0;"}
+::: {.rr-wrap}
+::: {.rr-cta}
+::: {}
+[Colaboración]{.rr-eyebrow}
+
+## Puntos de encuentro
+
+La experiencia de Adriana abarca la evaluación cognitiva basada en teoría, la neuroimagen multimodal y la modelización estadística en el envejecimiento y en poblaciones clínicas. Investigadores, instituciones y equipos de I+D que trabajen en preguntas afines pueden ponerse en contacto.
+
+::: {.rr-actions}
+[Contactar](contact.qmd){.rr-btn .rr-btn-primary}
+[Métodos y experiencia](expertise.qmd){.rr-btn .rr-btn-secondary}
+:::
+:::
+
+- Análisis de resonancia magnética multimodal [En reposo, de difusión y con tareas]{}
+- Evaluación de la atención visual basada en teoría [Velocidad de procesamiento, capacidad de la memoria a corto plazo, alerta]{}
+- Diseños longitudinales y de intervención [Modelos de curva de crecimiento latente, ensayos controlados aleatorizados]{}
+- Aprendizaje automático aplicado [Neuroimagen clínica y datos sociales abiertos]{}
+:::
+:::
+:::
+
+::: {.rr-section .rr-fellowships-section}
+::: {.rr-wrap}
+::: {.rr-section-head}
+::: {}
+[Becas competitivas]{.rr-eyebrow}
+
+## Apoyo Marie Skłodowska-Curie en dos etapas de su carrera
+
+La investigación doctoral y la posdoctoral de Adriana se financiaron, cada una, mediante programas de becas muy competitivos cofinanciados por las Acciones Marie Skłodowska-Curie de la Unión Europea.
+:::
+
+[Financiación y premios](about.qmd#funding-heading){.rr-more}
+:::
+
+::: {#fellowships}
+:::
+
+::: {.rr-funders-block}
+[Investigación financiada por]{.rr-eyebrow}
+
+::: {#funders}
+:::
+:::
+:::
+:::
+
+</main>

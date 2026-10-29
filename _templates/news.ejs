@@ -1,9 +1,10 @@
 ```{=html}
-<% const page = templateParams && templateParams.page; const h = page ? "h2" : "h3"; %>
+<% const page = templateParams && templateParams.page; const h = page ? "h2" : "h3";
+   const CAT = ((typeof templateParams !== "undefined" && templateParams && templateParams.t) || {}).news_categories || {}; %>
 <ul class="list rr-news<%= page ? " is-page" : "" %>">
 <% for (const item of items) { %>
 <li class="rr-news-item" <%= metadataAttrs(item) %>>
-<p class="rr-news-meta"><time class="rr-num" datetime="<%= item.datetime %>"><%- item.when %></time><span class="rr-chip plain"><%- item.category %></span></p>
+<p class="rr-news-meta"><time class="rr-num" datetime="<%= item.datetime %>"><%- item.when %></time><span class="rr-chip plain"><%- CAT[item.category] || item.category %></span></p>
 <<%= h %> class="rr-news-title"><% if (item.url) { %><a href="<%= item.url %>"><%- item.title %></a><% } else { %><%- item.title %><% } %></<%= h %>>
 <p class="rr-news-summary"><%- item.summary %></p>
 </li>

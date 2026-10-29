@@ -1,0 +1,36 @@
+---
+title: "Privacidad"
+description: "Cómo trata este sitio web los datos personales: alojamiento, sin cookies ni seguimiento, preferencias de visualización locales y correo."
+image: assets/social/es/privacy.png
+image-alt: "Tarjeta: Privacidad, Dra. Adriana L. Ruiz-Rizzo, sobre un fondo oscuro con un patrón de red."
+---
+
+## Responsable del tratamiento {#controller}
+
+Dra. Adriana L. Ruiz-Rizzo<br>
+{{< var legal.address >}}<br>
+Correo electrónico: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
+
+## Alojamiento {#hosting}
+
+Este sitio web está alojado en GitHub Pages, un servicio de GitHub, Inc. Cuando usted abre una página, GitHub trata los datos técnicos necesarios para entregarla, incluida su dirección IP, y puede registrarlos por motivos de seguridad. La base jurídica es el interés legítimo en ofrecer el sitio web de forma segura (art. 6, apdo. 1, letra f del RGPD). GitHub puede tratar estos datos en Estados Unidos; consulte la [Declaración de privacidad de GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) para saber cómo los trata.
+
+## Sin cookies, analítica ni contenido de terceros {#no-tracking}
+
+Este sitio web no instala cookies ni utiliza analítica, seguimiento o publicidad. No carga fuentes, scripts ni contenidos multimedia de otros proveedores: todo se sirve desde el propio sitio.
+
+## Preferencias de visualización {#preferences}
+
+Si usa el selector de modo claro y oscuro, su navegador guarda la elección en el almacenamiento local de su dispositivo. No se transmite a nadie, y puede borrarla en cualquier momento eliminando los datos de este sitio en su navegador.
+
+## Correo electrónico {#email}
+
+Si escribe un correo, su dirección y su mensaje se usan solo para responderle (art. 6, apdo. 1, letras b y f del RGPD). La dirección es una cuenta institucional del Hospital Universitario de Jena, cuyo servicio de correo procesa los mensajes.
+
+## Sus derechos {#rights}
+
+Usted tiene derecho de acceso, rectificación, supresión, limitación del tratamiento, portabilidad de los datos y oposición (arts. 15 a 21 del RGPD). También puede presentar una reclamación ante una autoridad de control de protección de datos, por ejemplo el Thüringer Landesbeauftragter für den Datenschutz und die Informationsfreiheit.
+
+Esta traducción se ofrece para facilitar la lectura; en caso de duda, prevalece la versión alemana.
+
+[Última revisión: {{< var legal.reviewed >}}]{.rr-eyebrow style="margin-top: var(--rr-space-6);"}

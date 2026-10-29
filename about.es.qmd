@@ -1,0 +1,107 @@
+---
+title: "Perfil"
+description: "Neurocientífica cognitiva y clínica en el Departamento de Neurología del Hospital Universitario de Jena. Trayectoria, premios, docencia y servicio."
+image: assets/social/es/about.png
+image-alt: "Tarjeta: Perfil de la Dra. Adriana L. Ruiz-Rizzo, con su retrato, sobre un fondo oscuro con un patrón de red."
+share-card-tagline: "Neurocientífica cognitiva y clínica, Departamento de Neurología, Hospital Universitario de Jena"
+share-type: profile
+share-profile:
+  first_name: "Adriana"
+  last_name: "Ruiz-Rizzo"
+toc: true
+toc-title: "En esta página"
+toc-location: right
+listing:
+  - id: positions
+    contents: data/career.yml
+    include: {kind: position}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: education
+    contents: data/career.yml
+    include: {kind: education}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: awards
+    contents: data/generated/recognition.yml
+    include: {kind: award}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: funding
+    contents: data/generated/recognition.yml
+    include: {kind: funding}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: teaching
+    contents: data/career.yml
+    include: {kind: teaching}
+    template: _templates/timeline.ejs
+    sort: false
+  - id: talks
+    contents: data/talks.yml
+    template: _templates/timeline.ejs
+    sort: false
+---
+
+## Perfil {#profile}
+
+::: {style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;"}
+<img class="rr-about-portrait" src="assets/img/portrait.jpg" width="1450" height="967" alt="Retrato de Adriana L. Ruiz-Rizzo">
+
+::: {style="flex: 1 1 22rem;"}
+La Dra. Adriana L. Ruiz-Rizzo es neurocientífica cognitiva y clínica e investigadora asociada en el {{< var affiliation.department >}} del {{< var affiliation.institution >}}, Alemania. Su investigación estudia cómo las redes cerebrales sustentan los cambios cognitivos y conductuales en el envejecimiento sano, el deterioro cognitivo subjetivo y el deterioro cognitivo leve, y cómo se relacionan la función cerebral, el estilo de vida y la conducta en distintas enfermedades neurológicas y psiquiátricas.
+:::
+:::
+
+Se formó en psicología en la Universidad de Antioquia, en Medellín (Colombia), donde trabajó con el Grupo de Neurociencias de Antioquia en la enfermedad de Alzheimer familiar (una investigación reconocida en 2013 con el Premio Nacional Alejandro Ángel Escobar, uno de los premios científicos más prestigiosos de Colombia), y en neurociencia cognitiva y clínica en la Universidad de Maastricht. Obtuvo su doctorado en Neurociencias Sistémicas en la Graduate School of Systemic Neurosciences de la LMU de Múnich, con una tesis sobre la velocidad de procesamiento visual en el cerebro que envejece, financiada por las Acciones Marie Skłodowska-Curie de la Unión Europea.
+
+Siguió su trabajo posdoctoral en la LMU de Múnich, con una beca LMUexcellent cofinanciada por el programa Horizonte 2020 de la Unión Europea, y como investigadora posdoctoral en el Instituto de Gerontología de la Wayne State University, en Detroit. Tiene además una especialización en estadística aplicada, que incorpora la modelización estadística y el aprendizaje automático a su investigación. Su trabajo se ha publicado en revistas como *Psychological Science*, *NeuroImage* y *Neurobiology of Aging*.
+
+En el Hospital Universitario de Jena dirige un proyecto sobre las bases de conectividad cerebral de las alteraciones de la atención visual en el deterioro cognitivo leve, cuenta con una ayuda del programa Advanced Medical Scientist del IZKF (2023 a 2026) y supervisa a una doctoranda. Forma parte de los comités editoriales de *Journal of Aging Research* y *BMC Geriatrics*.
+
+::: {.rr-actions}
+[CV (PDF, en inglés, {{< var cv.date >}})]({{< var cv.file >}}){.rr-btn .rr-btn-primary}
+[Contacto](contact.qmd){.rr-btn .rr-btn-secondary}
+:::
+
+## Puestos de investigación {#positions}
+
+::: {#positions}
+:::
+
+## Formación {#education-heading}
+
+::: {#education}
+:::
+
+## Premios y distinciones {#awards-heading}
+
+::: {#awards}
+:::
+
+## Financiación y becas {#funding-heading}
+
+::: {#funding}
+:::
+
+## Docencia y supervisión {#teaching-heading}
+
+::: {#teaching}
+:::
+
+## Conferencias y grabaciones {#talks-heading}
+
+Conferencias seleccionadas, en inglés; las grabaciones se enlazan cuando son públicas.
+
+::: {#talks}
+:::
+
+## Servicio a la comunidad científica {#service}
+
+**Comités editoriales:** editora académica de [*Journal of Aging Research*](https://onlinelibrary.wiley.com/page/journal/9025/homepage/editorial-board) y miembro del comité editorial de [*BMC Geriatrics*](https://link.springer.com/journal/12877/editorial-board).
+
+**Revisora** para más de 25 revistas, entre ellas *Brain*, *Alzheimer's & Dementia*, *NeuroImage*, *Human Brain Mapping*, *Cerebral Cortex*, *Neurobiology of Aging* y *Psychological Medicine*. La lista completa figura en el [CV]({{< var cv.file >}}); su actividad de revisión verificada consta en su [perfil de ORCID]({{< var links.orcid >}}).
+
+## Divulgación científica {#science-communication}
+
+Adriana divulga la psicología y la neurociencia para el público hispanohablante, por ejemplo en el blog [Psicología y Neurociencia en Español]({{< var links.blog >}}) y en un artículo de divulgación sobre las bases neurales de la capacidad atencional en la *Revista FULL Investiga* ([2021](https://doi.org/10.5281/zenodo.5163080)). Como estudiante en Medellín dirigió un curso de formación en funciones ejecutivas para docentes de preescolar, financiado con el Premio Mujer Joven Talento en Ciencia y Tecnología.

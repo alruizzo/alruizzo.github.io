@@ -20,8 +20,10 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "_site"
-SITE_URL = "https://alruizzo.github.io"
-BASE_PATH = urlsplit(SITE_URL).path.rstrip("/") + "/"  # "/" for a site served from the root
+# The public address comes from the build's own _quarto.yml (single source): the site root for
+# English, <root>/es and <root>/de for the language builds made by scripts/build_site.py.
+SITE_URL = str(yaml.safe_load((ROOT / "_quarto.yml").read_text(encoding="utf-8"))["website"]["site-url"]).rstrip("/")
+BASE_PATH = urlsplit(SITE_URL).path.rstrip("/") + "/"  # "/" at the root, "/es/" for Spanish
 SKIP_SCHEMES = ("mailto:", "tel:", "javascript:", "data:")
 
 
@@ -114,6 +116,9 @@ def main() -> int:
         return 1
     pages = {p: parse(p) for p in SITE.rglob("*.html")}
     errors: list[str] = []
+    # --links-only: the merged multilingual site (scripts/build_site.py). Each language was fully
+    # checked by its own build; this pass covers what joins them: the language switcher's links.
+    links_only = "--links-only" in sys.argv
 
     for path, page in pages.items():
         rel = path.relative_to(SITE)
@@ -154,6 +159,12 @@ def main() -> int:
             if "alt" not in img:
                 errors.append(f"{rel}: <img src={img.get('src')!r}> has no alt attribute")
 
+    if links_only:
+        for e in errors:
+            print("  ERROR:", e, file=sys.stderr)
+        print(f"check_site --links-only: {len(pages)} pages, " + (f"{len(errors)} problem(s)." if errors else "internal links and anchors OK."))
+        return 1 if errors else 0
+
     # Link-preview metadata of every page.
     for path, page in pages.items():
         rel = path.relative_to(SITE).as_posix()
@@ -172,8 +183,11 @@ def main() -> int:
     profiles = yaml.safe_load((ROOT / "data" / "profiles.yml").read_text(encoding="utf-8")) or []
     news = yaml.safe_load((ROOT / "data" / "news.yml").read_text(encoding="utf-8")) or []
     talks = yaml.safe_load((ROOT / "data" / "talks.yml").read_text(encoding="utf-8")) or []
-    home_news = re.search(r"id: news\n(?:\s{4}.*\n)*?\s{4}max-items: (\d+)", (ROOT / "index.qmd").read_text(encoding="utf-8"))
-    if not home_news:
+    # The homepage shows the latest few items: read max-items from its front matter (parsed, so the
+    # check holds for the language builds, whose front matter is rewritten by scripts/build_site.py).
+    index_fm = yaml.safe_load((ROOT / "index.qmd").read_text(encoding="utf-8").split("---", 2)[1]) or {}
+    home_news_max = next((l.get("max-items") for l in index_fm.get("listing", []) if l.get("id") == "news"), None)
+    if not isinstance(home_news_max, int):
         errors.append("index.qmd: the news listing must set max-items")
 
     # Every page's footer carries one icon link per profile, in data order, each with its visible name.
@@ -197,7 +211,7 @@ def main() -> int:
         ("contact.html", "listing-profiles", "rr-icon"): len(profiles),
         ("index.html", "listing-hero-profiles", "rr-pill-link"): sum(bool(p.get("hero")) for p in profiles),
         ("contact.html", "listing-coauthors-previous", "rr-coauthor"): sum(c["status"] == "previous" for c in coauthors),
-        ("index.html", "listing-news", "rr-news-item"): min(len(news), int(home_news.group(1)) if home_news else 0),
+        ("index.html", "listing-news", "rr-news-item"): min(len(news), home_news_max if isinstance(home_news_max, int) else 0),
         ("news.html", "listing-news-all", "rr-news-item"): len(news),
         ("about.html", "listing-talks", "rr-timeline-item"): len(talks),
     }

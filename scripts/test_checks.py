@@ -390,7 +390,7 @@ class SharePreviews(unittest.TestCase):
     def test_stale_card_detected(self):
         import make_social_cards
         original = make_social_cards.card_text
-        make_social_cards.card_text = lambda page: dict(original(page), title="Renamed page")
+        make_social_cards.card_text = lambda page, lang="en": dict(original(page, lang), title="Renamed page")
         try:
             prerender.errors.clear()
             prerender.check_share_cards()
@@ -483,3 +483,84 @@ class SiteCheckHelpers(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Translations(unittest.TestCase):
+    """The Spanish and German sites: complete translations, no silent English fallback."""
+
+    @classmethod
+    def setUpClass(cls):
+        import i18n
+        import build_site
+        cls.i18n, cls.build = i18n, build_site
+        cls.tr = {lang: i18n.load(lang) for lang in ("es", "de")}
+        cls.data = {name: prerender.load(f"{name}.yml") for name in i18n.TRANSLATABLE}
+
+    def test_every_page_and_record_is_translated(self):
+        self.build.check_translations(["es", "de"])     # raises SystemExit on any gap
+
+    def test_missing_field_is_reported(self):
+        tr = copy.deepcopy(self.tr["es"])
+        del tr["data"]["career"]["jena-neurology"]["title"]
+        with self.assertRaises(self.i18n.TranslationError) as ctx:
+            self.i18n.translate_records("career", self.data["career"], tr)
+        self.assertIn("data.career.jena-neurology.title: translation missing", str(ctx.exception))
+
+    def test_unknown_record_and_field_are_reported(self):
+        tr = copy.deepcopy(self.tr["de"])
+        tr["data"]["news"]["no-such-item"] = {"title": "x"}
+        tr["data"]["news"]["klink-top-down-control"]["url"] = "https://example.org"
+        with self.assertRaises(self.i18n.TranslationError) as ctx:
+            self.i18n.translate_records("news", self.data["news"], tr)
+        self.assertIn("no such record", str(ctx.exception))
+        self.assertIn("not a translatable field", str(ctx.exception))
+
+    def test_periods_follow_the_language(self):
+        es, de = self.tr["es"], self.tr["de"]
+        self.assertEqual(self.i18n.translate_period("2019 to 2022", es), "2019 a 2022")
+        self.assertEqual(self.i18n.translate_period("2022 to present", de), "2022 bis heute")
+        self.assertEqual(self.i18n.translate_period("2007", es), "2007")
+        with self.assertRaises(self.i18n.TranslationError):
+            self.i18n.translate_period("Since 2022", es)
+
+    def test_publication_titles_stay_and_get_a_language(self):
+        out = self.i18n.translate_records("publications", self.data["publications"], self.tr["es"])
+        for src, new in zip(self.data["publications"], out):
+            self.assertEqual(src["title"], new["title"])
+            self.assertEqual(new["language"], src.get("language", "en"))
+        self.assertTrue(all(c in self.tr["es"]["themes"].values() for p in out for c in p.get("categories", [])))
+
+    def test_switcher_links_point_to_the_same_page(self):
+        href = self.build.lang_href
+        self.assertEqual(href("en", "es", "about.html"), "es/about.html")
+        self.assertEqual(href("es", "en", "about.html"), "../about.html")
+        self.assertEqual(href("de", "es", "index.html"), "../es/")
+        self.assertEqual(href("en", "en", "index.html"), "./")
+        self.assertEqual(self.build.lang_url("https://x.io", "de", "news.html"), "https://x.io/de/news.html")
+
+    def test_homepage_translation_table_matches_the_english_page(self):
+        import translate_index
+        src = (prerender.ROOT / "index.qmd").read_text(encoding="utf-8")
+        for row in translate_index.STRINGS:
+            self.assertEqual(src.count(row[0]), row[3] if len(row) > 3 else 1, row[0][:60])
+        for lang, col in (("es", 1), ("de", 2)):
+            out = src
+            for row in translate_index.STRINGS:
+                out = out.replace(row[0], row[col])
+            self.assertEqual(out, (prerender.ROOT / f"index.{lang}.qmd").read_text(encoding="utf-8"),
+                             f"index.{lang}.qmd is stale; run python3 scripts/translate_index.py")
+
+    def test_translated_cards_are_current(self):
+        import json
+        import make_social_cards
+        for lang in ("es", "de"):
+            manifest = json.loads((prerender.ROOT / "assets" / "social" / lang / "cards.json").read_text(encoding="utf-8"))
+            for page in make_social_cards.PAGES:
+                self.assertEqual(manifest.get(page), make_social_cards.card_text(page, lang),
+                                 f"{lang}/{page}.png is stale; run python3 scripts/make_social_cards.py --lang {lang}")
+
+    def test_no_em_dashes_in_translations(self):
+        for lang in ("es", "de"):
+            text = (prerender.ROOT / "i18n" / f"{lang}.yml").read_text(encoding="utf-8")
+            text += "".join(p.read_text(encoding="utf-8") for p in prerender.ROOT.glob(f"*.{lang}.qmd"))
+            self.assertNotIn("—", text, f"em dash in the {lang} translation")

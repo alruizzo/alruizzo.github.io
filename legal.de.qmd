@@ -1,0 +1,29 @@
+---
+title: "Impressum"
+description: "Impressum: Angaben zur Anbieterin dieser Website gemäß § 5 Digitale-Dienste-Gesetz (DDG)."
+image: assets/social/de/legal.png
+image-alt: "Titelkarte: Impressum, Dr. Adriana L. Ruiz-Rizzo, auf dunklem Hintergrund mit Netzwerkmuster."
+---
+
+## Angaben gemäß § 5 DDG {#impressum}
+
+Dr. Adriana L. Ruiz-Rizzo<br>
+{{< var legal.address >}}
+
+E-Mail: <a href="mailto:{{< var email >}}">{{< var email >}}</a>
+
+Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV): Dr. Adriana L. Ruiz-Rizzo, Anschrift wie oben.
+
+## Art dieser Website {#nature}
+
+Dies ist eine persönliche wissenschaftliche Website. Sie ist keine offizielle Website des Universitätsklinikums Jena oder einer anderen hier genannten Einrichtung; Zugehörigkeiten werden nur zur Information angegeben.
+
+## Links zu anderen Websites {#links}
+
+Diese Website verlinkt auf externe Websites wie Verlage, Datenrepositorien und wissenschaftliche Profile. Für deren Inhalte sind die jeweiligen Betreiber verantwortlich. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar; wird eine Rechtsverletzung bekannt, wird der Link umgehend entfernt.
+
+## Urheberrecht {#copyright}
+
+Die Texte stammen von Adriana L. Ruiz-Rizzo, sofern nicht anders angegeben. Aus Publikationen übernommene Abbildungen sowie die Logos von Förderern und Einrichtungen verbleiben bei ihren Rechteinhabern und werden zu den in ihren Nachweisen genannten Bedingungen verwendet; Logos werden nur gezeigt, um Förderungen und Zugehörigkeiten kenntlich zu machen.
+
+[Zuletzt geprüft: {{< var legal.reviewed >}}]{.rr-eyebrow style="margin-top: var(--rr-space-6);"}

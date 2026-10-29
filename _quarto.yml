@@ -15,6 +15,9 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
+    # Translations (<page>.<lang>.qmd) are rendered by scripts/build_site.py, each as its own site.
+    - "!*.es.qmd"
+    - "!*.de.qmd"
   resources:
     - files/
     - assets/
@@ -47,7 +50,8 @@ website:
       light: assets/monogram.svg
       dark: assets/monogram-dark.svg
     logo-alt: "Home"
-    collapse-below: lg
+    # xl, not lg: with the language switcher the full name only fits from 1200 px up.
+    collapse-below: xl
     left:
       - text: "Research"
         href: research.qmd
@@ -58,9 +62,6 @@ website:
       - text: "About"
         href: about.qmd
     right:
-      - text: "CV (PDF)"
-        href: files/Ruiz-Rizzo_CV.pdf
-        aria-label: "Download CV, PDF, October 2026"
       - text: "Contact"
         href: contact.qmd
   page-footer:

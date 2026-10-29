@@ -44,16 +44,32 @@ PORTRAIT_PAGES = {"index", "about"}
 SITE_LABEL = "alruizzo.github.io"
 
 
-def front_matter(page: str) -> dict:
-    text = (ROOT / f"{page}.qmd").read_text(encoding="utf-8")
+def page_file(page: str, lang: str = "en") -> Path:
+    """The page source in `lang`: <page>.<lang>.qmd, or <page>.qmd for English. Inside a language
+    build (scripts/build_site.py) the translation has already been renamed to <page>.qmd."""
+    translated = ROOT / f"{page}.{lang}.qmd"
+    return translated if lang != "en" and translated.is_file() else ROOT / f"{page}.qmd"
+
+
+def front_matter(page: str, lang: str = "en") -> dict:
+    text = page_file(page, lang).read_text(encoding="utf-8")
     return yaml.safe_load(text.split("---", 2)[1]) or {}
 
 
-def card_text(page: str) -> dict:
+def eyebrow(page: str, lang: str) -> str:
+    if lang == "en":
+        return PAGES[page]
+    import i18n
+    cards = i18n.load(lang)["cards"]
+    return cards["name"] if PAGES[page] == NAME else cards["index_eyebrow"]
+
+
+def card_text(page: str, lang: str = "en") -> dict:
     """The text a card is drawn from; also what prerender.py checks for staleness."""
-    fm = front_matter(page)
+    fm = front_matter(page, lang)
     title = fm.get("share-card-title") or fm.get("title") or fm.get("pagetitle")
-    return {"eyebrow": PAGES[page], "title": str(title), "tagline": str(fm.get("share-card-tagline") or fm.get("description", ""))}
+    return {"eyebrow": eyebrow(page, lang), "title": str(title),
+            "tagline": str(fm.get("share-card-tagline") or fm.get("description", ""))}
 
 
 def font(path: str, size: int, index: int = 0, variation: bytes | None = None):
@@ -145,17 +161,26 @@ def draw_card(page: str, text: dict, portrait):
 
 
 def main() -> int:
+    """Usage: make_social_cards.py [--lang en|es|de|all]  (default: en)."""
     from PIL import Image
-    OUT.mkdir(parents=True, exist_ok=True)
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import i18n
+    arg = sys.argv[sys.argv.index("--lang") + 1] if "--lang" in sys.argv else "en"
+    langs = list(i18n.LANGS) if arg == "all" else [arg]
+    if any(lang not in i18n.LANGS for lang in langs):
+        raise SystemExit(f"--lang must be one of {i18n.LANGS} or all")
     portrait = Image.open(ROOT / "assets" / "img" / "portrait.jpg").convert("RGB")
-    manifest = {}
-    for page in PAGES:
-        text = card_text(page)
-        path = OUT / f"{page}.png"
-        draw_card(page, text, portrait).save(path, optimize=True)
-        manifest[page] = text
-        print(f"  {path.relative_to(ROOT)}  {path.stat().st_size // 1024} KB  {text['title']!r}")
-    (OUT / "cards.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for lang in langs:
+        out = OUT if lang == "en" else OUT / lang
+        out.mkdir(parents=True, exist_ok=True)
+        manifest = {}
+        for page in PAGES:
+            text = card_text(page, lang)
+            path = out / f"{page}.png"
+            draw_card(page, text, portrait).save(path, optimize=True)
+            manifest[page] = text
+            print(f"  {path.relative_to(ROOT)}  {path.stat().st_size // 1024} KB  {text['title']!r}")
+        (out / "cards.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return 0
 
 

@@ -1,0 +1,105 @@
+---
+title: "Publikationen"
+description: "Begutachtete Artikel, Kapitel und Preprints zu visueller Aufmerksamkeit, Hirnnetzwerken und kognitivem Altern, mit DOIs, offenen Daten und Zitierangaben."
+image: assets/social/de/publications.png
+image-alt: "Titelkarte: Publikationen, Dr. Adriana L. Ruiz-Rizzo, auf dunklem Hintergrund mit Netzwerkmuster."
+listing:
+  - id: articles
+    contents: data/publications.yml
+    include:
+      type: "{article,chapter,preprint}"
+    template: _templates/pubs.ejs
+    fields: [title, authors, venue, year, date, categories]
+    sort: "date desc"
+    categories: false
+    filter-ui: true
+    sort-ui: false
+    page-size: 200
+  - id: abstracts
+    contents: data/publications.yml
+    include:
+      type: abstract
+    template: _templates/pubs-compact.ejs
+    fields: [title, authors, venue, year, date, categories]
+    sort: "date desc"
+    page-size: 200
+  - id: theses
+    contents: data/publications.yml
+    include:
+      type: thesis
+    template: _templates/pubs-compact.ejs
+    fields: [title, authors, venue, year, date, categories]
+    sort: "date desc"
+    page-size: 200
+  - id: scicomm
+    contents: data/publications.yml
+    include:
+      type: scicomm
+    template: _templates/pubs-compact.ejs
+    fields: [title, authors, venue, year, date, categories]
+    sort: "date desc"
+---
+
+::: {.rr-actions}
+[BibTeX herunterladen](files/ruiz-rizzo-publications.bib){.rr-btn .rr-btn-primary download="ruiz-rizzo-publications.bib"}
+[ORCID-Eintrag]({{< var links.orcid >}}){.rr-btn .rr-btn-secondary}
+[Google Scholar]({{< var links.scholar >}}){.rr-btn .rr-btn-secondary}
+:::
+
+Die Einträge verlinken über ihre DOI auf die Verlagsversion. Wo Daten, Analyseskripte oder Workflows einer Studie offen geteilt sind, verlinkt der Eintrag darauf; die vollständige Übersicht steht unter [Open Science](expertise.qmd#open-science). ORCID und Google Scholar enthalten die vollständigen und aktuellsten Angaben. Titel werden wie veröffentlicht zitiert. Sie können nach Forschungsthema filtern oder nach Titeln, Autorinnen und Autoren sowie Zeitschriften suchen.
+
+## Artikel, Kapitel und Preprints {#articles-and-chapters}
+
+```{=html}
+<div class="quarto-listing-category rr-theme-filter" hidden role="group" aria-label="Publikationen nach Forschungsthema filtern">
+<span class="rr-filter-label" aria-hidden="true">Thema</span>
+<button type="button" class="category rr-filter-btn" data-category="" aria-pressed="true">Alle Themen</button>
+<button type="button" class="category rr-filter-btn rr-theme attention" data-category="VmlzdWVsbGUlMjBBdWZtZXJrc2Fta2VpdA==" aria-pressed="false">Visuelle Aufmerksamkeit</button>
+<button type="button" class="category rr-filter-btn rr-theme networks" data-category="SGlybm5ldHp3ZXJrZQ==" aria-pressed="false">Hirnnetzwerke</button>
+<button type="button" class="category rr-filter-btn rr-theme decline" data-category="S29nbml0aXZlciUyMEFiYmF1JTIwdW5kJTIwRGVtZW56" aria-pressed="false">Kognitiver Abbau und Demenz</button>
+<button type="button" class="category rr-filter-btn rr-theme lifestyle" data-category="TGViZW5zc3RpbCUyMHVuZCUyMEludGVydmVudGlvbmVu" aria-pressed="false">Lebensstil und Interventionen</button>
+<button type="button" class="category rr-filter-btn rr-theme clinical" data-category="S2xpbmlzY2hlJTIwTmV1cm93aXNzZW5zY2hhZnQ=" aria-pressed="false">Klinische Neurowissenschaft</button>
+<button type="button" class="category rr-filter-btn rr-theme data" data-category="RGF0YSUyMFNjaWVuY2U=" aria-pressed="false">Data Science</button>
+</div>
+```
+
+::: {#articles}
+:::
+
+## Konferenzbeiträge {#abstract-section}
+
+::: {#abstracts}
+:::
+
+## Abschlussarbeiten {#thesis-section}
+
+::: {#theses}
+:::
+
+## Wissenschaftskommunikation {#scicomm-section}
+
+Adriana schreibt außerdem für ein spanischsprachiges Publikum über Psychologie und Neurowissenschaft, unter anderem im Blog [Psicología y Neurociencia en Español]({{< var links.blog >}}){lang="es"}.
+
+::: {#scicomm}
+:::
+
+```{=html}
+<script>
+// Progressive enhancement for the theme filter: Quarto's listing script does the filtering
+// (it wires every .quarto-listing-category .category); this only reveals the bar when JS runs
+// and mirrors Quarto's .active class into aria-pressed for assistive technology.
+document.addEventListener("DOMContentLoaded", () => {
+  const bar = document.querySelector(".rr-theme-filter");
+  if (!bar) return;
+  const buttons = [...bar.querySelectorAll(".category")];
+  const sync = () => {
+    if (!buttons.some((b) => b.classList.contains("active"))) buttons[0].classList.add("active");
+    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.classList.contains("active"))));
+  };
+  new MutationObserver(sync).observe(bar, { subtree: true, attributes: true, attributeFilter: ["class"] });
+  bar.hidden = false;
+  sync();
+});
+</script>
+```
+

@@ -1,9 +1,9 @@
 <%
 // Homepage cards for publications flagged featured: true.
-const THEME_SLUG = {
-  "Visual attention": "attention", "Brain networks": "networks", "Cognitive decline and dementia": "decline",
-  "Lifestyle and interventions": "lifestyle", "Clinical neuroscience": "clinical", "Data science": "data",
-};
+const T = Object.assign({}, (typeof templateParams !== "undefined" && templateParams && templateParams.t) || {});
+const THEMES = T.themes || { attention: "Visual attention", networks: "Brain networks", decline: "Cognitive decline and dementia",
+  lifestyle: "Lifestyle and interventions", clinical: "Clinical neuroscience", data: "Data science" };
+const THEME_SLUG = Object.fromEntries(Object.entries(THEMES).map(([slug, name]) => [name, slug]));
 const isMe = (a) => /^Ruiz(?:[- ]Rizzo)?\s+A/.test(a);
 const byline = (authors) => {
   if (!authors || !authors.length) return "";
@@ -20,7 +20,7 @@ const byline = (authors) => {
 <article class="rr-card rr-feature rr-theme <%- THEME_SLUG[t] || '' %>" <%= metadataAttrs(item) %>>
 <span class="rr-theme-label"><%- t %></span>
 <div class="rr-feature-venue"><%- item.venue %> · <span class="rr-num"><%- item.year %></span></div>
-<h3><a href="https://doi.org/<%= item.doi %>"><%- item.title %></a></h3>
+<h3<%= item.language ? ` lang="${item.language}"` : "" %>><a href="https://doi.org/<%= item.doi %>"><%- item.title %></a></h3>
 <p class="rr-feature-summary"><%- item.summary %></p>
 <div class="rr-card-foot">
 <p class="rr-feature-authors"><%- byline(item.authors) %><% if (item.note) { %> · <%- item.note %><% } %></p>
